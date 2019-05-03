@@ -31,3 +31,37 @@ C:\Users\Administrator\source\repos\BridgeHCM\BridgeHCM\BridgeHCM\obj\Debug\netc
 C:\Users\Administrator\source\repos\BridgeHCM\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.dll
 C:\Users\Administrator\source\repos\BridgeHCM\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.pdb
 C:\Users\Administrator\source\repos\BridgeHCM\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.csproj.CopyComplete
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\bin\Debug\netcoreapp2.2\BridgeHCM.deps.json
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\bin\Debug\netcoreapp2.2\BridgeHCM.runtimeconfig.json
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\bin\Debug\netcoreapp2.2\BridgeHCM.runtimeconfig.dev.json
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\bin\Debug\netcoreapp2.2\BridgeHCM.dll
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\bin\Debug\netcoreapp2.2\BridgeHCM.pdb
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\bin\Debug\netcoreapp2.2\BridgeHCM.Views.dll
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\bin\Debug\netcoreapp2.2\BridgeHCM.Views.pdb
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.csprojAssemblyReference.cache
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.csproj.CoreCompileInputs.cache
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.RazorAssemblyInfo.cache
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.RazorAssemblyInfo.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.AssemblyInfoInputs.cache
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.AssemblyInfo.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.TagHelpers.input.cache
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.TagHelpers.output.cache
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.RazorCoreGenerate.cache
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\Razor\Views\authentication\Change_Log.g.cshtml.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\Razor\Views\authentication\Coming_Soon.g.cshtml.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\Razor\Views\authentication\Dashboard.g.cshtml.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\Razor\Views\authentication\Login.g.cshtml.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuList\Default.g.cshtml.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Menu.g.cshtml.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.RazorTargetAssemblyInfo.cache
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.RazorTargetAssemblyInfo.cs
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.Views.pdb
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.dll
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.pdb
+C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeHCM\BridgeHCM\obj\Debug\netcoreapp2.2\BridgeHCM.csproj.CopyComplete

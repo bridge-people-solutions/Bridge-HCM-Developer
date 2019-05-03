@@ -1,0 +1,13 @@
+C:\Users\Zildjan\source\repos\BridgeWCF\BridgeWCF\bin\BridgeWCF.dll.config
+C:\Users\Zildjan\source\repos\BridgeWCF\BridgeWCF\bin\BridgeWCF.dll
+C:\Users\Zildjan\source\repos\BridgeWCF\BridgeWCF\bin\BridgeWCF.pdb
+C:\Users\Zildjan\source\repos\BridgeWCF\BridgeWCF\obj\Debug\BridgeWCF.csproj.CoreCompileInputs.cache
+C:\Users\Zildjan\source\repos\BridgeWCF\BridgeWCF\obj\Debug\BridgeWCF.dll
+C:\Users\Zildjan\source\repos\BridgeWCF\BridgeWCF\obj\Debug\BridgeWCF.pdb
+C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\bin\BridgeWCF.dll.config
+C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\bin\BridgeWCF.dll
+C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\bin\BridgeWCF.pdb
+C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\obj\Debug\BridgeWCF.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\obj\Debug\BridgeWCF.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\obj\Debug\BridgeWCF.dll
+C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\obj\Debug\BridgeWCF.pdb

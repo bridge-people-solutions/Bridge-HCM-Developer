@@ -1,0 +1,322 @@
+-----------------------------------------------------------------------------
+Date : 4/29/2019 2:36:07 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Could not find stored procedure 'login_users_view_sel'.
+Date : 4/29/2019 2:37:12 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | setting_id
+Date : 4/29/2019 2:38:55 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | setting_id
+Date : 4/29/2019 2:39:09 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | setting_id
+Date : 4/29/2019 2:39:45 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 2:45:17 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 2:45:33 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 2:47:14 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 3:01:35 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 3:03:03 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 3:07:51 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 3:08:29 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 3:09:20 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 3:13:23 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 3:16:24 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 3:24:48 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 3:44:34 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 3:45:37 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Invalid column name 'user_id'.
+Invalid column name 'user_id'.
+Invalid column name 'user_code'.
+Date : 4/29/2019 3:53:27 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Invalid column name 'user_id'.
+Invalid column name 'user_id'.
+Invalid column name 'user_code'.
+Date : 4/29/2019 3:53:31 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Invalid column name 'user_id'.
+Invalid column name 'user_id'.
+Invalid column name 'user_code'.
+Date : 4/29/2019 3:53:37 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Invalid column name 'user_id'.
+Invalid column name 'user_id'.
+Invalid column name 'user_code'.
+Date : 4/29/2019 3:53:56 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 3:54:58 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 4:00:00 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 4:00:38 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 4:01:30 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 4:03:59 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 4:04:07 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 4:04:45 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 4:05:06 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 4:05:46 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 4:06:13 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 4:06:39 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 4:07:19 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 4/29/2019 4:07:46 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | @module_id is not a parameter for procedure menu_view_restriction.
+Date : 4/30/2019 2:01:30 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | enable_modify
+Date : 4/30/2019 2:01:41 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | enable_modify
+Date : 4/30/2019 2:35:19 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | Column 'enable_modify' does not belong to table .
+Date : 4/30/2019 2:49:33 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | Column 'enable_modify' does not belong to table .
+Date : 4/30/2019 2:49:55 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | Column 'enable_modify' does not belong to table .
+Date : 4/30/2019 2:50:19 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | String was not recognized as a valid Boolean.
+Date : 4/30/2019 2:53:09 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | Input string was not in a correct format.
+Date : 4/30/2019 3:00:30 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | Input string was not in a correct format.
+Date : 4/30/2019 3:00:59 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | Input string was not in a correct format.
+Date : 4/30/2019 3:05:20 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+

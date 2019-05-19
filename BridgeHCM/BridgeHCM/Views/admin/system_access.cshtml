@@ -1,0 +1,134 @@
+﻿@{
+    ViewData["Title"] = "System Access";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form class="" method="post" id="system_access_form" asp-antiforgery="true">
+    <div class="row" ng-app="myApp" ng-controller="myCtrl">
+        <div class="col-xs-12 col-sm-12 col-lg-12">
+            <div class="card">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label">Type</label>
+                                    <select name="singleSelect" ng-change="changeType()" class="form-control dropdowntype select myErrorClass" ng-model="selectedType">
+                                        <option value="" selected="selected">Select Type</option>
+                                        <option ng-repeat="x in dropdownType" value="{{x.id}}">{{x.value}}</option>
+                                    </select>
+                                </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group form-group-sm">
+                                <label class="control-label">Access Level</label>
+                                <select name="singleSelect" ng-change="changeAccess()" class="form-control dropdownlevel select" ng-model="selectedDropdown" id="aaaaa">
+                                    <option value="" selected="selected">Select Level</option>
+                                    <option ng-repeat="x in dropdownlist" value="{{x.setting_id_ds}}">{{x.description}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group form-group-sm">
+                                <label class="control-label">&nbsp;</label>
+                                <button class="btn waves-effect btn-sm waves-light btn-primary btn-square pull-right form-control" type="button" ng-click="submit()">Save Changes</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-lg-12">
+            <div class="card">
+                <div class="card-block">
+
+                    <div class="table-responsive dt-responsive">
+                        <table style="width:100%;" class="table nowrap table-list">
+                            <thead>
+                                <tr>
+                                    <th>Module</th>
+                                    <th>Active</th>
+                                    <th>New</th>
+                                    <th>Modify</th>
+                                    <th>View</th>
+                                    <th>Print</th>
+                                    <th>Duplicate</th>
+                                    <th>View All</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in tbl">
+                                    <td>{{x.module_name}}</td>
+                                    <td>
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="onoffswitch" ng-model="x.active" ng-change="enable_module($index)" class="onoffswitch-checkbox" id="{{x.module_name}}_active">
+                                            <label class="onoffswitch-label" for="{{x.module_name}}_active">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="onoffswitch" ng-if="x.new_ == true">
+                                            <input type="checkbox" name="onoffswitch" ng-model="x.enable_new" ng-disabled="!x.active" class="onoffswitch-checkbox" id="{{x.module_name}}_new">
+                                            <label class="onoffswitch-label" for="{{x.module_name}}_new">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="onoffswitch" ng-if="x.modify == true">
+                                            <input type="checkbox" name="onoffswitch" ng-model="x.enable_modify" ng-disabled="!x.active" class="onoffswitch-checkbox" id="{{x.module_name}}_modify">
+                                            <label class="onoffswitch-label" for="{{x.module_name}}_modify">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="onoffswitch" ng-if="x.views == true">
+                                            <input type="checkbox" name="onoffswitch" ng-model="x.enable_views" ng-disabled="!x.active" class="onoffswitch-checkbox" id="{{x.module_name}}_views">
+                                            <label class="onoffswitch-label" for="{{x.module_name}}_views">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="onoffswitch" ng-if="x.prints == true">
+                                            <input type="checkbox" name="onoffswitch" ng-model="x.enable_prints" ng-disabled="!x.active" class="onoffswitch-checkbox" id="{{x.module_name}}_prints">
+                                            <label class="onoffswitch-label" for="{{x.module_name}}_prints">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="onoffswitch" ng-if="x.duplicate == true">
+                                            <input type="checkbox" name="onoffswitch" ng-model="x.enable_duplicate" ng-disabled="!x.active" class="onoffswitch-checkbox" id="{{x.module_name}}_duplicate">
+                                            <label class="onoffswitch-label" for="{{x.module_name}}_duplicate">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select name="singleSelect" class="form-control dropdowntype select" ng-if="x.view_all == true" ng-model="x.enable_view_all" ng-disabled="!x.active">
+                                            <option value="" selected="selected">Disabled</option>
+                                            <option ng-repeat="x in ArrayTwo" value="{{x.id}}">{{x.value}}</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    <script src="~/scripts/admin/system_access.js"></script>
+    <script src="~/scripts/services.js"></script>
+}
+

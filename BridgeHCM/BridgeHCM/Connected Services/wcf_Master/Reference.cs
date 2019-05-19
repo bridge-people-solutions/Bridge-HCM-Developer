@@ -18,6 +18,8 @@ namespace wcf_Master
     public partial class login_authentication : object
     {
         
+        private int access_level_idField;
+        
         private int activeField;
         
         private string address_cityField;
@@ -129,6 +131,19 @@ namespace wcf_Master
         private string websiteField;
         
         private string weightField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int access_level_id
+        {
+            get
+            {
+                return this.access_level_idField;
+            }
+            set
+            {
+                this.access_level_idField = value;
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int active
@@ -865,13 +880,19 @@ namespace wcf_Master
     public partial class menu_view_restriction_lib : object
     {
         
+        private int access_level_idField;
+        
         private string actionField;
+        
+        private bool activeField;
         
         private string class_Field;
         
         private int company_idField;
         
         private string controllerField;
+        
+        private int created_byField;
         
         private bool duplicateField;
         
@@ -923,13 +944,26 @@ namespace wcf_Master
         
         private int seqnField;
         
-        private int user_group_idField;
+        private string urlField;
         
         private int view_allField;
         
         private bool viewsField;
         
         private int warehouse_idField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int access_level_id
+        {
+            get
+            {
+                return this.access_level_idField;
+            }
+            set
+            {
+                this.access_level_idField = value;
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string action
@@ -941,6 +975,19 @@ namespace wcf_Master
             set
             {
                 this.actionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool active
+        {
+            get
+            {
+                return this.activeField;
+            }
+            set
+            {
+                this.activeField = value;
             }
         }
         
@@ -980,6 +1027,19 @@ namespace wcf_Master
             set
             {
                 this.controllerField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int created_by
+        {
+            get
+            {
+                return this.created_byField;
+            }
+            set
+            {
+                this.created_byField = value;
             }
         }
         
@@ -1309,15 +1369,15 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int user_group_id
+        public string url
         {
             get
             {
-                return this.user_group_idField;
+                return this.urlField;
             }
             set
             {
-                this.user_group_idField = value;
+                this.urlField = value;
             }
         }
         
@@ -1361,6 +1421,1945 @@ namespace wcf_Master
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="util_dropdown_view_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
+    public partial class util_dropdown_view_lib : object
+    {
+        
+        private bool active_dmsField;
+        
+        private bool active_dsField;
+        
+        private string active_switch_dmsField;
+        
+        private string active_switch_dsField;
+        
+        private int company_idField;
+        
+        private string company_nameField;
+        
+        private int created_byField;
+        
+        private string date_created_dmsField;
+        
+        private string date_created_dsField;
+        
+        private string descriptionField;
+        
+        private string display_nameField;
+        
+        private int setting_id_dmsField;
+        
+        private int setting_id_dsField;
+        
+        private string setting_typeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool active_dms
+        {
+            get
+            {
+                return this.active_dmsField;
+            }
+            set
+            {
+                this.active_dmsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool active_ds
+        {
+            get
+            {
+                return this.active_dsField;
+            }
+            set
+            {
+                this.active_dsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string active_switch_dms
+        {
+            get
+            {
+                return this.active_switch_dmsField;
+            }
+            set
+            {
+                this.active_switch_dmsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string active_switch_ds
+        {
+            get
+            {
+                return this.active_switch_dsField;
+            }
+            set
+            {
+                this.active_switch_dsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int company_id
+        {
+            get
+            {
+                return this.company_idField;
+            }
+            set
+            {
+                this.company_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string company_name
+        {
+            get
+            {
+                return this.company_nameField;
+            }
+            set
+            {
+                this.company_nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int created_by
+        {
+            get
+            {
+                return this.created_byField;
+            }
+            set
+            {
+                this.created_byField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string date_created_dms
+        {
+            get
+            {
+                return this.date_created_dmsField;
+            }
+            set
+            {
+                this.date_created_dmsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string date_created_ds
+        {
+            get
+            {
+                return this.date_created_dsField;
+            }
+            set
+            {
+                this.date_created_dsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string description
+        {
+            get
+            {
+                return this.descriptionField;
+            }
+            set
+            {
+                this.descriptionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string display_name
+        {
+            get
+            {
+                return this.display_nameField;
+            }
+            set
+            {
+                this.display_nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int setting_id_dms
+        {
+            get
+            {
+                return this.setting_id_dmsField;
+            }
+            set
+            {
+                this.setting_id_dmsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int setting_id_ds
+        {
+            get
+            {
+                return this.setting_id_dsField;
+            }
+            set
+            {
+                this.setting_id_dsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string setting_type
+        {
+            get
+            {
+                return this.setting_typeField;
+            }
+            set
+            {
+                this.setting_typeField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="util_dropdown_list_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
+    public partial class util_dropdown_list_lib : object
+    {
+        
+        private bool activeField;
+        
+        private string date_createdField;
+        
+        private int setting_idField;
+        
+        private string setting_typeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool active
+        {
+            get
+            {
+                return this.activeField;
+            }
+            set
+            {
+                this.activeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string date_created
+        {
+            get
+            {
+                return this.date_createdField;
+            }
+            set
+            {
+                this.date_createdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int setting_id
+        {
+            get
+            {
+                return this.setting_idField;
+            }
+            set
+            {
+                this.setting_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string setting_type
+        {
+            get
+            {
+                return this.setting_typeField;
+            }
+            set
+            {
+                this.setting_typeField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="warehouse_in_up_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
+    public partial class warehouse_in_up_lib : object
+    {
+        
+        private bool activeField;
+        
+        private string addressField;
+        
+        private bool approvedField;
+        
+        private string bp_statusField;
+        
+        private int company_idField;
+        
+        private int created_byField;
+        
+        private string descriptionField;
+        
+        private string emailField;
+        
+        private string faxField;
+        
+        private string image_pathField;
+        
+        private string nameField;
+        
+        private string phoneField;
+        
+        private string tinField;
+        
+        private string warehouse_codeField;
+        
+        private int warehouse_idField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool active
+        {
+            get
+            {
+                return this.activeField;
+            }
+            set
+            {
+                this.activeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address
+        {
+            get
+            {
+                return this.addressField;
+            }
+            set
+            {
+                this.addressField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool approved
+        {
+            get
+            {
+                return this.approvedField;
+            }
+            set
+            {
+                this.approvedField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bp_status
+        {
+            get
+            {
+                return this.bp_statusField;
+            }
+            set
+            {
+                this.bp_statusField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int company_id
+        {
+            get
+            {
+                return this.company_idField;
+            }
+            set
+            {
+                this.company_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int created_by
+        {
+            get
+            {
+                return this.created_byField;
+            }
+            set
+            {
+                this.created_byField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string description
+        {
+            get
+            {
+                return this.descriptionField;
+            }
+            set
+            {
+                this.descriptionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string email
+        {
+            get
+            {
+                return this.emailField;
+            }
+            set
+            {
+                this.emailField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string fax
+        {
+            get
+            {
+                return this.faxField;
+            }
+            set
+            {
+                this.faxField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string image_path
+        {
+            get
+            {
+                return this.image_pathField;
+            }
+            set
+            {
+                this.image_pathField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string phone
+        {
+            get
+            {
+                return this.phoneField;
+            }
+            set
+            {
+                this.phoneField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tin
+        {
+            get
+            {
+                return this.tinField;
+            }
+            set
+            {
+                this.tinField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string warehouse_code
+        {
+            get
+            {
+                return this.warehouse_codeField;
+            }
+            set
+            {
+                this.warehouse_codeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int warehouse_id
+        {
+            get
+            {
+                return this.warehouse_idField;
+            }
+            set
+            {
+                this.warehouse_idField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="file_manager_in_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
+    public partial class file_manager_in_lib : object
+    {
+        
+        private int company_idField;
+        
+        private int created_byField;
+        
+        private string file_extensionField;
+        
+        private string file_nameField;
+        
+        private string file_pathField;
+        
+        private int module_idField;
+        
+        private int transaction_idField;
+        
+        private int warehouse_idField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int company_id
+        {
+            get
+            {
+                return this.company_idField;
+            }
+            set
+            {
+                this.company_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int created_by
+        {
+            get
+            {
+                return this.created_byField;
+            }
+            set
+            {
+                this.created_byField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string file_extension
+        {
+            get
+            {
+                return this.file_extensionField;
+            }
+            set
+            {
+                this.file_extensionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string file_name
+        {
+            get
+            {
+                return this.file_nameField;
+            }
+            set
+            {
+                this.file_nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string file_path
+        {
+            get
+            {
+                return this.file_pathField;
+            }
+            set
+            {
+                this.file_pathField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int module_id
+        {
+            get
+            {
+                return this.module_idField;
+            }
+            set
+            {
+                this.module_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int transaction_id
+        {
+            get
+            {
+                return this.transaction_idField;
+            }
+            set
+            {
+                this.transaction_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int warehouse_id
+        {
+            get
+            {
+                return this.warehouse_idField;
+            }
+            set
+            {
+                this.warehouse_idField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="employee_list_view_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
+    public partial class employee_list_view_lib : object
+    {
+        
+        private int access_level_idField;
+        
+        private bool activeField;
+        
+        private string address_cityField;
+        
+        private string address_countryField;
+        
+        private string address_stateField;
+        
+        private string address_streetField;
+        
+        private string address_zipcodeField;
+        
+        private string answer1Field;
+        
+        private string answer2Field;
+        
+        private bool approvedField;
+        
+        private string birth_placeField;
+        
+        private string birthdayField;
+        
+        private string bp_statusField;
+        
+        private int civil_status_idField;
+        
+        private int company_idField;
+        
+        private int created_byField;
+        
+        private string date_createdField;
+        
+        private string display_nameField;
+        
+        private string email_addressField;
+        
+        private string employee_codeField;
+        
+        private int employee_idField;
+        
+        private string enc_keyField;
+        
+        private string facebookField;
+        
+        private string first_nameField;
+        
+        private bool fixField;
+        
+        private string full_nameField;
+        
+        private int gender_idField;
+        
+        private string heightField;
+        
+        private string image_pathField;
+        
+        private string instagramField;
+        
+        private string last_nameField;
+        
+        private string linkedinField;
+        
+        private string middle_nameField;
+        
+        private int nationality_idField;
+        
+        private string nick_nameField;
+        
+        private string perm_cityField;
+        
+        private string perm_countryField;
+        
+        private string perm_stateField;
+        
+        private string perm_streetField;
+        
+        private string perm_zipcodeField;
+        
+        private string phone_faxField;
+        
+        private string phone_homeField;
+        
+        private string phone_mobileField;
+        
+        private string phone_otherField;
+        
+        private string phone_workField;
+        
+        private int question1Field;
+        
+        private int question2Field;
+        
+        private int religion_idField;
+        
+        private int salutation_idField;
+        
+        private string skypeField;
+        
+        private string tumblrField;
+        
+        private string twitterField;
+        
+        private int user_group_idField;
+        
+        private string userhashField;
+        
+        private string usernameField;
+        
+        private int warehouse_idField;
+        
+        private string websiteField;
+        
+        private string weightField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int access_level_id
+        {
+            get
+            {
+                return this.access_level_idField;
+            }
+            set
+            {
+                this.access_level_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool active
+        {
+            get
+            {
+                return this.activeField;
+            }
+            set
+            {
+                this.activeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_city
+        {
+            get
+            {
+                return this.address_cityField;
+            }
+            set
+            {
+                this.address_cityField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_country
+        {
+            get
+            {
+                return this.address_countryField;
+            }
+            set
+            {
+                this.address_countryField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_state
+        {
+            get
+            {
+                return this.address_stateField;
+            }
+            set
+            {
+                this.address_stateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_street
+        {
+            get
+            {
+                return this.address_streetField;
+            }
+            set
+            {
+                this.address_streetField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_zipcode
+        {
+            get
+            {
+                return this.address_zipcodeField;
+            }
+            set
+            {
+                this.address_zipcodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string answer1
+        {
+            get
+            {
+                return this.answer1Field;
+            }
+            set
+            {
+                this.answer1Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string answer2
+        {
+            get
+            {
+                return this.answer2Field;
+            }
+            set
+            {
+                this.answer2Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool approved
+        {
+            get
+            {
+                return this.approvedField;
+            }
+            set
+            {
+                this.approvedField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string birth_place
+        {
+            get
+            {
+                return this.birth_placeField;
+            }
+            set
+            {
+                this.birth_placeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string birthday
+        {
+            get
+            {
+                return this.birthdayField;
+            }
+            set
+            {
+                this.birthdayField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bp_status
+        {
+            get
+            {
+                return this.bp_statusField;
+            }
+            set
+            {
+                this.bp_statusField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int civil_status_id
+        {
+            get
+            {
+                return this.civil_status_idField;
+            }
+            set
+            {
+                this.civil_status_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int company_id
+        {
+            get
+            {
+                return this.company_idField;
+            }
+            set
+            {
+                this.company_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int created_by
+        {
+            get
+            {
+                return this.created_byField;
+            }
+            set
+            {
+                this.created_byField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string date_created
+        {
+            get
+            {
+                return this.date_createdField;
+            }
+            set
+            {
+                this.date_createdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string display_name
+        {
+            get
+            {
+                return this.display_nameField;
+            }
+            set
+            {
+                this.display_nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string email_address
+        {
+            get
+            {
+                return this.email_addressField;
+            }
+            set
+            {
+                this.email_addressField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string employee_code
+        {
+            get
+            {
+                return this.employee_codeField;
+            }
+            set
+            {
+                this.employee_codeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int employee_id
+        {
+            get
+            {
+                return this.employee_idField;
+            }
+            set
+            {
+                this.employee_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string enc_key
+        {
+            get
+            {
+                return this.enc_keyField;
+            }
+            set
+            {
+                this.enc_keyField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string facebook
+        {
+            get
+            {
+                return this.facebookField;
+            }
+            set
+            {
+                this.facebookField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string first_name
+        {
+            get
+            {
+                return this.first_nameField;
+            }
+            set
+            {
+                this.first_nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool fix
+        {
+            get
+            {
+                return this.fixField;
+            }
+            set
+            {
+                this.fixField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string full_name
+        {
+            get
+            {
+                return this.full_nameField;
+            }
+            set
+            {
+                this.full_nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int gender_id
+        {
+            get
+            {
+                return this.gender_idField;
+            }
+            set
+            {
+                this.gender_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string height
+        {
+            get
+            {
+                return this.heightField;
+            }
+            set
+            {
+                this.heightField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string image_path
+        {
+            get
+            {
+                return this.image_pathField;
+            }
+            set
+            {
+                this.image_pathField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string instagram
+        {
+            get
+            {
+                return this.instagramField;
+            }
+            set
+            {
+                this.instagramField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string last_name
+        {
+            get
+            {
+                return this.last_nameField;
+            }
+            set
+            {
+                this.last_nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string linkedin
+        {
+            get
+            {
+                return this.linkedinField;
+            }
+            set
+            {
+                this.linkedinField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string middle_name
+        {
+            get
+            {
+                return this.middle_nameField;
+            }
+            set
+            {
+                this.middle_nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int nationality_id
+        {
+            get
+            {
+                return this.nationality_idField;
+            }
+            set
+            {
+                this.nationality_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nick_name
+        {
+            get
+            {
+                return this.nick_nameField;
+            }
+            set
+            {
+                this.nick_nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string perm_city
+        {
+            get
+            {
+                return this.perm_cityField;
+            }
+            set
+            {
+                this.perm_cityField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string perm_country
+        {
+            get
+            {
+                return this.perm_countryField;
+            }
+            set
+            {
+                this.perm_countryField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string perm_state
+        {
+            get
+            {
+                return this.perm_stateField;
+            }
+            set
+            {
+                this.perm_stateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string perm_street
+        {
+            get
+            {
+                return this.perm_streetField;
+            }
+            set
+            {
+                this.perm_streetField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string perm_zipcode
+        {
+            get
+            {
+                return this.perm_zipcodeField;
+            }
+            set
+            {
+                this.perm_zipcodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string phone_fax
+        {
+            get
+            {
+                return this.phone_faxField;
+            }
+            set
+            {
+                this.phone_faxField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string phone_home
+        {
+            get
+            {
+                return this.phone_homeField;
+            }
+            set
+            {
+                this.phone_homeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string phone_mobile
+        {
+            get
+            {
+                return this.phone_mobileField;
+            }
+            set
+            {
+                this.phone_mobileField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string phone_other
+        {
+            get
+            {
+                return this.phone_otherField;
+            }
+            set
+            {
+                this.phone_otherField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string phone_work
+        {
+            get
+            {
+                return this.phone_workField;
+            }
+            set
+            {
+                this.phone_workField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int question1
+        {
+            get
+            {
+                return this.question1Field;
+            }
+            set
+            {
+                this.question1Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int question2
+        {
+            get
+            {
+                return this.question2Field;
+            }
+            set
+            {
+                this.question2Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int religion_id
+        {
+            get
+            {
+                return this.religion_idField;
+            }
+            set
+            {
+                this.religion_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int salutation_id
+        {
+            get
+            {
+                return this.salutation_idField;
+            }
+            set
+            {
+                this.salutation_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string skype
+        {
+            get
+            {
+                return this.skypeField;
+            }
+            set
+            {
+                this.skypeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tumblr
+        {
+            get
+            {
+                return this.tumblrField;
+            }
+            set
+            {
+                this.tumblrField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string twitter
+        {
+            get
+            {
+                return this.twitterField;
+            }
+            set
+            {
+                this.twitterField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int user_group_id
+        {
+            get
+            {
+                return this.user_group_idField;
+            }
+            set
+            {
+                this.user_group_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string userhash
+        {
+            get
+            {
+                return this.userhashField;
+            }
+            set
+            {
+                this.userhashField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string username
+        {
+            get
+            {
+                return this.usernameField;
+            }
+            set
+            {
+                this.usernameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int warehouse_id
+        {
+            get
+            {
+                return this.warehouse_idField;
+            }
+            set
+            {
+                this.warehouse_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string website
+        {
+            get
+            {
+                return this.websiteField;
+            }
+            set
+            {
+                this.websiteField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string weight
+        {
+            get
+            {
+                return this.weightField;
+            }
+            set
+            {
+                this.weightField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="warehouse_view_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
+    public partial class warehouse_view_lib : object
+    {
+        
+        private bool activeField;
+        
+        private string addressField;
+        
+        private bool approvedField;
+        
+        private string bp_statusField;
+        
+        private int company_idField;
+        
+        private int created_byField;
+        
+        private string date_createdField;
+        
+        private string descriptionField;
+        
+        private string emailField;
+        
+        private string faxField;
+        
+        private string image_pathField;
+        
+        private string nameField;
+        
+        private string phoneField;
+        
+        private string tinField;
+        
+        private string warehouse_codeField;
+        
+        private int warehouse_idField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool active
+        {
+            get
+            {
+                return this.activeField;
+            }
+            set
+            {
+                this.activeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address
+        {
+            get
+            {
+                return this.addressField;
+            }
+            set
+            {
+                this.addressField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool approved
+        {
+            get
+            {
+                return this.approvedField;
+            }
+            set
+            {
+                this.approvedField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bp_status
+        {
+            get
+            {
+                return this.bp_statusField;
+            }
+            set
+            {
+                this.bp_statusField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int company_id
+        {
+            get
+            {
+                return this.company_idField;
+            }
+            set
+            {
+                this.company_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int created_by
+        {
+            get
+            {
+                return this.created_byField;
+            }
+            set
+            {
+                this.created_byField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string date_created
+        {
+            get
+            {
+                return this.date_createdField;
+            }
+            set
+            {
+                this.date_createdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string description
+        {
+            get
+            {
+                return this.descriptionField;
+            }
+            set
+            {
+                this.descriptionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string email
+        {
+            get
+            {
+                return this.emailField;
+            }
+            set
+            {
+                this.emailField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string fax
+        {
+            get
+            {
+                return this.faxField;
+            }
+            set
+            {
+                this.faxField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string image_path
+        {
+            get
+            {
+                return this.image_pathField;
+            }
+            set
+            {
+                this.image_pathField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string phone
+        {
+            get
+            {
+                return this.phoneField;
+            }
+            set
+            {
+                this.phoneField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tin
+        {
+            get
+            {
+                return this.tinField;
+            }
+            set
+            {
+                this.tinField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string warehouse_code
+        {
+            get
+            {
+                return this.warehouse_codeField;
+            }
+            set
+            {
+                this.warehouse_codeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int warehouse_id
+        {
+            get
+            {
+                return this.warehouse_idField;
+            }
+            set
+            {
+                this.warehouse_idField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="approval_process_in_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
+    public partial class approval_process_in_lib : object
+    {
+        
+        private bool activeField;
+        
+        private int approval_group_idField;
+        
+        private int company_idField;
+        
+        private int created_byField;
+        
+        private wcf_Master.employee_list_view_lib[] employeeField;
+        
+        private int employee_idField;
+        
+        private string full_nameField;
+        
+        private int module_idField;
+        
+        private int seqField;
+        
+        private string statusField;
+        
+        private int warehouse_idField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool active
+        {
+            get
+            {
+                return this.activeField;
+            }
+            set
+            {
+                this.activeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int approval_group_id
+        {
+            get
+            {
+                return this.approval_group_idField;
+            }
+            set
+            {
+                this.approval_group_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int company_id
+        {
+            get
+            {
+                return this.company_idField;
+            }
+            set
+            {
+                this.company_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int created_by
+        {
+            get
+            {
+                return this.created_byField;
+            }
+            set
+            {
+                this.created_byField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public wcf_Master.employee_list_view_lib[] employee
+        {
+            get
+            {
+                return this.employeeField;
+            }
+            set
+            {
+                this.employeeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int employee_id
+        {
+            get
+            {
+                return this.employee_idField;
+            }
+            set
+            {
+                this.employee_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string full_name
+        {
+            get
+            {
+                return this.full_nameField;
+            }
+            set
+            {
+                this.full_nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int module_id
+        {
+            get
+            {
+                return this.module_idField;
+            }
+            set
+            {
+                this.module_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int seq
+        {
+            get
+            {
+                return this.seqField;
+            }
+            set
+            {
+                this.seqField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int warehouse_id
+        {
+            get
+            {
+                return this.warehouse_idField;
+            }
+            set
+            {
+                this.warehouse_idField = value;
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="wcf_Master.IMaster_Service")]
     public interface IMaster_Service
@@ -1370,7 +3369,46 @@ namespace wcf_Master
         System.Threading.Tasks.Task<wcf_Master.login_authentication> user_authenticateAsync(string username, string userhash);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/menu_view_restriction", ReplyAction="http://tempuri.org/IMaster_Service/menu_view_restrictionResponse")]
-        System.Threading.Tasks.Task<wcf_Master.menu_view_restriction_lib[]> menu_view_restrictionAsync(int user_group_id, int module_id, int company_id, int warehouse_id);
+        System.Threading.Tasks.Task<wcf_Master.menu_view_restriction_lib[]> menu_view_restrictionAsync(int access_level_id, int module_id, int company_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/util_dropdown_view", ReplyAction="http://tempuri.org/IMaster_Service/util_dropdown_viewResponse")]
+        System.Threading.Tasks.Task<wcf_Master.util_dropdown_view_lib[]> util_dropdown_viewAsync(int setting_id, bool active, int setting_type_id, int company_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/util_dropdown_list", ReplyAction="http://tempuri.org/IMaster_Service/util_dropdown_listResponse")]
+        System.Threading.Tasks.Task<wcf_Master.util_dropdown_list_lib[]> util_dropdown_listAsync(int setting_type);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/modules_access_view", ReplyAction="http://tempuri.org/IMaster_Service/modules_access_viewResponse")]
+        System.Threading.Tasks.Task<wcf_Master.menu_view_restriction_lib[]> modules_access_viewAsync(int access_level_id, int module_id, int company_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/modules_view", ReplyAction="http://tempuri.org/IMaster_Service/modules_viewResponse")]
+        System.Threading.Tasks.Task<wcf_Master.menu_view_restriction_lib[]> modules_viewAsync(int module_id, bool is_ap, bool is_active);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/util_dropdown_setting_in", ReplyAction="http://tempuri.org/IMaster_Service/util_dropdown_setting_inResponse")]
+        System.Threading.Tasks.Task<int> util_dropdown_setting_inAsync(wcf_Master.util_dropdown_view_lib obj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/module_access_in", ReplyAction="http://tempuri.org/IMaster_Service/module_access_inResponse")]
+        System.Threading.Tasks.Task<wcf_Master.menu_view_restriction_lib> module_access_inAsync(wcf_Master.menu_view_restriction_lib[] obj, int company_id, int created_by);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/warehouse_in_up", ReplyAction="http://tempuri.org/IMaster_Service/warehouse_in_upResponse")]
+        System.Threading.Tasks.Task<wcf_Master.warehouse_in_up_lib> warehouse_in_upAsync(wcf_Master.warehouse_in_up_lib obj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/file_manager_in", ReplyAction="http://tempuri.org/IMaster_Service/file_manager_inResponse")]
+        System.Threading.Tasks.Task<int> file_manager_inAsync(wcf_Master.file_manager_in_lib objHeader);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/util_dropdown_setting_up", ReplyAction="http://tempuri.org/IMaster_Service/util_dropdown_setting_upResponse")]
+        System.Threading.Tasks.Task<int> util_dropdown_setting_upAsync(wcf_Master.util_dropdown_view_lib obj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/employee_list_view", ReplyAction="http://tempuri.org/IMaster_Service/employee_list_viewResponse")]
+        System.Threading.Tasks.Task<wcf_Master.employee_list_view_lib[]> employee_list_viewAsync(wcf_Master.employee_list_view_lib obj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/warehouse_view", ReplyAction="http://tempuri.org/IMaster_Service/warehouse_viewResponse")]
+        System.Threading.Tasks.Task<wcf_Master.warehouse_view_lib[]> warehouse_viewAsync(int warehouse_id, int company_id, bool is_active, bool is_ap);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/approval_process_in", ReplyAction="http://tempuri.org/IMaster_Service/approval_process_inResponse")]
+        System.Threading.Tasks.Task<wcf_Master.approval_process_in_lib> approval_process_inAsync(wcf_Master.approval_process_in_lib[] obj, int approval_group_id, int module_id, bool all, int company_id, int warehouse_id, int created_by);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/approval_process_view", ReplyAction="http://tempuri.org/IMaster_Service/approval_process_viewResponse")]
+        System.Threading.Tasks.Task<wcf_Master.approval_process_in_lib[]> approval_process_viewAsync(int module_id, int approval_group_id, int warehouse_id, int company_id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
@@ -1428,9 +3466,74 @@ namespace wcf_Master
             return base.Channel.user_authenticateAsync(username, userhash);
         }
         
-        public System.Threading.Tasks.Task<wcf_Master.menu_view_restriction_lib[]> menu_view_restrictionAsync(int user_group_id, int module_id, int company_id, int warehouse_id)
+        public System.Threading.Tasks.Task<wcf_Master.menu_view_restriction_lib[]> menu_view_restrictionAsync(int access_level_id, int module_id, int company_id)
         {
-            return base.Channel.menu_view_restrictionAsync(user_group_id, module_id, company_id, warehouse_id);
+            return base.Channel.menu_view_restrictionAsync(access_level_id, module_id, company_id);
+        }
+        
+        public System.Threading.Tasks.Task<wcf_Master.util_dropdown_view_lib[]> util_dropdown_viewAsync(int setting_id, bool active, int setting_type_id, int company_id)
+        {
+            return base.Channel.util_dropdown_viewAsync(setting_id, active, setting_type_id, company_id);
+        }
+        
+        public System.Threading.Tasks.Task<wcf_Master.util_dropdown_list_lib[]> util_dropdown_listAsync(int setting_type)
+        {
+            return base.Channel.util_dropdown_listAsync(setting_type);
+        }
+        
+        public System.Threading.Tasks.Task<wcf_Master.menu_view_restriction_lib[]> modules_access_viewAsync(int access_level_id, int module_id, int company_id)
+        {
+            return base.Channel.modules_access_viewAsync(access_level_id, module_id, company_id);
+        }
+        
+        public System.Threading.Tasks.Task<wcf_Master.menu_view_restriction_lib[]> modules_viewAsync(int module_id, bool is_ap, bool is_active)
+        {
+            return base.Channel.modules_viewAsync(module_id, is_ap, is_active);
+        }
+        
+        public System.Threading.Tasks.Task<int> util_dropdown_setting_inAsync(wcf_Master.util_dropdown_view_lib obj)
+        {
+            return base.Channel.util_dropdown_setting_inAsync(obj);
+        }
+        
+        public System.Threading.Tasks.Task<wcf_Master.menu_view_restriction_lib> module_access_inAsync(wcf_Master.menu_view_restriction_lib[] obj, int company_id, int created_by)
+        {
+            return base.Channel.module_access_inAsync(obj, company_id, created_by);
+        }
+        
+        public System.Threading.Tasks.Task<wcf_Master.warehouse_in_up_lib> warehouse_in_upAsync(wcf_Master.warehouse_in_up_lib obj)
+        {
+            return base.Channel.warehouse_in_upAsync(obj);
+        }
+        
+        public System.Threading.Tasks.Task<int> file_manager_inAsync(wcf_Master.file_manager_in_lib objHeader)
+        {
+            return base.Channel.file_manager_inAsync(objHeader);
+        }
+        
+        public System.Threading.Tasks.Task<int> util_dropdown_setting_upAsync(wcf_Master.util_dropdown_view_lib obj)
+        {
+            return base.Channel.util_dropdown_setting_upAsync(obj);
+        }
+        
+        public System.Threading.Tasks.Task<wcf_Master.employee_list_view_lib[]> employee_list_viewAsync(wcf_Master.employee_list_view_lib obj)
+        {
+            return base.Channel.employee_list_viewAsync(obj);
+        }
+        
+        public System.Threading.Tasks.Task<wcf_Master.warehouse_view_lib[]> warehouse_viewAsync(int warehouse_id, int company_id, bool is_active, bool is_ap)
+        {
+            return base.Channel.warehouse_viewAsync(warehouse_id, company_id, is_active, is_ap);
+        }
+        
+        public System.Threading.Tasks.Task<wcf_Master.approval_process_in_lib> approval_process_inAsync(wcf_Master.approval_process_in_lib[] obj, int approval_group_id, int module_id, bool all, int company_id, int warehouse_id, int created_by)
+        {
+            return base.Channel.approval_process_inAsync(obj, approval_group_id, module_id, all, company_id, warehouse_id, created_by);
+        }
+        
+        public System.Threading.Tasks.Task<wcf_Master.approval_process_in_lib[]> approval_process_viewAsync(int module_id, int approval_group_id, int warehouse_id, int company_id)
+        {
+            return base.Channel.approval_process_viewAsync(module_id, approval_group_id, warehouse_id, company_id);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
@@ -1461,7 +3564,7 @@ namespace wcf_Master
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IMaster_Service))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost:2001/Master_Service.svc");
+                return new System.ServiceModel.EndpointAddress("http://localhost:54991/Master_Service.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

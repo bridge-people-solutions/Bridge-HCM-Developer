@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewData["Title"] = "Approval Process";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form class="" method="post" id="system_access_form" asp-antiforgery="true">
+    <div class="row" ng-app="myApp" ng-controller="myCtrl">
+        <div class="col-xs-12 col-sm-12 col-lg-12">
+            <div class="card">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group form-group-sm">
+                                <label class="control-label">Approval Group</label>
+                                <select name="ddlStatus" ng-change="loadStatus()" class="form-control dropdownlevel select" ng-model="selectedGroup">
+                                    <option value="" selected="selected">Select Group</option>
+                                    <option ng-repeat="x in dropdownlist" value="{{x.setting_id_ds}}">{{x.description}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group form-group-sm">
+                                <label class="control-label">Module</label>
+                                <select name="singleSelect" ng-change="loadStatus()" class="form-control dropdownlevel select" ng-model="selectedModule" ng-disabled="swtAll">
+                                    <option value="" selected="selected">Select Module</option>
+                                    <option ng-repeat="x in modulelist" value="{{x.module_id}}">{{x.module_name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group form-group-sm">
+                                <label class="control-label">Apply to All Module</label>
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch" ng-model="swtAll" class="onoffswitch-checkbox" id="swt-active">
+                                    <label class="onoffswitch-label" for="swt-active">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group form-group-sm">
+                                <label class="control-label">&nbsp;</label>
+                                <button class="btn waves-effect btn-sm waves-light btn-primary btn-square pull-right form-control" type="button" ng-click="submit()">Save Changes</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Approval Sequence</h5>
+                </div>
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group form-group-sm">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" ng-model="addValue" ng-class="isStatus">
+                                    <div class="input-group-append">
+                                        <button type="button" ng-click="addStatus()" class="btn btn-sm waves-effect waves-light btn-primary"><i class="icofont icofont-ui-add"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="breadcrumb-step breadcrumb-body">
+                                <a href="#" ng-repeat="x in status">{{x.status}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Approval List</h5>
+                </div>
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group form-group-sm">
+                                <label class="control-label">Status</label>
+                                <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedStatus">
+                                    <option value="" selected="selected">Select Status</option>
+                                    <option ng-repeat="x in status" value="{{x.status}}">{{x.status}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-group-sm">
+                                <label class="control-label">Employee</label>
+                                <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedUser">
+                                    <option value="" selected="selected">Select Employee</option>
+                                    <option ng-repeat="x in employeelist" value="{{x.employee_id}}">{{x.full_name}}</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn waves-effect waves-light btn-grd-primary btn-sm btn-square pull-right" ng-click="insertEmployee()"><i class="icofont icofont-ui-add"></i>Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-8 col-sm-8 col-lg-8">
+            <div class="row">
+                <div class="col-sm-4" ng-repeat="x in status">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>{{x.status}} </h5>
+                            <a href="#" ng-click="delete($index)"> <i class="fa fa open-card-option fa-times pull-right"></i></a>
+                        </div>
+                        <div class="card-block table-border-style">
+                            <ul class="basic-list">
+                                <li ng-repeat="z in x.employee">
+                                    <a href="#" ng-click="deleteChild($parent.$index, $index)"> {{z.full_name}} <i class="fa fa open-card-option fa-times pull-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    <script src="~/scripts/admin/approval_process.js"></script>
+    <script src="~/scripts/services.js"></script>
+}
+

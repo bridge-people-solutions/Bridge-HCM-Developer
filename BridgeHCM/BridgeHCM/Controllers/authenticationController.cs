@@ -43,11 +43,11 @@ namespace BridgeHCM.Controllers
                     options.Expires = DateTime.Now.AddDays(365);
                 }
 
-                Response.Cookies.Append("UserId", Crypto.password_encrypt(resp.user_id.ToString()), options);
-                //Response.Cookies.Append("WarehouseId", Crypto.password_encrypt(resp.warehouse_id.ToString()), options);
-                //Response.Cookies.Append("CompanyId", Crypto.password_encrypt(resp.company_id.ToString()), options);
-                //Response.Cookies.Append("UserGroupId", Crypto.password_encrypt(resp.user_group_id.ToString()), options);
-                //Response.Cookies.Append("DisplayName", Crypto.password_encrypt(resp.display_name.ToString()), options);
+                Response.Cookies.Append("UserId", Crypto.url_encrypt(resp.user_id.ToString()), options);
+                Response.Cookies.Append("WarehouseId", Crypto.url_encrypt(resp.warehouse_id.ToString()), options);
+                Response.Cookies.Append("CompanyId", Crypto.url_encrypt(resp.company_id.ToString()), options);
+                Response.Cookies.Append("AccessLevelId", Crypto.url_encrypt(resp.access_level_id.ToString()), options);
+                Response.Cookies.Append("DisplayName", resp.display_name.ToString(), options);
                 //Response.Cookies.Append("Department", Crypto.password_encrypt(resp.department.ToString()), options);
                 //Response.Cookies.Append("ImgPath", Crypto.password_encrypt(resp.img.ToString()), options);
 
@@ -79,9 +79,12 @@ namespace BridgeHCM.Controllers
                 option.Expires = DateTime.Now.AddDays(-1);
                 Response.Cookies.Append(".AspNetCore.Session", "", option);
             }
-
             option.Expires = DateTime.Now.AddDays(-1);
             Response.Cookies.Append("UserId", "", option);
+            Response.Cookies.Append("WarehouseId", "", option);
+            Response.Cookies.Append("CompanyId", "", option);
+            Response.Cookies.Append("AccessLevelId", "", option);
+            Response.Cookies.Append("DisplayName", "", option);
             return RedirectToAction("Login", "authentication");
         }
         #endregion
@@ -99,6 +102,11 @@ namespace BridgeHCM.Controllers
         }
 
         public IActionResult Coming_Soon()
+        {
+            return View();
+        }
+
+        public IActionResult error_403()
         {
             return View();
         }

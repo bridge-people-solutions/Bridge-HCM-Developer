@@ -320,3 +320,878 @@ Transaction Id : 0
 Company Id : 1
 Created By : 0
 
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Could not find stored procedure 'util_dropdown_view_lib'.
+Date : 5/3/2019 4:06:18 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Could not find stored procedure 'util_dropdown_view_lib'.
+Date : 5/3/2019 4:06:35 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Could not find stored procedure 'util_dropdown_view_lib'.
+Date : 5/5/2019 5:15:18 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Could not find stored procedure 'util_dropdown_view_lib'.
+Date : 5/5/2019 5:15:18 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Could not find stored procedure 'util_dropdown_view_lib'.
+Date : 5/5/2019 5:16:18 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Could not find stored procedure 'util_dropdown_view_lib'.
+Date : 5/5/2019 5:16:23 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Column 'setting_type' does not belong to table .
+Date : 5/6/2019 8:17:23 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Column 'setting_type' does not belong to table .
+Date : 5/6/2019 8:17:23 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Column 'setting_type' does not belong to table .
+Date : 5/6/2019 8:17:31 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Column 'setting_type' does not belong to table .
+Date : 5/6/2019 8:17:34 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Column 'setting_type' does not belong to table .
+Date : 5/6/2019 8:17:38 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Column 'setting_type' does not belong to table .
+Date : 5/6/2019 8:17:40 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Column 'setting_type' does not belong to table .
+Date : 5/6/2019 8:19:55 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Column 'setting_type' does not belong to table .
+Date : 5/6/2019 8:19:55 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Column 'setting_type' does not belong to table .
+Date : 5/6/2019 8:20:22 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Column 'setting_type' does not belong to table .
+Date : 5/6/2019 8:21:33 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Input string was not in a correct format.
+Date : 5/6/2019 8:26:39 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Input string was not in a correct format.
+Date : 5/6/2019 8:27:45 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Input string was not in a correct format.
+Date : 5/6/2019 8:28:49 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | Procedure or function modules_view has too many arguments specified.
+Date : 5/6/2019 2:16:29 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | Procedure or function modules_view has too many arguments specified.
+Date : 5/6/2019 2:17:11 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | Input string was not in a correct format.
+Date : 5/6/2019 2:35:30 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | Input string was not in a correct format.
+Date : 5/6/2019 2:36:09 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | String was not recognized as a valid Boolean.
+Date : 5/6/2019 2:37:34 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_side | String was not recognized as a valid Boolean.
+Date : 5/6/2019 2:40:06 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | @setting_type is not a parameter for procedure modules_view.
+Date : 5/9/2019 8:42:33 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | @setting_type is not a parameter for procedure modules_view.
+Date : 5/9/2019 9:03:25 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | @setting_type is not a parameter for procedure modules_view.
+Date : 5/9/2019 9:03:46 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | @setting_type is not a parameter for procedure modules_view.
+Date : 5/9/2019 9:03:59 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | String was not recognized as a valid Boolean.
+Date : 5/9/2019 9:05:13 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_setting_in | Error converting data type nvarchar to bigint.
+Date : 5/9/2019 11:26:31 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_setting_in | Error converting data type nvarchar to bigint.
+Date : 5/9/2019 11:27:54 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:46:08 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:46:16 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:46:35 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Date : 5/10/2019 9:48:31 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:49:49 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Date : 5/10/2019 9:50:08 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:50:26 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Date : 5/10/2019 9:50:39 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:50:59 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:51:10 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:51:46 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:51:58 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:52:30 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:53:39 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:53:48 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:53:59 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 9:54:36 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 10:07:02 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 10:07:03 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 10:07:28 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 10:07:30 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 10:07:48 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 10:07:50 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 10:08:19 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | Column 'setting_id' does not belong to table .
+Date : 5/10/2019 10:08:23 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | String was not recognized as a valid Boolean.
+Date : 5/10/2019 10:09:02 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | String was not recognized as a valid Boolean.
+Date : 5/10/2019 10:09:15 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_list | String was not recognized as a valid Boolean.
+Date : 5/10/2019 10:10:20 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/11/2019 7:48:24 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/13/2019 10:14:40 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/13/2019 10:15:14 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | Invalid column name 'user_group_id'.
+Invalid column name 'warehouse_id'.
+Invalid column name 'user_group_id'.
+Invalid column name 'warehouse_id'.
+Date : 5/14/2019 10:40:55 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | Invalid column name 'user_group_id'.
+Invalid column name 'warehouse_id'.
+Invalid column name 'user_group_id'.
+Invalid column name 'warehouse_id'.
+Date : 5/14/2019 10:41:58 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Column 'warehouse_id' does not belong to table .
+Date : 5/14/2019 11:04:54 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Column 'warehouse_id' does not belong to table .
+Date : 5/14/2019 11:04:56 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Column 'warehouse_id' does not belong to table .
+Date : 5/14/2019 11:05:56 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Column 'warehouse_id' does not belong to table .
+Date : 5/14/2019 11:06:50 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | String was not recognized as a valid Boolean.
+Date : 5/14/2019 11:28:12 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | String was not recognized as a valid Boolean.
+Date : 5/14/2019 11:28:22 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=303; handshake=14896; 
+Date : 5/14/2019 12:46:34 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/14/2019 12:46:52 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/14/2019 12:46:52 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/14/2019 12:46:56 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/14/2019 12:47:16 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/14/2019 12:47:33 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The remote computer refused the network connection.)
+Date : 5/14/2019 12:47:48 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The remote computer refused the network connection.)
+Date : 5/14/2019 12:47:51 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The remote computer refused the network connection.)
+Date : 5/14/2019 12:47:53 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/14/2019 12:48:24 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/14/2019 12:48:27 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/14/2019 12:49:16 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The remote computer refused the network connection.)
+Date : 5/14/2019 4:47:04 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/14/2019 10:00:30 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/14/2019 10:17:15 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/14/2019 10:17:15 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/14/2019 10:17:51 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = warehouse_in_up | Procedure or function 'warehouse_in_up' expects parameter '@img', which was not supplied.
+Date : 5/15/2019 1:39:39 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/15/2019 10:22:18 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/15/2019 10:23:46 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/15/2019 10:24:06 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = warehouse_in_up | Procedure or function 'warehouse_in_up' expects parameter '@img', which was not supplied.
+Date : 5/15/2019 10:41:38 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = warehouse_in_up | Procedure or function 'warehouse_in_up' expects parameter '@img', which was not supplied.
+Date : 5/15/2019 10:41:50 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = warehouse_in_up | Procedure or function 'warehouse_in_up' expects parameter '@img', which was not supplied.
+Date : 5/15/2019 10:43:34 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = warehouse_in_up | Procedure or function 'warehouse_in_up' expects parameter '@img', which was not supplied.
+Date : 5/15/2019 7:44:37 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = warehouse_in_up | Procedure or function 'warehouse_in_up' expects parameter '@image_path', which was not supplied.
+Date : 5/15/2019 10:06:48 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = warehouse_in_up | The transaction operation cannot be performed because there are pending requests working on this transaction.
+Date : 5/16/2019 12:58:37 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1041; handshake=14675; 
+Date : 5/16/2019 1:17:59 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = dropdown_setting_up | Procedure or function 'dropdown_setting_up' expects parameter '@setting_id', which was not supplied.
+Date : 5/16/2019 2:21:59 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = dropdown_setting_up | Procedure or function 'dropdown_setting_up' expects parameter '@setting_id', which was not supplied.
+Date : 5/16/2019 2:22:38 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = dropdown_setting_up | Procedure or function 'dropdown_setting_up' expects parameter '@setting_id', which was not supplied.
+Date : 5/16/2019 2:23:18 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = dropdown_setting_up | Procedure or function 'dropdown_setting_up' expects parameter '@setting_id', which was not supplied.
+Date : 5/16/2019 2:23:19 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | String was not recognized as a valid Boolean.
+Date : 5/16/2019 11:05:06 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | String was not recognized as a valid Boolean.
+Date : 5/16/2019 11:05:23 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | String was not recognized as a valid Boolean.
+Date : 5/16/2019 11:05:57 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | String was not recognized as a valid Boolean.
+Date : 5/16/2019 11:06:45 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Input string was not in a correct format.
+Date : 5/17/2019 12:06:10 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Input string was not in a correct format.
+Date : 5/17/2019 12:06:36 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Input string was not in a correct format.
+Date : 5/17/2019 12:07:01 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Input string was not in a correct format.
+Date : 5/17/2019 12:07:38 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Input string was not in a correct format.
+Date : 5/17/2019 12:07:45 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Input string was not in a correct format.
+Date : 5/17/2019 12:07:52 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Input string was not in a correct format.
+Date : 5/17/2019 12:08:19 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Input string was not in a correct format.
+Date : 5/17/2019 12:09:08 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Input string was not in a correct format.
+Date : 5/17/2019 12:11:17 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Input string was not in a correct format.
+Date : 5/17/2019 12:12:40 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Column 'setting_id' does not belong to table .
+Date : 5/18/2019 2:41:59 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_setting_in | ExecuteNonQuery: CommandText property has not been initialized
+Date : 5/19/2019 12:12:19 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_setting_in | ExecuteNonQuery: CommandText property has not been initialized
+Date : 5/19/2019 12:12:48 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 1
+
+-----------------------------------------------------------------------------
+Error : SP = approval_process_view | Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+Date : 5/19/2019 1:19:29 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/19/2019 1:32:53 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Column 'employee_id' does not belong to table .
+Date : 5/19/2019 1:48:30 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | Column 'employee_id' does not belong to table .
+Date : 5/19/2019 1:49:25 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+

@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "System Settings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <form class="col-xs-12 col-sm-12 col-lg-12 col-md-12" method="post" asp-action="system_settings_save" asp-antiforgery="true" id="frm_system_settings">
+        <div class="row" ng-app="myApp" ng-controller="myCtrl">
+            <div class="col-xs-3 col-sm-3 col-lg-3 col-md-3">
+                <div class="card">
+                    <div class="card-block">
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">Dropdown Type</label>
+                            <select name="singleSelect" ng-change="change()" class="form-control dropdowntype select" ng-model="selectedDropdown">
+                                <option value="" selected="selected">Select Account</option>
+                                <option ng-repeat="x in dropdownlist" value="{{x.setting_id}}">{{x.setting_type}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">Description</label>
+                            <input type="text" ng-model="description" class="form-control" />
+                        </div>
+                        <button class="btn btn-out-dashed waves-effect waves-light btn-inverse btn-square pull-right" type="button" ng-click="submit()">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-9 col-sm-9 col-lg-9 col-md-9">
+                <div class="card">
+                    <div class="card-block">
+                        <div class="table-responsive dt-responsive">
+                            <table style="width:100%;" class="table nowrap table-list">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Created By</th>
+                                        <th>Date Created</th>
+                                        <th>Company</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in tableList">
+                                        <td>{{x.description}}</td>
+                                        <td>{{x.display_name}}</td>
+                                        <td>{{x.date_created_ds}}</td>
+                                        <td>{{x.company_name}}</td>
+                                        <td>
+                                            <div class="onoffswitch">
+                                                <input type="checkbox" name="onoffswitch" ng-model="x.active_ds" ng-change="update_setting($index)" class="onoffswitch-checkbox" id="{{x.setting_id_ds}}">
+                                                <label class="onoffswitch-label" for="{{x.setting_id_ds}}">
+                                                    <span class="onoffswitch-inner"></span>
+                                                    <span class="onoffswitch-switch"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/scripts/admin/system_settings.js"></script>
+    <script src="~/scripts/services.js"></script>
+}

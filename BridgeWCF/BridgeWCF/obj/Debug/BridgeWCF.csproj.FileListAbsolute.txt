@@ -14,7 +14,6 @@ C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\obj\Debug\Brid
 C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeWCF\BridgeWCF\bin\BridgeWCF.dll.config
 C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeWCF\BridgeWCF\bin\BridgeWCF.dll
 C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeWCF\BridgeWCF\bin\BridgeWCF.pdb
-C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeWCF\BridgeWCF\obj\Debug\BridgeWCF.csprojAssemblyReference.cache
 C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeWCF\BridgeWCF\obj\Debug\BridgeWCF.csproj.CoreCompileInputs.cache
 C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeWCF\BridgeWCF\obj\Debug\BridgeWCF.dll
 C:\Users\Zildjian\source\repos\Bridge HCM Ongoing\BridgeWCF\BridgeWCF\obj\Debug\BridgeWCF.pdb

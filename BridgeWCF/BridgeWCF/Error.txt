@@ -1195,3 +1195,1060 @@ Transaction Id : 0
 Company Id : 0
 Created By : 0
 
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/20/2019 7:48:35 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/20/2019 8:19:03 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/21/2019 1:21:52 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/21/2019 1:21:56 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/22/2019 7:47:14 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/22/2019 7:47:57 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/22/2019 9:40:06 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/22/2019 9:40:08 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/22/2019 9:57:05 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/22/2019 9:57:20 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/22/2019 9:57:20 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/22/2019 9:57:22 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = modules_view | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/22/2019 9:57:22 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/22/2019 9:57:22 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Date : 5/22/2019 10:05:56 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | user_id
+Date : 5/22/2019 8:40:59 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | user_id
+Date : 5/22/2019 8:41:22 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Invalid column name 'phone_phone'.
+Date : 5/22/2019 9:13:36 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Invalid column name 'phone_phone'.
+Date : 5/22/2019 9:14:36 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | warehouse_id
+Date : 5/22/2019 9:15:15 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Column 'phone_home' does not belong to table .
+Date : 5/22/2019 9:17:19 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Column 'phone_home' does not belong to table .
+Date : 5/22/2019 9:17:37 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A transport-level error has occurred when receiving results from the server. (provider: Session Provider, error: 19 - Physical connection is not usable)
+Date : 5/22/2019 10:18:36 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)
+Date : 5/23/2019 1:31:25 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Column 'employee_id' does not belong to table .
+Date : 5/23/2019 10:50:27 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Column 'employee_id' does not belong to table .
+Date : 5/23/2019 10:50:41 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Input string was not in a correct format.
+Date : 5/23/2019 10:52:11 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Input string was not in a correct format.
+Date : 5/23/2019 10:53:45 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/23/2019 1:28:58 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = warehouse_view | @is_active is not a parameter for procedure warehouse_view.
+Date : 5/23/2019 2:13:28 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = warehouse_view | @is_active is not a parameter for procedure warehouse_view.
+Date : 5/23/2019 2:15:24 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = warehouse_view | @is_active is not a parameter for procedure warehouse_view.
+Date : 5/23/2019 2:15:32 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = warehouse_view | @is_active is not a parameter for procedure warehouse_view.
+Date : 5/23/2019 2:21:31 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = warehouse_view | @is_active is not a parameter for procedure warehouse_view.
+Date : 5/23/2019 2:22:21 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/23/2019 3:19:26 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/23/2019 3:19:26 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A transport-level error has occurred when receiving results from the server. (provider: Session Provider, error: 19 - Physical connection is not usable)
+Date : 5/23/2019 4:38:48 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Invalid column name 'user_group_id'.
+Date : 5/23/2019 10:20:47 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Invalid column name 'user_group_id'.
+Date : 5/23/2019 10:21:00 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Invalid column name 'user_group_id'.
+Date : 5/23/2019 10:21:34 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+Date : 5/23/2019 10:24:13 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+Date : 5/23/2019 10:24:15 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = util_dropdown_view_lib | Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+Date : 5/23/2019 10:24:15 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/23/2019 10:24:58 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/23/2019 10:26:47 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/23/2019 10:27:32 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/23/2019 10:30:46 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 12:15:13 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 12:18:34 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 12:21:40 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 12:21:43 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 12:22:20 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 12:23:18 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 12:28:26 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 12:41:57 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 12:44:34 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = leave_entitlement_detail_in | Error converting data type nvarchar to datetime.
+Date : 5/24/2019 12:47:14 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = leave_entitlement_detail_in | String was not recognized as a valid DateTime.
+Date : 5/24/2019 12:48:52 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = leave_entitlement_detail_in | String was not recognized as a valid DateTime.
+Date : 5/24/2019 12:49:15 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 12:51:42 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 12:56:26 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = leave_entitlement_detail_in | Procedure or function 'employee_in' expects parameter '@answer1', which was not supplied.
+Date : 5/24/2019 12:58:09 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = leave_entitlement_detail_in | Procedure or function 'employee_in' expects parameter '@answer1', which was not supplied.
+Date : 5/24/2019 12:58:52 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = leave_entitlement_detail_in | Procedure or function 'employee_in' expects parameter '@username', which was not supplied.
+Date : 5/24/2019 1:00:47 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = leave_entitlement_detail_in | Procedure or function 'employee_in' expects parameter '@date_created', which was not supplied.
+Date : 5/24/2019 1:01:21 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_emergency_in | Error converting data type nvarchar to datetime.
+Date : 5/24/2019 1:05:01 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_emergency_in | Error converting data type nvarchar to datetime.
+Date : 5/24/2019 1:05:43 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_emergency_in | Error converting data type nvarchar to datetime.
+Date : 5/24/2019 1:08:18 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 1:33:39 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 1:33:50 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 1:34:34 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 1:34:51 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 1:35:05 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 1:36:01 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 1:37:12 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 1:37:55 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 2:02:23 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 2:02:44 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 2:05:42 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 2:05:44 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 2:06:40 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 2:07:00 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 2:07:20 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 2:10:22 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 2:15:33 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Column 'phone_home' does not belong to table .
+Date : 5/24/2019 2:30:23 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Column 'phone_home' does not belong to table .
+Date : 5/24/2019 2:32:26 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_information_in | Error converting data type nvarchar to bigint.
+Date : 5/24/2019 3:10:01 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_information_in | Error converting data type nvarchar to bigint.
+Date : 5/24/2019 3:11:52 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_information_in | Error converting data type varchar to bigint.
+Date : 5/24/2019 3:12:08 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_information_in | Error converting data type varchar to bigint.
+Date : 5/24/2019 3:12:52 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_information_in | Error converting data type varchar to bigint.
+Date : 5/24/2019 3:15:41 AM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 5/24/2019 3:16:35 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Input string was not in a correct format.
+Date : 5/24/2019 3:16:39 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Input string was not in a correct format.
+Date : 5/24/2019 3:17:16 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Input string was not in a correct format.
+Date : 5/24/2019 3:19:21 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 5/24/2019 3:19:41 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 5/24/2019 3:20:54 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 5/24/2019 3:21:40 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 5/24/2019 3:22:42 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Input string was not in a correct format.
+Date : 5/24/2019 3:24:19 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Input string was not in a correct format.
+Date : 5/24/2019 3:24:48 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Input string was not in a correct format.
+Date : 5/24/2019 3:25:01 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Input string was not in a correct format.
+Date : 5/24/2019 3:25:33 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/24/2019 8:38:40 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/24/2019 8:39:05 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/24/2019 8:39:09 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/24/2019 8:40:28 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_information_view | Column 'division' does not belong to table .
+Date : 5/24/2019 8:41:03 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:41:05 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_information_view | Column 'division' does not belong to table .
+Date : 5/24/2019 8:42:01 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:42:02 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:42:49 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:43:02 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:43:56 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:48:40 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:51:42 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:53:00 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:54:37 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:55:06 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:55:42 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:57:45 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 8:58:17 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 9:03:01 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 9:05:07 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_education_view | Column 'course' does not belong to table .
+Date : 5/24/2019 9:05:46 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_fetch_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 11:11:35 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_fetch_view | Invalid column name 'user_group_id'.
+Date : 5/24/2019 11:12:08 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_fetch_view | Column 'salutation' does not belong to table .
+Date : 5/24/2019 11:14:30 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_fetch_view | Column 'salutation' does not belong to table .
+Date : 5/24/2019 11:14:41 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_fetch_view | Column 'salutation' does not belong to table .
+Date : 5/24/2019 11:16:35 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_fetch_view | Column 'date_hired' does not belong to table .
+Date : 5/24/2019 11:58:37 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_fetch_view | Column 'date_hired' does not belong to table .
+Date : 5/24/2019 11:59:11 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_fetch_view | Column 'date_hired' does not belong to table .
+Date : 5/24/2019 11:59:18 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_fetch_view | Column 'date_hired' does not belong to table .
+Date : 5/25/2019 12:01:43 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Column 'biometrics_id' does not belong to table .
+Date : 5/25/2019 3:53:35 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Column 'biometrics_id' does not belong to table .
+Date : 5/25/2019 3:53:53 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = employee_list_view | Column 'biometrics_id' does not belong to table .
+Date : 5/25/2019 3:55:08 AM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+Date : 5/25/2019 7:40:21 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Invalid column name 'warehouse_id'.
+Date : 5/25/2019 8:42:17 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Invalid column name 'warehouse_id'.
+Date : 5/25/2019 8:42:28 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = login_users_view_sel | Invalid column name 'warehouse_id'.
+Date : 5/25/2019 8:42:50 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = leave_entitlement_detail_in | Could not find stored procedure 'employee_in'.
+Date : 5/25/2019 8:49:30 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = leave_entitlement_detail_in | Could not find stored procedure 'employee_in'.
+Date : 5/25/2019 8:49:31 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = leave_entitlement_detail_in | Could not find stored procedure 'employee_in'.
+Date : 5/25/2019 8:49:31 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = leave_entitlement_detail_in | Could not find stored procedure 'employee_in'.
+Date : 5/25/2019 8:49:31 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = leave_entitlement_detail_in | Could not find stored procedure 'employee_in'.
+Date : 5/25/2019 8:49:53 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = series_view | employee_id
+Date : 5/25/2019 9:44:55 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = series_view | employee_id
+Date : 5/25/2019 9:45:52 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = series_view | employee_id
+Date : 5/25/2019 9:46:19 PM
+Transaction Id : 0
+Company Id : 0
+Created By : 0
+
+-----------------------------------------------------------------------------
+Error : SP = menu_view_restriction | A transport-level error has occurred when receiving results from the server. (provider: Session Provider, error: 19 - Physical connection is not usable)
+Date : 5/25/2019 9:50:16 PM
+Transaction Id : 0
+Company Id : 1
+Created By : 0
+

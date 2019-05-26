@@ -6,18 +6,23 @@ app.controller('myCtrl', function ($scope, systemSettingsService) {
     dt.then(function (data) {
         $scope.dropdownlist = JSON.parse(data.data);
         $scope.selected = { value: $scope.dropdownlist[0] };
-    })
+    }).then(function () {
+        $(".theme-loader").animate({
+            opacity: "0"
+        }, 1000);
+        setTimeout(function () {
+            $(".theme-loader").remove();
+        }, 1000);
+    });
 
     $scope.change = function () {
        var dv = systemSettingsService.dropdownView($scope.selectedDropdown);
         dv.then(function (data) {
             $scope.tableList = JSON.parse(data.data);
-            console.log($scope.tableList);
         })
     }
 
     $scope.update_setting = function (index) {
-        alert($scope.tableList[index].active_ds);
         var cont = $scope.tableList[index].active_ds;
         systemSettingsService.dropdownUp(
             $scope.tableList[index].setting_id_ds,
@@ -37,27 +42,13 @@ app.controller('myCtrl', function ($scope, systemSettingsService) {
         },
             function (isConfirm) {
                 if (isConfirm) {
-                    systemSettingsService.dropdownAdd(
+                    var dv = systemSettingsService.dropdownAdd(
                         $scope.selectedDropdown,
                         $scope.description);
 
-                    var dv = systemSettingsService.dropdownView($scope.selectedDropdown);
                     dv.then(function (data) {
-                        $scope.tableList = JSON.parse(data.data);
-                        $('.table-list').dataTable({
-                            "destroy": true,
-                            "aaData": $scope.tableList,
-                            "aoColumns": [
-                                { "mDataProp": "description" },
-                                { "mDataProp": "display_name" },
-                                { "mDataProp": "date_created_ds" },
-                                { "mDataProp": "company_name" },
-                                { "mDataProp": "active_switch_ds" }
-                            ],
-                            "searching": false,
-                            "lengthChange": false
-                        });
-                    })
+                        $scope.tableList = data.data;
+                    });
 
                     $scope.description = "";
                     swal("Success!", "Dropdown has been added.", "success");

@@ -7,7 +7,14 @@ app.controller('myCtrl', function ($scope, systemAccessService) {
 
     dt.then(function (data) {
         $scope.dropdownlist = JSON.parse(data.data);
-    })
+    }).then(function () {
+        $(".theme-loader").animate({
+            opacity: "0"
+        }, 1000);
+        setTimeout(function () {
+            $(".theme-loader").remove();
+        }, 1000);
+    });
 
     $scope.dropdownType = systemAccessService.dropdownType();
 

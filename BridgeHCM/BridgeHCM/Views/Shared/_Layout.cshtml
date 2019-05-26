@@ -23,9 +23,13 @@
     <link rel="stylesheet" type="text/css" href="../files/plugins/stroll/css/stroll.css">
     <!-- themify-icons line icon -->
     <link rel="stylesheet" type="text/css" href="../files/default/icon/themify-icons/themify-icons.css">
+    <!-- Data Table Css -->
+    <link rel="stylesheet" type="text/css" href="../files/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../files/default/pages/data-table/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../files/plugins/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
     <!-- Select 2 css -->
     @*
-        <link rel="stylesheet" href="~/Files/plugins/ui-select/css/select2.min.css" />*@
+    <link rel="stylesheet" href="~/Files/plugins/ui-select/css/select2.min.css" />*@
     <link rel="stylesheet" href="~/Files/plugins/select2/css/select2.min.css" />
     <!-- Notification.css -->
     <link rel="stylesheet" type="text/css" href="../files/default/pages/notification/notification.css">
@@ -36,6 +40,8 @@
     <!-- animation -->
     <!-- animation css -->
     <link rel="stylesheet" type="text/css" href="../files/plugins/animate.css/css/animate.css">
+    <!--forms-wizard css-->
+    <link rel="stylesheet" type="text/css" href="../files/plugins/jquery.steps/css/jquery.steps.css">
     <!-- main style -->
     <link rel="stylesheet" type="text/css" href="~/files/default/css/style.css">
     <link rel="stylesheet" type="text/css" href="~/files/default/css/jquery.mCustomScrollbar.css">
@@ -124,35 +130,35 @@
         }
     </style>
     @*<!-- pace -->
-        <link rel="stylesheet" href="~/Files/plugins/pace/css/pace-theme-minimal.css" />
+    <link rel="stylesheet" href="~/Files/plugins/pace/css/pace-theme-minimal.css" />
+    <link rel="stylesheet" type="text/css" href="~/files/plugins/bootstrap/css/bootstrap.min.css">
+    <environment include="Development">
+        <!-- framework -->
         <link rel="stylesheet" type="text/css" href="~/files/plugins/bootstrap/css/bootstrap.min.css">
-        <environment include="Development">
-            <!-- framework -->
-            <link rel="stylesheet" type="text/css" href="~/files/plugins/bootstrap/css/bootstrap.min.css">
 
-            <!-- waves.css -->
-            <link rel="stylesheet" href="~/files/default/pages/waves/css/waves.min.css" type="text/css" media="all">
-            <!-- themify-icons line icon -->
-            <link rel="stylesheet" type="text/css" href="~/files/default/icon/themify-icons/themify-icons.css">
-            <!-- ico font -->
-            <link rel="stylesheet" type="text/css" href="~/files/default/icon/icofont/css/icofont.css">
-            <!-- Font Awesome -->
-            <link rel="stylesheet" type="text/css" href="~/files/default/icon/font-awesome/css/font-awesome.min.css">
-            <!-- sweet alert framework -->
-            <link rel="stylesheet" type="text/css" href="~/files/plugins/sweetalert/css/sweetalert.css">
-            <!-- Select 2 css -->
-            <link rel="stylesheet" href="~/Files/plugins/ui-select/css/select2.min.css" />
-            <!-- main style -->
-            <link rel="stylesheet" type="text/css" href="~/files/default/css/style.css">
-            <link rel="stylesheet" type="text/css" href="~/files/default/css/jquery.mCustomScrollbar.css">
-        </environment>
-        <environment exclude="Development">
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-                  crossorigin="anonymous"
-                  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
-        </environment>*@
+        <!-- waves.css -->
+        <link rel="stylesheet" href="~/files/default/pages/waves/css/waves.min.css" type="text/css" media="all">
+        <!-- themify-icons line icon -->
+        <link rel="stylesheet" type="text/css" href="~/files/default/icon/themify-icons/themify-icons.css">
+        <!-- ico font -->
+        <link rel="stylesheet" type="text/css" href="~/files/default/icon/icofont/css/icofont.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" type="text/css" href="~/files/default/icon/font-awesome/css/font-awesome.min.css">
+        <!-- sweet alert framework -->
+        <link rel="stylesheet" type="text/css" href="~/files/plugins/sweetalert/css/sweetalert.css">
+        <!-- Select 2 css -->
+        <link rel="stylesheet" href="~/Files/plugins/ui-select/css/select2.min.css" />
+        <!-- main style -->
+        <link rel="stylesheet" type="text/css" href="~/files/default/css/style.css">
+        <link rel="stylesheet" type="text/css" href="~/files/default/css/jquery.mCustomScrollbar.css">
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+    </environment>*@
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js"></script>
@@ -300,28 +306,23 @@
                                 </a>
                                 <ul class="show-notification profile-notification">
                                     <li class="waves-effect waves-light">
-                                        <a href="#!">
-                                            <i class="ti-settings"></i> Settings
-                                        </a>
-                                    </li>
-                                    <li class="waves-effect waves-light">
-                                        <a href="user-profile.html">
+                                        <a href="~/master/employee_profile">
                                             <i class="ti-user"></i> Profile
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="email-inbox.html">
-                                            <i class="ti-email"></i> My Messages
+                                        <a href="#">
+                                            <i class="ti-image"></i> My Files
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="auth-lock-screen.html">
-                                            <i class="ti-lock"></i> Lock Screen
+                                        <a href="#">
+                                            <i class="ti-layout-list-thumb-alt"></i> History
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
                                         <a href="~/authentication/logout">
-                                            <i class="ti-layout-sidebar-left"></i> Logout
+                                            <i class="ti-unlock"></i> Logout
                                         </a>
                                     </li>
                                 </ul>
@@ -340,18 +341,8 @@
                                 <div class="main-menu-header">
                                     <img class="img-80 img-radius" src="../files/default/images/avatar-4.jpg" alt="User-Profile-Image">
                                     <div class="user-details">
-                                        <span id="more-details">John Doe<i class="fa fa-caret-down"></i></span>
+                                        <span>John Doe</span>
                                     </div>
-                                </div>
-
-                                <div class="main-menu-content">
-                                    <ul>
-                                        <li class="more-details">
-                                            <a href="user-profile.html"><i class="ti-user"></i>View Profile</a>
-                                            <a href="#!"><i class="ti-settings"></i>Settings</a>
-                                            <a href="~/authentication/logout"><i class="ti-layout-sidebar-left"></i>Logout</a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                             <div class="p-15 p-b-0">
@@ -359,7 +350,7 @@
                                     <div class="form-group form-primary">
                                         <input type="text" name="footer-email" class="form-control" required="">
                                         <span class="form-bar"></span>
-                                        <label class="float-label"><i class="fa fa-search m-r-10"></i>Search Friend</label>
+                                        <label class="float-label"><i class="fa fa-search m-r-10"></i>Search Something...</label>
                                     </div>
                                 </form>
                             </div>
@@ -390,6 +381,7 @@
                                                         <i class="icofont icofont-home"></i>
                                                     </a>
                                                 </li>
+                                                @Html.Raw(ViewBag.MenuView)
                                                 <li class="breadcrumb-item">
                                                     <a href="#">@ViewBag.Title</a>
                                                 </li>
@@ -418,20 +410,19 @@
                                     <div class="breadcrumb-step breadcrumb-body pull-right">
                                         @Html.Raw(ViewBag.ApprovalSequence)
                                         @*<a href="#" class="active">test</a>
-                                            <a href="#">test</a>
-                                            <a href="#">test</a>*@
+                                        <a href="#">test</a>
+                                        <a href="#">test</a>*@
                                     </div>
                                 </div>
                             </div>
                             <input type="hidden" id="module" value="@ViewBag.module" />
-                            <input type="hidden" id="transaction" value="0" />
                             <div class="main-body">
 
                                 <div class="page-wrapper">
 
                                     <!-- Page body start -->
                                     <div class="page-body">
-
+                                        <input type="hidden" class="form-control trans" value="@ViewData["transaction_id"]" />
                                         @RenderBody()
                                     </div>
                                     <!-- Page body end -->
@@ -469,65 +460,82 @@
     <script src="~/files/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
     <!-- notification js -->
     <script type="text/javascript" src="../files/default/js/bootstrap-growl.min.js"></script>
-    @*<script type="text/javascript" src="../files/default/pages/notification/notification.js"></script>*@
+    @*
+    <script type="text/javascript" src="../files/default/pages/notification/notification.js"></script>*@
+    <!--Forms - Wizard js-->
+    <script src="../files/plugins/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../files/plugins/jquery.steps/js/jquery.steps.js"></script>
+    <script src="../files/plugins/jquery-validation/js/jquery.validate.js"></script>
+    <!-- Validation js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script type="text/javascript" src="../files/default/pages/form-validation/validate.js"></script>
     <!-- toastr js -->
     <script type="text/javascript" src="~/Files/plugins/toastr/js/toastr.min.js"></script>
     <!-- Custom js -->
+    @*
+    <script src="../files/default/pages/forms-wizard-validation/form-wizard.js"></script>*@
     <script src="~/files/default/js/pcoded.min.js"></script>
     <script src="~/files/default/js/dark/vertical-layout.min.js"></script>
-    <script src="~/Files/default/js/script.min.js"></script>
+    <script src="~/Files/default/js/script.js"></script>
     @*<environment include="Development">
-            <!-- Required Jquery -->
-            <script type="text/javascript" src="~/files/plugins/jquery/js/jquery.min.js"></script>
-            <script type="text/javascript" src="~/files/plugins/jquery-ui/js/jquery-ui.min.js"></script>
-            <script type="text/javascript" src="~/files/plugins/popper.js/js/popper.min.js"></script>
-            <script type="text/javascript" src="~/files/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Required Jquery -->
+        <script type="text/javascript" src="~/files/plugins/jquery/js/jquery.min.js"></script>
+        <script type="text/javascript" src="~/files/plugins/jquery-ui/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="~/files/plugins/popper.js/js/popper.min.js"></script>
+        <script type="text/javascript" src="~/files/plugins/bootstrap/js/bootstrap.min.js"></script>
 
-            <!-- waves js -->
-            <script src="~/files/default/pages/waves/js/waves.min.js"></script>
+        <!-- waves js -->
+        <script src="~/files/default/pages/waves/js/waves.min.js"></script>
 
-            <!-- jquery slimscroll js -->
-            <script type="text/javascript" src="~/files/plugins/jquery-slimscroll/js/jquery.slimscroll.js"></script>
-            <!-- sweet alert js -->
-            <script type="text/javascript" src="~/files/plugins/sweetalert/js/sweetalert.min.js"></script>
-            <!-- Select 2 js -->
+        <!-- jquery slimscroll js -->
+        <script type="text/javascript" src="~/files/plugins/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+        <!-- sweet alert js -->
+        <script type="text/javascript" src="~/files/plugins/sweetalert/js/sweetalert.min.js"></script>
+        <!-- Select 2 js -->
 
-            <script src="~/Files/plugins/ui-select/js/select2.min.js"></script>
-            <!-- data-table js -->
-            <script src="~/files/plugins/datatables.net/js/jquery.dataTables.min.js"></script>
-            <script src="~/files/plugins/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-            <script src="~/files/default/pages/data-table/js/jszip.min.js"></script>
-            <script src="~/files/default/pages/data-table/js/pdfmake.min.js"></script>
-            <script src="~/files/default/pages/data-table/js/vfs_fonts.js"></script>
-            <script src="~/files/plugins/datatables.net-buttons/js/buttons.print.min.js"></script>
-            <script src="~/files/plugins/datatables.net-buttons/js/buttons.html5.min.js"></script>
-            <script src="~/files/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-            <script src="~/files/plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-            <script src="~/files/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-            <!-- Custom js -->
-            <script src="~/files/default/js/pcoded.min.js"></script>
-            <script src="~/files/default/js/dark/vertical-layout.min.js"></script>
-            <script src="~/Files/plugins/pace/js/pace.min.js"></script>
+        <script src="~/Files/plugins/ui-select/js/select2.min.js"></script>
+        <!-- data-table js -->
+        <script src="~/files/plugins/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="~/files/plugins/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="~/files/default/pages/data-table/js/jszip.min.js"></script>
+        <script src="~/files/default/pages/data-table/js/pdfmake.min.js"></script>
+        <script src="~/files/default/pages/data-table/js/vfs_fonts.js"></script>
+        <script src="~/files/plugins/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="~/files/plugins/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="~/files/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="~/files/plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="~/files/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+        <!-- Custom js -->
+        <script src="~/files/default/js/pcoded.min.js"></script>
+        <script src="~/files/default/js/dark/vertical-layout.min.js"></script>
+        <script src="~/Files/plugins/pace/js/pace.min.js"></script>
 
-        </environment>
-        <environment exclude="Development">
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                    asp-fallback-test="window.jQuery"
-                    crossorigin="anonymous"
-                    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
-            </script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                    crossorigin="anonymous"
-                    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
-            </script>
-        </environment>
-        <script src="~/js/site.js" asp-append-version="true"></script>*@
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>*@
     <script>
         $(document).ready(function () {
             $('.select').select2({ width: '100%' });
+            $(".wizard-form").steps({
+                headerTag: "h3",
+                bodyTag: "fieldset",
+                transitionEffect: "slideLeft"
+            });
+            
         });</script>
     @RenderSection("Scripts", required: false)
 </body>

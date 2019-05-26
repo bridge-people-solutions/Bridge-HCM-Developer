@@ -86,15 +86,15 @@ $(document).ready(function() {
     });
 
     // card js end
-    $.mCustomScrollbar.defaults.axis = "yx";
-    $("#styleSelector .style-cont").slimScroll({
-        setTop: "1px",
-        height:"calc(100vh - 520px)",
-    });
-    $(".main-menu").mCustomScrollbar({
-        setTop: "1px",
-        setHeight: "calc(100% - 56px)",
-    });
+    //$.mCustomScrollbar.defaults.axis = "yx";
+    //$("#styleSelector .style-cont").slimScroll({
+    //    setTop: "1px",
+    //    height:"calc(100vh - 520px)",
+    //});
+    //$(".main-menu").mCustomScrollbar({
+    //    setTop: "1px",
+    //    setHeight: "calc(100% - 56px)",
+    //});
     /*chatbar js start*/
     /*chat box scroll*/
     var a = $(window).height() - 80;
@@ -183,15 +183,15 @@ $(document).ready(function() {
     Waves.attach('.float-button-light', ['waves-button', 'waves-float', 'waves-light']);
     Waves.attach('.flat-buttons', ['waves-button', 'waves-float', 'waves-light', 'flat-buttons']);
 });
-$(document).ready(function() {
-        $(".theme-loader").animate({
-            opacity: "0"
-        },1000);
-        setTimeout(function() {
-            $(".theme-loader").remove();
-        }, 1000);
+//$(document).ready(function() {
+//        $(".theme-loader").animate({
+//            opacity: "0"
+//        },1000);
+//        setTimeout(function() {
+//            $(".theme-loader").remove();
+//        }, 1000);
     
-});
+//});
 
 // toggle full screen
 function toggleFullScreen() {

@@ -188,16 +188,16 @@
 
 .wizard > .content > .body input
 {
-    display: block;
-    border: 1px solid #ccc;
+    /*display: block;
+    border: 1px solid #ccc;*/
 }
 
 .wizard > .content > .body input[type="checkbox"]
 {
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
-.wizard > .content > .body input.error
+/*.wizard > .content > .body input.error
 {
     background: rgb(251, 227, 228);
     border: 1px solid #fbc2c4;
@@ -215,7 +215,7 @@
     color: #8a1f11;
     display: inline-block;
     margin-left: 1.5em;
-}
+}*/
 
 .wizard > .actions
 {

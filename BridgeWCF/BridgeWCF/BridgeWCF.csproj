@@ -65,6 +65,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crypto.cs" />
     <Compile Include="IMaster_Service.cs" />
     <Compile Include="Library\Master_Library.cs" />
     <Compile Include="Master_Service.svc.cs">

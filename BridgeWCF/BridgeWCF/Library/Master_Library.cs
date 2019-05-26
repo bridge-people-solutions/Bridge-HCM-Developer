@@ -7,63 +7,51 @@ namespace BridgeWCF.Library
 {
     public class login_authentication
     {
-        public int user_id { get; set; }
-        public string user_code { get; set; }
+        public int employee_id { get; set; }
+        public string employee_code { get; set; }
         public string username { get; set; }
         public string userhash { get; set; }
+        public int salutation_id { get; set; }
         public string first_name { get; set; }
         public string middle_name { get; set; }
         public string last_name { get; set; }
         public string full_name { get; set; }
         public string display_name { get; set; }
         public string nick_name { get; set; }
-        public string email_address { get; set; }
-        public string birthday { get; set; }
+        public int religion_id { get; set; }
+        public int gender_id { get; set; }
+        public int nationality_id { get; set; }
         public string birth_place { get; set; }
+        public string birthday { get; set; }
+        public int civil_status_id { get; set; }
         public string height { get; set; }
         public string weight { get; set; }
-        public string phone_home { get; set; }
-        public string phone_work { get; set; }
+        public string blood_type { get; set; }
         public string phone_mobile { get; set; }
+        public string phone_telephone { get; set; }
+        public string phone_office { get; set; }
         public string phone_fax { get; set; }
-        public string phone_other { get; set; }
-        public string address_street { get; set; }
-        public string address_city { get; set; }
-        public string address_state { get; set; }
-        public string address_country { get; set; }
-        public string address_zipcode { get; set; }
-        public string perm_street { get; set; }
-        public string perm_city { get; set; }
-        public string perm_state { get; set; }
-        public string perm_country { get; set; }
-        public string perm_zipcode { get; set; }
+        public string email_address { get; set; }
+        public string present_address { get; set; }
+        public string permanent_address { get; set; }
         public string image_path { get; set; }
         public int question1 { get; set; }
         public string answer1 { get; set; }
         public int question2 { get; set; }
         public string answer2 { get; set; }
-        public string website { get; set; }
-        public string facebook { get; set; }
-        public string twitter { get; set; }
-        public string instagram { get; set; }
-        public string linkedin { get; set; }
-        public string skype { get; set; }
-        public string tumblr { get; set; }
-        public int salutation_id { get; set; }
-        public int gender_id { get; set; }
-        public int civil_status_id { get; set; }
-        public int nationality_id { get; set; }
-        public int religion_id { get; set; }
-        public int user_group_id { get; set; }
+        public string bp_status { get; set; }
+        public bool approved { get; set; }
+        public bool active { get; set; }
+        public int approval_group_id { get; set; }
         public int access_level_id { get; set; }
-        public int warehouse_id { get; set; }
-        public int company_id { get; set; }
-        public int active { get; set; }
+        public int immediate_supervisor_id { get; set; }
         public int created_by { get; set; }
         public string date_created { get; set; }
-        public int approved { get; set; }
-        public string bp_status { get; set; }
         public string enc_key { get; set; }
+        public int warehouse_id { get; set; }
+        public int company_id { get; set; }
+        public bool fix { get; set; }
+
     }
 
     public class menu_view_restriction_lib
@@ -77,6 +65,8 @@ namespace BridgeWCF.Library
         public int warehouse_id { get; set; }
         public int company_id { get; set; }
         public string action { get; set; }
+        public string action_new { get; set; }
+        public string action_view { get; set; }
         public string controller { get; set; }
         public string url { get; set; }
         public int seqn { get; set; }
@@ -169,60 +159,92 @@ namespace BridgeWCF.Library
         public string employee_code { get; set; }
         public string username { get; set; }
         public string userhash { get; set; }
+        public int salutation_id { get; set; }
+        public string salutation { get; set; }
         public string first_name { get; set; }
         public string middle_name { get; set; }
         public string last_name { get; set; }
         public string full_name { get; set; }
         public string display_name { get; set; }
         public string nick_name { get; set; }
-        public string email_address { get; set; }
-        public string birthday { get; set; }
+        public int religion_id { get; set; }
+        public string religion { get; set; }
+        public int gender_id { get; set; }
+        public string gender { get; set; }
+        public int nationality_id { get; set; }
+        public string nationality { get; set; }
         public string birth_place { get; set; }
+        public string birthday { get; set; }
+        public int civil_status_id { get; set; }
+        public string civil_status { get; set; }
         public string height { get; set; }
         public string weight { get; set; }
-        public string phone_home { get; set; }
-        public string phone_work { get; set; }
+        public string blood_type { get; set; }
         public string phone_mobile { get; set; }
+        public string phone_telephone { get; set; }
+        public string phone_office { get; set; }
         public string phone_fax { get; set; }
-        public string phone_other { get; set; }
-        public string address_street { get; set; }
-        public string address_city { get; set; }
-        public string address_state { get; set; }
-        public string address_country { get; set; }
-        public string address_zipcode { get; set; }
-        public string perm_street { get; set; }
-        public string perm_city { get; set; }
-        public string perm_state { get; set; }
-        public string perm_country { get; set; }
-        public string perm_zipcode { get; set; }
+        public string email_address { get; set; }
+        public string present_address { get; set; }
+        public string permanent_address { get; set; }
         public string image_path { get; set; }
         public int question1 { get; set; }
         public string answer1 { get; set; }
         public int question2 { get; set; }
         public string answer2 { get; set; }
-        public string website { get; set; }
-        public string facebook { get; set; }
-        public string twitter { get; set; }
-        public string instagram { get; set; }
-        public string linkedin { get; set; }
-        public string skype { get; set; }
-        public string tumblr { get; set; }
-        public int salutation_id { get; set; }
-        public int gender_id { get; set; }
-        public int civil_status_id { get; set; }
-        public int nationality_id { get; set; }
-        public int religion_id { get; set; }
-        public int user_group_id { get; set; }
-        public int warehouse_id { get; set; }
-        public int company_id { get; set; }
-        public bool active { get; set; }
-        public int created_by { get; set; }
-        public string date_created { get; set; }
-        public bool approved { get; set; }
         public string bp_status { get; set; }
-        public string enc_key { get; set; }
-        public bool fix { get; set; }
+        public bool approved { get; set; }
+        public bool active { get; set; }
+        public int approval_group_id { get; set; }
+        public string approval_group { get; set; }
         public int access_level_id { get; set; }
+        public string access_level { get; set; }
+        public int immediate_supervisor_id { get; set; }
+        public string immediate_supervisor { get; set; }
+        public int created_by_id { get; set; }
+        public string created_by { get; set; }
+        public string date_created { get; set; }
+        public string enc_key { get; set; }
+        public int company_id { get; set; }
+        public string company_name { get; set; }
+        public bool fix { get; set; }
+
+        public int payroll_type { get; set; }
+        public string payroll_type_desc { get; set; }
+        public string biometrics_id { get; set; }
+        public string bank { get; set; }
+        public string bankaccount { get; set; }
+        public decimal basic_rate { get; set; }
+        public decimal daily_rate { get; set; }
+        public decimal hourly_rate { get; set; }
+        public decimal semi_monthly_rate { get; set; }
+        public int employee_status_id { get; set; }
+        public string employee_status { get; set; }
+        public int occupation_id { get; set; }
+        public string occupation { get; set; }
+        public int department_id { get; set; }
+        public string department { get; set; }
+        public string sss { get; set; }
+        public string pagibig { get; set; }
+        public string philhealth { get; set; }
+        public string tin { get; set; }
+        public string nbi { get; set; }
+        public string gsis { get; set; }
+        public string date_hired { get; set; }
+        public int division_id { get; set; }
+        public string division { get; set; }
+        public int section_id { get; set; }
+        public string section { get; set; }
+        public int confidentiality_id { get; set; }
+        public string confidentiality { get; set; }
+        public int supervisor { get; set; }
+        public string supervisor_desc { get; set; }
+        public int warehouse { get; set; }
+        public string warehouse_desc { get; set; }
+        public bool is_fixed_salary { get; set; }
+        public bool is_tardiness_deduction { get; set; }
+        public bool is_without_ot { get; set; }
+        public string button { get; set; }
     }
 
     public class approval_process_in_lib
@@ -258,5 +280,166 @@ namespace BridgeWCF.Library
       public bool active { get; set; }
       public bool approved { get; set; }
       public string bp_status { get; set; }
+    }
+
+    public class payroll_type_view_lib
+    {
+        public int payroll_type_id { get; set; }
+        public string description { get; set; }
+        public bool is_per_cut_off { get; set; }
+        public bool is_per_month { get; set; }
+        public bool is_per_day { get; set; }
+        public bool is_per_hr { get; set; }
+        public int cutoff_from { get; set; }
+        public int cutoff_to { get; set; }
+        public string date_created { get; set; }
+    }
+
+    public class employee_in_lib
+    {
+        public int employee_id { get; set; }
+        public string username { get; set; }
+        public string userhash { get; set; }
+        public int salutation_id { get; set; }
+        public string first_name { get; set; }
+        public string middle_name { get; set; }
+        public string last_name { get; set; }
+        public string display_name { get; set; }
+        public string nick_name { get; set; }
+        public int religion_id { get; set; }
+        public int gender_id { get; set; }
+        public int nationality_id { get; set; }
+        public string birth_place { get; set; }
+        public string birthday { get; set; }
+        public int civil_status_id { get; set; }
+        public string height { get; set; }
+        public string weight { get; set; }
+        public string blood_type { get; set; }
+        public string phone_mobile { get; set; }
+        public string phone_telephone { get; set; }
+        public string phone_office { get; set; }
+        public string phone_fax { get; set; }
+        public string email_address { get; set; }
+        public string present_address { get; set; }
+        public string permanent_address { get; set; }
+        public string image_path { get; set; }
+        public int question1 { get; set; }
+        public string answer1 { get; set; }
+        public int question2 { get; set; }
+        public string answer2 { get; set; }
+        public bool active { get; set; }
+        public int approval_group_id { get; set; }
+        public int access_level_id { get; set; }
+        public int immediate_supervisor_id { get; set; }
+        public int created_by { get; set; }
+        public string date_created { get; set; }
+        public int company_id { get; set; }
+        public bool fix { get; set; }
+    }
+
+    public class employee_information_in_lib
+    {
+        public int employee_id { get; set; }
+        public int payroll_type { get; set; }
+        public string payroll_type_desc { get; set; }
+        public string biometrics_id { get; set; }
+        public string bank { get; set; }
+        public string bankaccount { get; set; }
+        public decimal basic_rate { get; set; }
+        public decimal daily_rate { get; set; }
+        public decimal hourly_rate { get; set; }
+        public decimal semi_monthly_rate { get; set; }
+        public int employee_status_id { get; set; }
+        public string employee_status { get; set; }
+        public int occupation_id { get; set; }
+        public string occupation { get; set; }
+        public int department_id { get; set; }
+        public string department { get; set; }
+        public string sss { get; set; }
+        public string pagibig { get; set; }
+        public string philhealth { get; set; }
+        public string tin { get; set; }
+        public string nbi { get; set; }
+        public string gsis { get; set; }
+        public string date_hired { get; set; }
+        public int division_id { get; set; }
+        public string division { get; set; }
+        public int section_id { get; set; }
+        public string section { get; set; }
+        public int confidentiality { get; set; }
+        public string confidentiality_desc { get; set; }
+        public int supervisor { get; set; }
+        public string supervisor_desc { get; set; }
+        public int warehouse { get; set; }
+        public string warehouse_desc { get; set; }
+        public bool is_fixed_salary { get; set; }
+        public bool is_tardiness_deduction { get; set; }
+        public bool is_without_ot { get; set; }
+    }
+
+    public class employee_relative_in_lib
+    {
+        public int employee_id { get; set; }
+        public string name { get; set; }
+        public int relationship_id { get; set; }
+        public string relationship { get; set; }
+        public string birthday { get; set; }
+        public int gender_id { get; set; }
+        public string gender { get; set; }
+        public string occupation { get; set; }
+        public string company { get; set; }
+    }
+
+    public class employee_emergency_in_lib
+    {
+        public int employee_id { get; set; }
+        public string name { get; set; }
+        public int relationship_id { get; set; }
+        public string relationship { get; set; }
+        public string address { get; set; }
+        public string contact_number { get; set; }
+    }
+
+    public class employee_employment_in_lib
+    {
+        public int employee_id { get; set; }
+        public string company { get; set; }
+        public string position { get; set; }
+        public decimal salary { get; set; }
+        public string date_from { get; set; }
+        public string date_to { get; set; }
+        public string reason { get; set; }
+    }
+
+    public class employee_education_in_lib
+    {
+        public int employee_id { get; set; }
+        public string name { get; set; }
+        public int type_id { get; set; }
+        public string type { get; set; }
+        public string date_from { get; set; }
+        public string date_to { get; set; }
+        public string awards { get; set; }
+    }
+
+    public class employee_degree_in_lib
+    {
+        public int employee_id { get; set; }
+        public string name { get; set; }
+        public string course { get; set; }
+        public string major { get; set; }
+    }
+
+    public class series_view_lib
+    {
+        public int series_id { get; set; }
+        public int module_id { get; set; }
+        public string module_name { get; set; }
+        public string prefix { get; set; }
+        public int series_num { get; set; }
+        public int company_id { get; set; }
+        public bool active { get; set; }
+        public int year { get; set; }
+        public string series_code { get; set; }
     }
 }

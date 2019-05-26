@@ -1,6 +1,13 @@
 ﻿var app = angular.module('myApp', ['ngRoute', 'ngSanitize']);
 
 app.controller('myCtrl', function ($scope, warehouseService) {
+    $(".theme-loader").animate({
+        opacity: "0"
+    }, 1000);
+    setTimeout(function () {
+        $(".theme-loader").remove();
+    }, 1000);
+
     $scope.swtActive = true;
     $scope.setFile = function (element) {
         $scope.currentFile = element.files[0];
@@ -13,7 +20,6 @@ app.controller('myCtrl', function ($scope, warehouseService) {
             }
             reader.readAsDataURL(element.files[0]);
         }
-
     }
 
     $scope.submit = function () {
@@ -51,8 +57,12 @@ app.controller('myCtrl', function ($scope, warehouseService) {
 
     function validation() {
         var ret = true;
+        if ($scope.currentFile == undefined) {
+            toastr.warning("Please upload picture.", "Warning");
+            ret = false;
+        }
         if ($scope.name === undefined || $scope.name === "") {
-            $scope.isName = "form-control-warning";
+            $scope.isName = "text-warning";
             toastr.warning("Please input name.", "Warning");
             ret = false;
         }
@@ -60,7 +70,7 @@ app.controller('myCtrl', function ($scope, warehouseService) {
             $scope.isName = "";
         }
         if ($scope.description === undefined || $scope.description === "") {
-            $scope.isDescription = "form-control-warning";
+            $scope.isDescription = "text-warning";
             toastr.warning("Please input description.", "Warning");
             ret = false;
         }
@@ -68,7 +78,7 @@ app.controller('myCtrl', function ($scope, warehouseService) {
             $scope.isDescription = "";
         }
         if ($scope.tin === undefined || $scope.tin === "") {
-            $scope.isTin = "form-control-warning";
+            $scope.isTin = "text-warning";
             toastr.warning("Please input tin.", "Warning");
             ret = false;
         }
@@ -76,7 +86,7 @@ app.controller('myCtrl', function ($scope, warehouseService) {
             $scope.isTin = "";
         }
         if ($scope.phone === undefined || $scope.phone === "") {
-            $scope.isPhone = "form-control-warning";
+            $scope.isPhone = "text-warning";
             toastr.warning("Please input phone.", "Warning");
             ret = false;
         }
@@ -84,7 +94,7 @@ app.controller('myCtrl', function ($scope, warehouseService) {
             $scope.isPhone = "";
         }
         if ($scope.fax === undefined || $scope.fax === "") {
-            $scope.isFax = "form-control-warning";
+            $scope.isFax = "text-warning";
             toastr.warning("Please input fax.", "Warning");
             ret = false;
         }
@@ -92,7 +102,7 @@ app.controller('myCtrl', function ($scope, warehouseService) {
             $scope.isFax = "";
         }
         if ($scope.email === undefined || $scope.email === "") {
-            $scope.isEmail = "form-control-warning";
+            $scope.isEmail = "text-warning";
             toastr.warning("Please input email.", "Warning");
             ret = false;
         }
@@ -100,7 +110,7 @@ app.controller('myCtrl', function ($scope, warehouseService) {
             $scope.isEmail = "";
         }
         if ($scope.address === undefined || $scope.address === "") {
-            $scope.isAddress = "form-control-warning";
+            $scope.isAddress = "text-warning";
             toastr.warning("Please input address.", "Warning");
             ret = false;
         }

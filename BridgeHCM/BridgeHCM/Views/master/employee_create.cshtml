@@ -1,0 +1,862 @@
+﻿@{
+    ViewData["Title"] = "Employee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row" ng-app="myApp" ng-controller="myCtrl">
+    <div class="col-md-2">
+        <div class="card">
+            <div class="card-block">
+                <ul class="nav nav-tabs md-tabs tabs-left b-none" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#personal" role="tab">Personal Info</a>
+                        <div class="slide"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#contact" role="tab">Contact & Address</a>
+                        <div class="slide"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#career" role="tab">Career & Education</a>
+                        <div class="slide"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#payroll" role="tab">Payroll Info</a>
+                        <div class="slide"></div>
+                    </li>
+                </ul>
+            </div>
+            <form class="form-material" method="post" id="system_access_form" asp-antiforgery="true">                
+                <div class="card-footer">
+                    <div class="row">
+                        @Html.Raw(ViewBag.BotMenu)
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="tab-content">
+            <div class="tab-pane active" id="personal" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Personal Information</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="control-label" ng-class="isUpload">Upload Picture</label>
+                                <div class="form-group form-group-sm">
+                                    <input type="file" ng-model="filename" id="trigger" ngf-max-size='10' class="form-control" onchange="angular.element(this).scope().setFile(this)" accept="image/*">
+                                    <input type="hidden" ng-model="oldFilename" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isSelectedSalutation">Salutation</label>
+                                    <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedSalutation" ng-options="x.setting_id_ds as x.description for x in ddSalutation">
+                                        <option value="" selected="selected">Select Salutation</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isDisplayName">Display Name</label>
+                                    <input type="text" class="form-control" ng-model="displayName" />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isNickName">Nick Name</label>
+                                    <input type="text" class="form-control" ng-model="nickName" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isFirstName">First Name</label>
+                                    <input type="text" class="form-control" ng-model="firstName" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isMiddleName">Middle Name</label>
+                                    <input type="text" class="form-control" ng-model="middleName" />
+                                </div>
+                            </div>  <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isLastName">Last Name</label>
+                                    <input type="text" class="form-control" ng-model="lastName" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isSelectedReligion">Religion</label>
+                                    <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedReligion" ng-options="x.setting_id_ds as x.description for x in ddReligion">
+                                        <option value="" selected="selected">Select Religion</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isSelectedGender">Gender</label>
+                                    <select name="singleSelect" class="form-control dropdowntype select" ng-model="selectedGender" ng-options="x.setting_id_ds as x.description for x in ddGender">
+                                        <option value="" selected="selected">Select Gender</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isSelectedNationality">Nationality</label>
+                                    <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedNationality" ng-options="x.setting_id_ds as x.description for x in ddNationality">
+                                        <option value="" selected="selected">Select Nationality</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isBirthPlace">Birthplace</label>
+                                    <input type="text" class="form-control" ng-model="birthPlace" />
+                                </div>
+                            </div>  <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isBirthDay">Birthday</label>
+                                    <input type="date" class="form-control" ng-model="birthDay" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isSelectedCivilStatus">Civil Status</label>
+                                    <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedCivilStatus" ng-options="x.setting_id_ds as x.description for x in ddCivilStatus">
+                                        <option value="" selected="selected">Select Civil Status</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isHeight">Height</label>
+                                    <input type="text" class="form-control" ng-model="height" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isWeight">Weight</label>
+                                    <input type="text" class="form-control" ng-model="weight" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isBloodType">Blood Type</label>
+                                    <input type="text" class="form-control" ng-model="bloodType" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Relatives Information</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="table-responsive dt-responsive">
+                            <table style="width:100%;" class="table nowrap table-list">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Relationship</th>
+                                        <th>Birthday</th>
+                                        <th>Sex</th>
+                                        <th>Occupation</th>
+                                        <th>Company</th>
+                                        <th><button type="button" class="btn btn-mini pull-right waves-effect waves-light btn-primary" data-toggle="modal" data-target="#relationshipModal"><i class="fa fa-plus"></i></button></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in relative_list">
+                                        <td>{{x.name}}</td>
+                                        <td>{{x.relationship}}</td>
+                                        <td>{{x.birthday}}</td>
+                                        <td>{{x.gender}}</td>
+                                        <td>{{x.occupation}}</td>
+                                        <td>{{x.company}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-mini pull-right waves-effect waves-light btn-danger" ng-click="removeRelatives($index)"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="modal fade" id="relationshipModal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Relatives</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isRelativeName">Name</label>
+                                                        <input type="text" class="form-control" ng-model="relativeName" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isRelativeRelationship">Relationship</label>
+                                                        <select name="singleSelect" class="form-control modalSelect select" ng-model="selectedRelativeRelationship" ng-options="x as x.description for x in ddRelationship">
+                                                            <option value="" selected="selected">Select Relationship</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isRelativeBirthday">Birthday</label>
+                                                        <input type="date" class="form-control modal-date" ng-model="relativeBirthday" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isRelativeGender">Gender</label>
+                                                        <select name="singleSelect" class="form-control modalSelect select" ng-model="selectedRelativeGender" ng-options="x as x.description for x in ddGender">
+                                                            <option value="" selected="selected">Select Gender</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isRelativeOccupation">Occupation</label>
+                                                        <input type="text" class="form-control" ng-model="relativeOccupation" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isRelativeCompany">Company</label>
+                                                        <input type="text" class="form-control" ng-model="relativeCompany" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm btn-default waves-effect" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-sm btn-primary waves-effect waves-light" ng-click="addRelatives()">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="contact" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Contact & Address Information</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isMobileNumber">Mobile Number</label>
+                                    <input type="text" class="form-control" ng-model="mobileNumber" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isPhoneNumber">Phone Number</label>
+                                    <input type="text" class="form-control" ng-model="phoneNumber" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isOfficeNumber">Office Number</label>
+                                    <input type="text" class="form-control" ng-model="officeNumber" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isFaxNumber">Fax Number</label>
+                                    <input type="text" class="form-control" ng-model="faxNumber" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isEmail">Email</label>
+                                    <input type="text" class="form-control" ng-model="email" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isPresentAddress">Present Address</label>
+                                    <textarea class="form-control" ng-model="presentAddress"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isPermanentAddress">Permanent Address</label>
+                                    <textarea class="form-control" ng-model="permanentAddress"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Incase of Emergency</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="table-responsive dt-responsive">
+                            <table style="width:100%;" class="table nowrap table-list">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Relationship</th>
+                                        <th>Address</th>
+                                        <th>Contact Number</th>
+                                        <th><button type="button" class="btn btn-mini pull-right waves-effect waves-light btn-primary" data-toggle="modal" data-target="#emergency"><i class="fa fa-plus"></i></button></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in emergency_list">
+                                        <td>{{x.name}}</td>
+                                        <td>{{x.relationship}}</td>
+                                        <td>{{x.address}}</td>
+                                        <td>{{x.contact_number}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-mini pull-right waves-effect waves-light btn-danger" ng-click="removeEmergency($index)"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="modal fade" id="emergency" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Incase of Emergency</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEmergencyName">Name</label>
+                                                        <input type="text" class="form-control" ng-model="emergencyName" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEmergencyRelationship">Relationship</label>
+                                                        <select name="singleSelect" class="form-control modalSelect select" ng-model="selectedEmergencyRelationship" ng-options="x as x.description for x in ddRelationship">
+                                                            <option value="" selected="selected">Select Relationship</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEmergencyAddress">Address</label>
+                                                        <input type="text" class="form-control" ng-model="emergencyAddress" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEmergencyContact">Contact Number</label>
+                                                        <input type="text" class="form-control" ng-model="emergencyContact" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm btn-default waves-effect" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-sm btn-primary waves-effect waves-light" ng-click="addEmergency()">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="career" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Employment History</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="table-responsive dt-responsive">
+                            <table style="width:100%;" class="table nowrap table-list">
+                                <thead>
+                                    <tr>
+                                        <th>Company</th>
+                                        <th>Position</th>
+                                        <th>Salary</th>
+                                        <th>From</th>
+                                        <th>To</th>
+                                        <th>Reason For Leaving</th>
+                                        <th><button type="button" class="btn btn-mini pull-right waves-effect waves-light btn-primary" data-toggle="modal" data-target="#employmentModal"><i class="fa fa-plus"></i></button></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in employment_list">
+                                        <td>{{x.company}}</td>
+                                        <td>{{x.position}}</td>
+                                        <td>{{x.salary}}</td>
+                                        <td>{{x.date_from}}</td>
+                                        <td>{{x.date_to}}</td>
+                                        <td>{{x.reason}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-mini pull-right waves-effect waves-light btn-danger" ng-click="removeEmployment($index)"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="modal fade" id="employmentModal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Employment History</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEmploymentCompany">Company</label>
+                                                        <input type="text" class="form-control" ng-model="employmentCompany" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEmploymentPosition">Position</label>
+                                                        <input type="text" class="form-control" ng-model="employmentPosition" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEmploymentSalary">Salary</label>
+                                                        <input type="number" class="form-control" ng-model="employmentSalary" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEmploymentFrom">From</label>
+                                                        <input type="date" class="form-control modal-date" ng-model="employmentFrom" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEmploymentTo">To</label>
+                                                        <input type="date" class="form-control modal-date" ng-model="employmentTo" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEmploymentReason">Reason For Leaving</label>
+                                                        <textarea class="form-control" ng-model="employmentReason"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm btn-default waves-effect" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-sm btn-primary waves-effect waves-light " ng-click="addEmployment()">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Educational Attainment</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="table-responsive dt-responsive">
+                            <table style="width:100%;" class="table nowrap table-list">
+                                <thead>
+                                    <tr>
+                                        <th>School (Name/Town/Province)</th>
+                                        <th>Type</th>
+                                        <th>From</th>
+                                        <th>To</th>
+                                        <th>Honors/Awards/Citations</th>
+                                        <th><button type="button" class="btn btn-mini pull-right waves-effect waves-light btn-primary" data-toggle="modal" data-target="#educationModal"><i class="fa fa-plus"></i></button></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in education_list">
+                                        <td>{{x.name}}</td>
+                                        <td>{{x.type}}</td>
+                                        <td>{{x.date_from}}</td>
+                                        <td>{{x.date_to}}</td>
+                                        <td>{{x.awards}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-mini pull-right waves-effect waves-light btn-danger" ng-click="removeEducation($index)"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="modal fade" id="educationModal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Educational Attainment</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEducationName">School (Name/Town/Province)</label>
+                                                        <input type="text" class="form-control" ng-model="educationName" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isSelectedEducationType">Type</label>
+                                                        <select name="singleSelect" class="form-control modalSelect select" ng-model="selectedEducationType" ng-options="x as x.description for x in ddEducation">
+                                                            <option value="" selected="selected">Select Type</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEducationFrom">From</label>
+                                                        <input type="date" class="form-control modal-date" ng-model="educationFrom" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEducationTo">To</label>
+                                                        <input type="date" class="form-control modal-date" ng-model="educationTo" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isEducationHonor">Honors/Awards/Citations</label>
+                                                        <input type="text" class="form-control" ng-model="educationHonor" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm btn-default waves-effect" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-sm btn-primary waves-effect waves-light" ng-click="addEducation()">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">College Degree Earned</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="table-responsive dt-responsive">
+                            <table style="width:100%;" class="table nowrap table-list">
+                                <thead>
+                                    <tr>
+                                        <th>School (Name/Town/Province)</th>
+                                        <th>Course</th>
+                                        <th>Major In</th>
+                                        <th><button type="button" class="btn btn-mini pull-right waves-effect waves-light btn-primary" data-toggle="modal" data-target="#collegedegreeModal"><i class="fa fa-plus"></i></button></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in college_list">
+                                        <td>{{x.name}}</td>
+                                        <td>{{x.course}}</td>
+                                        <td>{{x.major}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-mini pull-right waves-effect waves-light btn-danger" ng-click="removeCollege($index)"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="modal fade" id="collegedegreeModal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">College Degree</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isCollegeName">School (Name/Town/Province)</label>
+                                                        <input type="text" class="form-control" ng-model="collegeName" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isCollegeCourse">Course</label>
+                                                        <input type="text" class="form-control" ng-model="collegeCourse" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group form-group-sm">
+                                                        <label class="control-label" ng-class="isCollegeMajor">Major In</label>
+                                                        <input type="text" class="form-control" ng-model="collegeMajor" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm btn-default waves-effect" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-sm btn-primary waves-effect waves-light" ng-click="addCollege()">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="payroll" role="tabpanel">
+                <div class="card">
+                    <div class="card-header"></div>
+                    <div class="card-block">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label" ng-class="isSelectedPayrollType">Payroll Type</label>
+                                <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedPayrollType" ng-options="x.payroll_type_id as x.description for x in ddPayrollType">
+                                    <option value="" selected="selected">Payroll Type</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isBiometricsID">Biometrics Id</label>
+                                    <input type="text" class="form-control" ng-model="biometricsID" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isEmployeeCode">Employee Code</label>
+                                    <input type="text" class="form-control" readonly ng-model="employeeCode" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label" ng-class="isBasicSalary">Basic Salary</label>
+                                <input type="number" class="form-control" ng-model="basicSalary" />
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isSelectedEmployeeStatus">Employee Status</label>
+                                    <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedEmployeeStatus" ng-options="x.setting_id_ds as x.description for x in ddStatus">
+                                        <option value="" selected="selected">Select Employee Status</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isSelectedOccupation">Occupation</label>
+                                    <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedOccupation" ng-options="x.setting_id_ds as x.description for x in ddOccupation">
+                                        <option value="" selected="selected">Select Occupation</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label" ng-class="isBank">Bank</label>
+                                <input type="text" class="form-control" ng-model="bank" />
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isBankAccount">Bank Account</label>
+                                    <input type="text" class="form-control" ng-model="bankAccount" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isSelectedDepartment">Department</label>
+                                    <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedDepartment" ng-options="x.setting_id_ds as x.description for x in ddDepartment">
+                                        <option value="" selected="selected">Select Department</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label" ng-class="isSss">SSS #</label>
+                                <input type="text" class="form-control" ng-model="sss" />
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isPagibig">Pag-ibig #</label>
+                                    <input type="text" class="form-control" ng-model="pagibig" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isPhilhealth">Phil Health #</label>
+                                    <input type="text" class="form-control" ng-model="philhealth" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label" ng-class="isTin">TIN #</label>
+                                <input type="text" class="form-control" ng-model="tin" />
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isNbi">NBI #</label>
+                                    <input type="text" class="form-control" ng-model="nbi" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isGsis">GSIS #</label>
+                                    <input type="text" class="form-control" ng-model="gsis" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isDateHired">Date Hired</label>
+                                    <input type="date" class="form-control" ng-model="dateHired" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="control-label" ng-class="isSelectedDivision">Division</label>
+                                <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedDivision" ng-options="x.setting_id_ds as x.description for x in ddDivision">
+                                    <option value="" selected="selected">Select Division</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="control-label" ng-class="isSelectedSection">Section</label>
+                                <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedSection" ng-options="x.setting_id_ds as x.description for x in ddSection">
+                                    <option value="" selected="selected">Select Section</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isSelectedConfidentiality">Confidentiality</label>
+                                    <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedConfidentiality" ng-options="x.setting_id_ds as x.description for x in ddConfidentiality">
+                                        <option value="" selected="selected">Select Confidentiality</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="control-label" ng-class="isSelectedEmployee">Immediate Superior</label>
+                                <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedEmployee" ng-options="x.employee_id as x.display_name for x in ddEmployee">
+                                    <option value="" selected="selected">Select Supervisor</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="control-label" ng-class="isSelectedWarehouse">Warehouse</label>
+                                <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedWarehouse" ng-options="x.warehouse_id as x.name for x in ddWarehouse">
+                                    <option value="" selected="selected">Select Warehouse</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label" ng-class="isSelectedApprovalGroup">Approval Group</label>
+                                    <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedApprovalGroup" ng-options="x.setting_id_ds as x.description for x in ddApprovalGroup">
+                                        <option value="" selected="selected">Select Approval Group</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="control-label" ng-class="isSelectedAccessLevel">Access Level</label>
+                                <select name="singleSelect" class="form-control dropdownlevel select" ng-model="selectedAccessLevel" ng-options="x.setting_id_ds as x.description for x in ddAccessLevel">
+                                    <option value="" selected="selected">Select Access Level</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label">Fixed Salary</label>
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" ng-model="fixSalary" id="swt-salary">
+                                        <label class="onoffswitch-label" for="swt-salary">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label">Tardiness Deduction?</label>
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" ng-model="tardinessDeduction" id="swt-deduction">
+                                        <label class="onoffswitch-label" for="swt-deduction">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group form-group-sm">
+                                    <label class="control-label">Without OT?</label>
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" ng-model="withoutOT" id="swt-ot">
+                                        <label class="onoffswitch-label" for="swt-ot">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/scripts/master/employee_create.js"></script>
+    <script src="~/scripts/master_service.js"></script>
+}

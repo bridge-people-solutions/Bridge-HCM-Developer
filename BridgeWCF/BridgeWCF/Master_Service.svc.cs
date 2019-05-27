@@ -41,50 +41,63 @@ namespace BridgeWCF
                 SqlDataReader sdr = oCmd.ExecuteReader();
                 while (sdr.Read())
                 {
-                    ret.employee_id = Convert.ToInt32(sdr["employee_id"].ToString());
-                    ret.employee_code = sdr["employee_code"].ToString();
+                    ret.user_id = Convert.ToInt32(sdr["user_id"].ToString());
+                    ret.user_code = sdr["user_code"].ToString();
                     ret.username = sdr["username"].ToString();
                     ret.userhash = sdr["userhash"].ToString();
-                    ret.salutation_id = Convert.ToInt32(sdr["salutation_id"].ToString());
                     ret.first_name = sdr["first_name"].ToString();
                     ret.middle_name = sdr["middle_name"].ToString();
                     ret.last_name = sdr["last_name"].ToString();
                     ret.full_name = sdr["full_name"].ToString();
                     ret.display_name = sdr["display_name"].ToString();
                     ret.nick_name = sdr["nick_name"].ToString();
-                    ret.religion_id = Convert.ToInt32(sdr["religion_id"].ToString());
-                    ret.gender_id = Convert.ToInt32(sdr["gender_id"].ToString());
-                    ret.nationality_id = Convert.ToInt32(sdr["nationality_id"].ToString());
-                    ret.birth_place = sdr["birth_place"].ToString();
+                    ret.email_address = sdr["email_address"].ToString();
                     ret.birthday = sdr["birthday"].ToString();
-                    ret.civil_status_id = Convert.ToInt32(sdr["civil_status_id"].ToString());
+                    ret.birth_place = sdr["birth_place"].ToString();
                     ret.height = sdr["height"].ToString();
                     ret.weight = sdr["weight"].ToString();
-                    ret.blood_type = sdr["blood_type"].ToString();
+                    ret.phone_home = sdr["phone_home"].ToString();
+                    ret.phone_work = sdr["phone_work"].ToString();
                     ret.phone_mobile = sdr["phone_mobile"].ToString();
-                    ret.phone_telephone = sdr["phone_telephone"].ToString();
-                    ret.phone_office = sdr["phone_office"].ToString();
                     ret.phone_fax = sdr["phone_fax"].ToString();
-                    ret.email_address = sdr["email_address"].ToString();
-                    ret.present_address = sdr["present_address"].ToString();
-                    ret.permanent_address = sdr["permanent_address"].ToString();
+                    ret.phone_other = sdr["phone_other"].ToString();
+                    ret.address_street = sdr["address_street"].ToString();
+                    ret.address_city = sdr["address_city"].ToString();
+                    ret.address_state = sdr["address_state"].ToString();
+                    ret.address_country = sdr["address_country"].ToString();
+                    ret.address_zipcode = sdr["address_zipcode"].ToString();
+                    ret.perm_street = sdr["perm_street"].ToString();
+                    ret.perm_city = sdr["perm_city"].ToString();
+                    ret.perm_state = sdr["perm_state"].ToString();
+                    ret.perm_country = sdr["perm_country"].ToString();
+                    ret.perm_zipcode = sdr["perm_zipcode"].ToString();
                     ret.image_path = sdr["image_path"].ToString();
                     ret.question1 = Convert.ToInt32(sdr["question1"].ToString());
                     ret.answer1 = sdr["answer1"].ToString();
                     ret.question2 = Convert.ToInt32(sdr["question2"].ToString());
                     ret.answer2 = sdr["answer2"].ToString();
-                    ret.bp_status = sdr["bp_status"].ToString();
-                    ret.approved = Convert.ToBoolean(sdr["approved"].ToString());
-                    ret.active = Convert.ToBoolean(sdr["active"].ToString());
-                    ret.approval_group_id = Convert.ToInt32(sdr["approval_group_id"].ToString());
+                    ret.website = sdr["website"].ToString();
+                    ret.facebook = sdr["facebook"].ToString();
+                    ret.twitter = sdr["twitter"].ToString();
+                    ret.instagram = sdr["instagram"].ToString();
+                    ret.linkedin = sdr["linkedin"].ToString();
+                    ret.skype = sdr["skype"].ToString();
+                    ret.tumblr = sdr["tumblr"].ToString();
+                    ret.salutation_id = Convert.ToInt32(sdr["salutation_id"].ToString());
+                    ret.gender_id = Convert.ToInt32(sdr["gender_id"].ToString());
+                    ret.civil_status_id = Convert.ToInt32(sdr["civil_status_id"].ToString());
+                    ret.nationality_id = Convert.ToInt32(sdr["nationality_id"].ToString());
+                    ret.religion_id = Convert.ToInt32(sdr["religion_id"].ToString());
+                    ret.user_group_id = Convert.ToInt32(sdr["user_group_id"].ToString());
                     ret.access_level_id = Convert.ToInt32(sdr["access_level_id"].ToString());
-                    ret.immediate_supervisor_id = Convert.ToInt32(sdr["immediate_supervisor_id"].ToString());
+                    ret.warehouse_id = Convert.ToInt32(sdr["warehouse_id"].ToString());
+                    ret.company_id = Convert.ToInt32(sdr["company_id"].ToString());
+                    ret.active = Convert.ToInt32(sdr["active"].ToString());
                     ret.created_by = Convert.ToInt32(sdr["created_by"].ToString());
                     ret.date_created = sdr["date_created"].ToString();
+                    ret.approved = Convert.ToInt32(sdr["approved"].ToString());
+                    ret.bp_status = sdr["bp_status"].ToString();
                     ret.enc_key = sdr["enc_key"].ToString();
-                    ret.warehouse_id = Convert.ToInt32(sdr["company_id"].ToString());
-                    ret.company_id = Convert.ToInt32(sdr["company_id"].ToString());
-                    ret.fix = Convert.ToBoolean(sdr["fix"].ToString());
                 }
                 sdr.Close();
                 oConn.Close();
@@ -93,49 +106,6 @@ namespace BridgeWCF
             {
                 Console.WriteLine("Error: " + e.Message);
                 error_log_in("0", "SP = login_users_view_sel | " + e.Message, Convert.ToInt32(ret.company_id), 0);
-            }
-
-            return ret;
-        }
-
-        public series_view_lib series_view(int module_id, int company_id)
-        {
-            series_view_lib ret = new series_view_lib();
-            DataTable dt = new DataTable();
-            try
-            {
-                SqlConnection oConn = new SqlConnection(_master);
-                SqlTransaction oTrans;
-                oConn.Open();
-                oTrans = oConn.BeginTransaction();
-                SqlCommand oCmd = new SqlCommand();
-                oCmd.Connection = oConn;
-                oCmd.Transaction = oTrans;
-                oCmd.CommandText = "series_view";
-                oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.Parameters.Clear();
-                oCmd.Parameters.AddWithValue("@module_id", module_id);
-                oCmd.Parameters.AddWithValue("@company_id", company_id);
-                SqlDataReader sdr = oCmd.ExecuteReader();
-                while (sdr.Read())
-                {
-                    ret.series_id = Convert.ToInt32(sdr["series_id"].ToString());
-                    ret.module_id = Convert.ToInt32(sdr["module_id"].ToString());
-                    ret.module_name = sdr["module_name"].ToString();
-                    ret.prefix = sdr["prefix"].ToString();
-                    ret.series_num = Convert.ToInt32(sdr["series_num"].ToString());
-                    ret.company_id = Convert.ToInt32(sdr["company_id"].ToString());
-                    ret.active = Convert.ToBoolean(sdr["active"].ToString());
-                    ret.year = Convert.ToInt32(sdr["year"].ToString());
-                    ret.series_code = sdr["series_code"].ToString();
-                }
-                sdr.Close();
-                oConn.Close();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = series_view | " + e.Message, Convert.ToInt32(ret.company_id), 0);
             }
 
             return ret;
@@ -170,8 +140,6 @@ namespace BridgeWCF
                            access_level_id = Convert.ToInt32(dr["access_level_id"].ToString()),
                            company_id = Convert.ToInt32(dr["company_id"].ToString()),
                            action = dr["action"].ToString(),
-                           action_new = dr["action_new"].ToString(),
-                           action_view = dr["action_view"].ToString(),
                            controller = dr["controller"].ToString(),
                            url = dr["url"].ToString(),
                            seqn = Convert.ToInt32(dr["seqn"].ToString()),
@@ -328,46 +296,6 @@ namespace BridgeWCF
 
             }
             return ret;
-        }
-
-        public void function_encrypt(int module_id, int id, int company_id, int created_by, SqlCommand oCmd)
-        {
-            try
-            {
-                var enc_key = Crypto.password_encrypt(id.ToString());
-                oCmd.CommandText = "util_encrypt_up";
-                oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.Parameters.Clear();
-                oCmd.Parameters.AddWithValue("@module_id", module_id);
-                oCmd.Parameters.AddWithValue("@id", id);
-                oCmd.Parameters.AddWithValue("@enc_key", enc_key);
-                oCmd.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = util_encrypt_up | " + e.Message, company_id, created_by);
-            }
-        }
-
-        public void function_approval(int module_id, int transaction_id, int approval_group_id, int company_id, int created_by, SqlCommand oCmd)
-        {
-            try
-            {
-                oCmd.CommandText = "util_approval_process_up";
-                oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.Parameters.Clear();
-                oCmd.Parameters.AddWithValue("@module_id", module_id);
-                oCmd.Parameters.AddWithValue("@transaction_id", transaction_id);
-                oCmd.Parameters.AddWithValue("@approval_group_id", approval_group_id);
-                oCmd.Parameters.AddWithValue("@company_id", company_id);
-                oCmd.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = util_approval_process_up | " + e.Message, company_id, created_by);
-            }
         }
         #endregion
 
@@ -538,10 +466,9 @@ namespace BridgeWCF
             return ret;
         }
 
-        public List<util_dropdown_view_lib> util_dropdown_setting_in(util_dropdown_view_lib obj)
+        public int util_dropdown_setting_in(util_dropdown_view_lib obj)
         {
-            List<util_dropdown_view_lib> ret = new List<util_dropdown_view_lib>();
-            DataTable dt = new DataTable();
+            int ret = 1;
             SqlConnection oConn = new SqlConnection(_master);
             SqlTransaction oTrans;
             oConn.Open();
@@ -562,41 +489,10 @@ namespace BridgeWCF
             {
                 oCmd.ExecuteNonQuery();
                 oTrans.Commit();
-
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = oCmd;
-                oCmd.CommandText = "util_dropdown_view";
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                oCmd.Parameters.Clear();
-                oCmd.Parameters.AddWithValue("@setting_id", obj.setting_id_ds);
-                oCmd.Parameters.AddWithValue("@setting_type_id", 0);
-                oCmd.Parameters.AddWithValue("@active", 0);
-                oCmd.Parameters.AddWithValue("@company_id", obj.company_id);
-                da.Fill(dt);
-                ret = (from DataRow dr in dt.Rows
-                       select new util_dropdown_view_lib()
-                       {
-                           setting_id_dms = Convert.ToInt32(dr["setting_id_dms"].ToString()),
-                           setting_id_ds = Convert.ToInt32(dr["setting_id_ds"].ToString()),
-                           setting_type = dr["setting_type"].ToString(),
-                           description = dr["description"].ToString(),
-                           company_id = Convert.ToInt32(dr["company_id"].ToString()),
-                           company_name = dr["company_name"].ToString(),
-                           created_by = Convert.ToInt32(dr["created_by"].ToString()),
-                           display_name = dr["display_name"].ToString(),
-                           date_created_dms = dr["date_created_dms"].ToString(),
-                           date_created_ds = dr["date_created_ds"].ToString(),
-                           active_dms = Convert.ToBoolean(dr["active_dms"].ToString()),
-                           active_ds = Convert.ToBoolean(dr["active_ds"].ToString()),
-                           active_switch_dms = dr["active_switch_dms"].ToString(),
-                           active_switch_ds = dr["active_switch_ds"].ToString()
-
-                       }).ToList();
-
-                
             }
             catch (Exception e)
             {
+                ret = 0;
                 Console.WriteLine("Error: " + e.Message);
                 error_log_in("0", "SP = util_dropdown_setting_in | " + e.Message, obj.company_id, obj.created_by);
                 oTrans.Rollback();
@@ -688,7 +584,7 @@ namespace BridgeWCF
             catch (Exception e)
             {
                 Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = warehouse_in_up | " + e.Message, Convert.ToInt32(obj.company_id), 0);
+                error_log_in("0", "SP = login_users_view_sel | " + e.Message, Convert.ToInt32(ret.company_id), 0);
             }
             finally
             {
@@ -696,7 +592,6 @@ namespace BridgeWCF
             }
             return ret;
         }
-
         #endregion
 
         #region Module Access
@@ -716,8 +611,8 @@ namespace BridgeWCF
                 sqlcomm.Parameters.Clear();
                 sqlcomm.Parameters.AddWithValue("@warehouse_id", warehouse_id);
                 sqlcomm.Parameters.AddWithValue("@company_id", company_id);
-                sqlcomm.Parameters.AddWithValue("@active", is_active);
-                sqlcomm.Parameters.AddWithValue("@approved", is_ap);
+                sqlcomm.Parameters.AddWithValue("@is_active", is_active);
+                sqlcomm.Parameters.AddWithValue("@is_ap", is_ap);
                 da.Fill(dt);
                 ret = (from DataRow dr in dt.Rows
                        select new warehouse_view_lib()
@@ -968,263 +863,6 @@ namespace BridgeWCF
         #endregion
 
         #region Employee
-        public employee_in_lib employee_in_up(employee_in_lib objPersonal, employee_information_in_lib objPayroll, employee_relative_in_lib[] objRelative,
-            employee_emergency_in_lib[] objEmergency, employee_employment_in_lib[] objEmployment, employee_education_in_lib[] objEducation, employee_degree_in_lib[] objDegree, int approval_group_id, bool oldPath)
-        {
-            string sp = "";
-            employee_in_lib ret = new employee_in_lib();
-            SqlConnection oConn = new SqlConnection(_master);
-            SqlTransaction oTrans;
-            oConn.Open();
-            oTrans = oConn.BeginTransaction();
-            SqlCommand oCmd = new SqlCommand();
-            oCmd.Connection = oConn;
-            oCmd.Transaction = oTrans;
-            try
-            {
-                var path = "";
-                if (oldPath)
-                {
-                    path = objPersonal.image_path;
-                }
-                else
-                {
-                    path = "\\Uploaded\\Images\\" + objPersonal.company_id + "\\employee\\" + objPersonal.image_path;
-                }
-                
-
-                sp = "employee_in_up";
-                oCmd.CommandText = "employee_in_up";
-                oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.Parameters.Clear();
-                oCmd.Parameters.AddWithValue("@employee_id", objPersonal.employee_id);
-                oCmd.Parameters.AddWithValue("@salutation_id", objPersonal.salutation_id);
-                oCmd.Parameters.AddWithValue("@first_name", objPersonal.first_name);
-                oCmd.Parameters.AddWithValue("@middle_name", objPersonal.middle_name);
-                oCmd.Parameters.AddWithValue("@last_name", objPersonal.last_name);
-                oCmd.Parameters.AddWithValue("@display_name", objPersonal.display_name);
-                oCmd.Parameters.AddWithValue("@nick_name", objPersonal.nick_name);
-                oCmd.Parameters.AddWithValue("@religion_id", objPersonal.religion_id);
-                oCmd.Parameters.AddWithValue("@gender_id", objPersonal.gender_id);
-                oCmd.Parameters.AddWithValue("@nationality_id", objPersonal.nationality_id);
-                oCmd.Parameters.AddWithValue("@birth_place", objPersonal.birth_place);
-                oCmd.Parameters.AddWithValue("@birthday", Convert.ToDateTime(objPersonal.birthday));
-                oCmd.Parameters.AddWithValue("@civil_status_id", objPersonal.civil_status_id);
-                oCmd.Parameters.AddWithValue("@height", objPersonal.height);
-                oCmd.Parameters.AddWithValue("@weight", objPersonal.weight);
-                oCmd.Parameters.AddWithValue("@blood_type", objPersonal.blood_type);
-                oCmd.Parameters.AddWithValue("@phone_mobile", objPersonal.phone_mobile);
-                oCmd.Parameters.AddWithValue("@phone_telephone", objPersonal.phone_telephone);
-                oCmd.Parameters.AddWithValue("@phone_office", objPersonal.phone_office);
-                oCmd.Parameters.AddWithValue("@phone_fax", objPersonal.phone_fax);
-                oCmd.Parameters.AddWithValue("@email_address", objPersonal.email_address);
-                oCmd.Parameters.AddWithValue("@present_address", objPersonal.present_address);
-                oCmd.Parameters.AddWithValue("@permanent_address", objPersonal.permanent_address);
-                oCmd.Parameters.AddWithValue("@image_path", path);
-                oCmd.Parameters.AddWithValue("@active", objPersonal.active);
-                oCmd.Parameters.AddWithValue("@approval_group_id", objPersonal.approval_group_id);
-                oCmd.Parameters.AddWithValue("@access_level_id", objPersonal.access_level_id);
-                oCmd.Parameters.AddWithValue("@immediate_supervisor_id", objPersonal.immediate_supervisor_id);
-                oCmd.Parameters.AddWithValue("@created_by", objPersonal.created_by);
-                oCmd.Parameters.AddWithValue("@company_id", objPersonal.company_id);
-                oCmd.Parameters.AddWithValue("@fix", 0);
-                SqlDataReader sdr = oCmd.ExecuteReader();
-                while (sdr.Read())
-                {
-                    ret.employee_id = Convert.ToInt32(sdr["employee_id"].ToString());
-                }
-                sdr.Close();
-
-                sp = "employee_details_del";
-                oCmd.CommandText = "employee_details_del";
-                oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.Parameters.Clear();
-                oCmd.Parameters.AddWithValue("@employee_id", ret.employee_id);
-                oCmd.ExecuteNonQuery();
-
-                sp = "employee_information_in";
-                oCmd.CommandText = "employee_information_in";
-                oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.Parameters.Clear();
-                oCmd.Parameters.AddWithValue("@employee_id", ret.employee_id);
-                oCmd.Parameters.AddWithValue("@payroll_type", objPayroll.payroll_type);
-                oCmd.Parameters.AddWithValue("@biometrics_id", objPayroll.biometrics_id);
-                oCmd.Parameters.AddWithValue("@bank", objPayroll.bank);
-                oCmd.Parameters.AddWithValue("@bankaccount", objPayroll.bankaccount);
-                oCmd.Parameters.AddWithValue("@basic_rate", objPayroll.basic_rate);
-                oCmd.Parameters.AddWithValue("@daily_rate", objPayroll.daily_rate);
-                oCmd.Parameters.AddWithValue("@hourly_rate", objPayroll.hourly_rate);
-                oCmd.Parameters.AddWithValue("@semi_monthly_rate", objPayroll.semi_monthly_rate);
-                oCmd.Parameters.AddWithValue("@employee_status_id", objPayroll.employee_status_id);
-                oCmd.Parameters.AddWithValue("@occupation_id", objPayroll.occupation_id);
-                oCmd.Parameters.AddWithValue("@department_id", objPayroll.department_id);
-                oCmd.Parameters.AddWithValue("@sss", objPayroll.sss);
-                oCmd.Parameters.AddWithValue("@pagibig", objPayroll.pagibig);
-                oCmd.Parameters.AddWithValue("@philhealth", objPayroll.philhealth);
-                oCmd.Parameters.AddWithValue("@tin", objPayroll.tin);
-                oCmd.Parameters.AddWithValue("@nbi", objPayroll.nbi);
-                oCmd.Parameters.AddWithValue("@gsis", objPayroll.gsis);
-                oCmd.Parameters.AddWithValue("@date_hired", Convert.ToDateTime(objPayroll.date_hired));
-                oCmd.Parameters.AddWithValue("@division_id", objPayroll.division_id);
-                oCmd.Parameters.AddWithValue("@section_id", objPayroll.section_id);
-                oCmd.Parameters.AddWithValue("@confidentiality", objPayroll.confidentiality);
-                oCmd.Parameters.AddWithValue("@supervisor", objPayroll.supervisor);
-                oCmd.Parameters.AddWithValue("@warehouse", objPayroll.warehouse);
-                oCmd.Parameters.AddWithValue("@is_fixed_salary", objPayroll.is_fixed_salary);
-                oCmd.Parameters.AddWithValue("@is_tardiness_deduction", objPayroll.is_tardiness_deduction);
-                oCmd.Parameters.AddWithValue("@is_without_ot", objPayroll.is_without_ot);
-                oCmd.ExecuteNonQuery();
-
-                if (objRelative != null)
-                {
-                    foreach (var item in objRelative)
-                    {
-                        sp = "employee_relative_in";
-                        oCmd.CommandText = "employee_relative_in";
-                        oCmd.CommandType = CommandType.StoredProcedure;
-                        oCmd.Parameters.Clear();
-                        oCmd.Parameters.AddWithValue("@employee_id", ret.employee_id);
-                        oCmd.Parameters.AddWithValue("@name", item.name);
-                        oCmd.Parameters.AddWithValue("@relationship_id", item.relationship_id);
-                        oCmd.Parameters.AddWithValue("@birthday", item.birthday);
-                        oCmd.Parameters.AddWithValue("@gender_id", item.gender_id);
-                        oCmd.Parameters.AddWithValue("@occupation", item.occupation);
-                        oCmd.Parameters.AddWithValue("@company", item.company);
-                        oCmd.ExecuteNonQuery();
-                    }
-                }
-
-                if (objEmergency != null)
-                {
-                    foreach (var item in objEmergency)
-                    {
-                        sp = "employee_emergency_in";
-                        oCmd.CommandText = "employee_emergency_in";
-                        oCmd.CommandType = CommandType.StoredProcedure;
-                        oCmd.Parameters.Clear();
-                        oCmd.Parameters.AddWithValue("@employee_id", ret.employee_id);
-                        oCmd.Parameters.AddWithValue("@name", item.name);
-                        oCmd.Parameters.AddWithValue("@relationship_id", item.relationship_id);
-                        oCmd.Parameters.AddWithValue("@address", item.address);
-                        oCmd.Parameters.AddWithValue("@contact_number", item.contact_number);
-                        oCmd.ExecuteNonQuery();
-                    }
-                }
-
-                if (objEmployment != null)
-                {
-                    foreach (var item in objEmployment)
-                    {
-                        sp = "employee_employment_in";
-                        oCmd.CommandText = "employee_employment_in";
-                        oCmd.CommandType = CommandType.StoredProcedure;
-                        oCmd.Parameters.Clear();
-                        oCmd.Parameters.AddWithValue("@employee_id", ret.employee_id);
-                        oCmd.Parameters.AddWithValue("@company", item.company);
-                        oCmd.Parameters.AddWithValue("@position", item.position);
-                        oCmd.Parameters.AddWithValue("@salary", item.salary);
-                        oCmd.Parameters.AddWithValue("@date_from", item.date_from);
-                        oCmd.Parameters.AddWithValue("@date_to", item.date_to);
-                        oCmd.Parameters.AddWithValue("@reason", item.reason);
-                        oCmd.ExecuteNonQuery();
-                    }
-                }
-
-                if (objEducation != null)
-                {
-                    foreach (var item in objEducation)
-                    {
-                        sp = "employee_education_in";
-                        oCmd.CommandText = "employee_education_in";
-                        oCmd.CommandType = CommandType.StoredProcedure;
-                        oCmd.Parameters.Clear();
-                        oCmd.Parameters.AddWithValue("@employee_id", ret.employee_id);
-                        oCmd.Parameters.AddWithValue("@name", item.name);
-                        oCmd.Parameters.AddWithValue("@type_id", item.type_id);
-                        oCmd.Parameters.AddWithValue("@date_from", item.date_from);
-                        oCmd.Parameters.AddWithValue("@date_to", item.date_to);
-                        oCmd.Parameters.AddWithValue("@awards", item.awards);
-                        oCmd.ExecuteNonQuery();
-                    }
-                }
-
-                if (objDegree != null)
-                {
-                    foreach (var item in objDegree)
-                    {
-                        sp = "employee_degree_in";
-                        oCmd.CommandText = "employee_degree_in";
-                        oCmd.CommandType = CommandType.StoredProcedure;
-                        oCmd.Parameters.Clear();
-                        oCmd.Parameters.AddWithValue("@employee_id", ret.employee_id);
-                        oCmd.Parameters.AddWithValue("@name", item.name);
-                        oCmd.Parameters.AddWithValue("@course", item.course);
-                        oCmd.Parameters.AddWithValue("@major", item.major);
-                        oCmd.ExecuteNonQuery();
-                    }
-                }
-
-                function_encrypt(11, ret.employee_id, objPersonal.company_id, objPersonal.created_by, oCmd);
-                function_approval(11, ret.employee_id, approval_group_id, objPersonal.company_id, objPersonal.created_by, oCmd);
-                oTrans.Commit();
-            }
-            catch (Exception e)
-            {
-                ret.employee_id = 0;
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = " + sp + " | " + e.Message, Convert.ToInt32(objPersonal.company_id), 0);
-            }
-            finally
-            {
-                oConn.Close();
-            }
-            return ret;
-        }
-
-        public employee_list_view_lib employee_credentials_up(employee_list_view_lib obj)
-        {
-            employee_list_view_lib ret = new employee_list_view_lib();
-            SqlConnection oConn = new SqlConnection(_master);
-            SqlTransaction oTrans;
-            oConn.Open();
-            oTrans = oConn.BeginTransaction();
-            SqlCommand oCmd = new SqlCommand();
-            oCmd.Connection = oConn;
-            oCmd.Transaction = oTrans;
-            try
-            {
-                var pass = Crypto.password_encrypt(obj.userhash);
-                oCmd.CommandText = "employee_credentials_up";
-                oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.Parameters.Clear();
-                oCmd.Parameters.AddWithValue("@employee_id", obj.employee_id);
-                oCmd.Parameters.AddWithValue("@username", obj.username);
-                oCmd.Parameters.AddWithValue("@userhash", pass);
-                oCmd.Parameters.AddWithValue("@question1", obj.question1);
-                oCmd.Parameters.AddWithValue("@answer1", obj.answer1);
-                oCmd.Parameters.AddWithValue("@question2", obj.question2);
-                oCmd.Parameters.AddWithValue("@answer2", obj.answer2);
-
-                SqlDataReader sdr = oCmd.ExecuteReader();
-                while (sdr.Read())
-                {
-                    ret.employee_id = Convert.ToInt32(sdr["employee_id"].ToString());
-                }
-                sdr.Close();
-                oTrans.Commit();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = employee_credentials_up | " + e.Message, Convert.ToInt32(obj.company_id), 0);
-            }
-            finally
-            {
-                oConn.Close();
-            }
-            return ret;
-        }
-
         public List<employee_list_view_lib> employee_list_view(employee_list_view_lib obj)
         {
             SqlConnection sqlConn = new SqlConnection(_master);
@@ -1251,776 +889,60 @@ namespace BridgeWCF
                            employee_code = dr["employee_code"].ToString(),
                            username = dr["username"].ToString(),
                            userhash = dr["userhash"].ToString(),
-                           salutation_id = Convert.ToInt32(dr["salutation_id"].ToString()),
-                           salutation = dr["salutation"].ToString(),
                            first_name = dr["first_name"].ToString(),
                            middle_name = dr["middle_name"].ToString(),
                            last_name = dr["last_name"].ToString(),
                            full_name = dr["full_name"].ToString(),
                            display_name = dr["display_name"].ToString(),
                            nick_name = dr["nick_name"].ToString(),
-                           religion_id = Convert.ToInt32(dr["religion_id"].ToString()),
-                           religion = dr["religion"].ToString(),
-                           gender_id = Convert.ToInt32(dr["gender_id"].ToString()),
-                           gender = dr["gender"].ToString(),
-                           nationality_id = Convert.ToInt32(dr["nationality_id"].ToString()),
-                           nationality = dr["nationality"].ToString(),
-                           birth_place = dr["birth_place"].ToString(),
+                           email_address = dr["email_address"].ToString(),
                            birthday = dr["birthday"].ToString(),
-                           civil_status_id = Convert.ToInt32(dr["civil_status_id"].ToString()),
-                           civil_status = dr["civil_status"].ToString(),
+                           birth_place = dr["birth_place"].ToString(),
                            height = dr["height"].ToString(),
                            weight = dr["weight"].ToString(),
-                           blood_type = dr["blood_type"].ToString(),
+                           phone_home = dr["phone_home"].ToString(),
+                           phone_work = dr["phone_work"].ToString(),
                            phone_mobile = dr["phone_mobile"].ToString(),
-                           phone_telephone = dr["phone_telephone"].ToString(),
-                           phone_office = dr["phone_office"].ToString(),
                            phone_fax = dr["phone_fax"].ToString(),
-                           email_address = dr["email_address"].ToString(),
-                           present_address = dr["present_address"].ToString(),
-                           permanent_address = dr["permanent_address"].ToString(),
+                           phone_other = dr["phone_other"].ToString(),
+                           address_street = dr["address_street"].ToString(),
+                           address_city = dr["address_city"].ToString(),
+                           address_state = dr["address_state"].ToString(),
+                           address_country = dr["address_country"].ToString(),
+                           address_zipcode = dr["address_zipcode"].ToString(),
+                           perm_street = dr["perm_street"].ToString(),
+                           perm_city = dr["perm_city"].ToString(),
+                           perm_state = dr["perm_state"].ToString(),
+                           perm_country = dr["perm_country"].ToString(),
+                           perm_zipcode = dr["perm_zipcode"].ToString(),
                            image_path = dr["image_path"].ToString(),
                            question1 = Convert.ToInt32(dr["question1"].ToString()),
                            answer1 = dr["answer1"].ToString(),
                            question2 = Convert.ToInt32(dr["question2"].ToString()),
                            answer2 = dr["answer2"].ToString(),
-                           bp_status = dr["bp_status"].ToString(),
-                           approved = Convert.ToBoolean(dr["approved"].ToString()),
-                           active = Convert.ToBoolean(dr["active"].ToString()),
-                           approval_group_id = Convert.ToInt32(dr["approval_group_id"].ToString()),
-                           approval_group = dr["approval_group"].ToString(),
-                           access_level_id = Convert.ToInt32(dr["access_level_id"].ToString()),
-                           access_level = dr["access_level"].ToString(),
-                           immediate_supervisor_id = Convert.ToInt32(dr["immediate_supervisor_id"].ToString()),
-                           immediate_supervisor = dr["immediate_supervisor"].ToString(),
-                           created_by_id = Convert.ToInt32(dr["created_by_id"].ToString()),
-                           created_by = dr["created_by"].ToString(),
-                           date_created = dr["date_created"].ToString(),
-                           enc_key = dr["enc_key"].ToString(),
-                           company_id = Convert.ToInt32(dr["company_id"].ToString()),
-                           company_name = dr["company_name"].ToString(),
-                           fix = Convert.ToBoolean(dr["fix"].ToString()),
-                           button = dr["button"].ToString(),
-
-                           payroll_type = Convert.ToInt32(dr["payroll_type_Id"].ToString()),
-                           payroll_type_desc = dr["payroll_type_desc"].ToString(),
-                           biometrics_id = dr["biometrics_id"].ToString(),
-                           bank = dr["bank"].ToString(),
-                           bankaccount = dr["bankaccount"].ToString(),
-                           basic_rate = Convert.ToDecimal(dr["basic_rate"].ToString()),
-                           daily_rate = Convert.ToDecimal(dr["daily_rate"].ToString()),
-                           hourly_rate = Convert.ToDecimal(dr["hourly_rate"].ToString()),
-                           semi_monthly_rate = Convert.ToDecimal(dr["semi_monthly_rate"].ToString()),
-                           employee_status_id = Convert.ToInt32(dr["employee_status_id"].ToString()),
-                           employee_status = dr["employee_status"].ToString(),
-                           occupation_id = Convert.ToInt32(dr["occupation_id"].ToString()),
-                           occupation = dr["occupation"].ToString(),
-                           department_id = Convert.ToInt32(dr["department_id"].ToString()),
-                           department = dr["department"].ToString(),
-                           sss = dr["sss"].ToString(),
-                           pagibig = dr["pagibig"].ToString(),
-                           philhealth = dr["philhealth"].ToString(),
-                           tin = dr["tin"].ToString(),
-                           nbi = dr["nbi"].ToString(),
-                           gsis = dr["gsis"].ToString(),
-                           date_hired = dr["date_hired"].ToString(),
-                           division_id = Convert.ToInt32(dr["division_id"].ToString()),
-                           division = dr["division"].ToString(),
-                           section_id = Convert.ToInt32(dr["section_id"].ToString()),
-                           section = dr["section"].ToString(),
-                           confidentiality_id = Convert.ToInt32(dr["confidentiality_id"].ToString()),
-                           confidentiality = dr["confidentiality"].ToString(),
-                           supervisor = Convert.ToInt32(dr["supervisor"].ToString()),
-                           warehouse = Convert.ToInt32(dr["warehouse"].ToString()),
-                           is_fixed_salary = Convert.ToBoolean(dr["is_fixed_salary"].ToString()),
-                           is_tardiness_deduction = Convert.ToBoolean(dr["is_tardiness_deduction"].ToString()),
-                           is_without_ot = Convert.ToBoolean(dr["is_without_ot"].ToString()),
-                       }).ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = employee_list_view | " + e.Message, 0, 0);
-            }
-            finally
-            {
-                sqlConn.Close();
-
-            }
-            return ret;
-        }
-
-        public List<employee_list_view_lib> employee_sel(employee_list_view_lib obj)
-        {
-            SqlConnection sqlConn = new SqlConnection(_master);
-            SqlCommand sqlcomm = new SqlCommand();
-            sqlcomm.Connection = sqlConn;
-            DataTable dt = new DataTable();
-            List<employee_list_view_lib> ret = new List<employee_list_view_lib>();
-            try
-            {
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = sqlcomm;
-                sqlcomm.CommandText = "employee_sel";
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlcomm.Parameters.Clear();
-                sqlcomm.Parameters.AddWithValue("@employee_id", obj.employee_id);
-                da.Fill(dt);
-                ret = (from DataRow dr in dt.Rows
-                       select new employee_list_view_lib()
-                       {
-                           employee_id = Convert.ToInt32(dr["employee_id"].ToString()),
-                           employee_code = dr["employee_code"].ToString(),
-                           username = dr["username"].ToString(),
-                           userhash = dr["userhash"].ToString(),
+                           website = dr["website"].ToString(),
+                           facebook = dr["facebook"].ToString(),
+                           twitter = dr["twitter"].ToString(),
+                           instagram = dr["instagram"].ToString(),
+                           linkedin = dr["linkedin"].ToString(),
+                           skype = dr["skype"].ToString(),
+                           tumblr = dr["tumblr"].ToString(),
                            salutation_id = Convert.ToInt32(dr["salutation_id"].ToString()),
-                           salutation = dr["salutation"].ToString(),
-                           first_name = dr["first_name"].ToString(),
-                           middle_name = dr["middle_name"].ToString(),
-                           last_name = dr["last_name"].ToString(),
-                           full_name = dr["full_name"].ToString(),
-                           display_name = dr["display_name"].ToString(),
-                           nick_name = dr["nick_name"].ToString(),
-                           religion_id = Convert.ToInt32(dr["religion_id"].ToString()),
-                           religion = dr["religion"].ToString(),
                            gender_id = Convert.ToInt32(dr["gender_id"].ToString()),
-                           gender = dr["gender"].ToString(),
-                           nationality_id = Convert.ToInt32(dr["nationality_id"].ToString()),
-                           nationality = dr["nationality"].ToString(),
-                           birth_place = dr["birth_place"].ToString(),
-                           birthday = dr["birthday"].ToString(),
                            civil_status_id = Convert.ToInt32(dr["civil_status_id"].ToString()),
-                           civil_status = dr["civil_status"].ToString(),
-                           height = dr["height"].ToString(),
-                           weight = dr["weight"].ToString(),
-                           blood_type = dr["blood_type"].ToString(),
-                           phone_mobile = dr["phone_mobile"].ToString(),
-                           phone_telephone = dr["phone_telephone"].ToString(),
-                           phone_office = dr["phone_office"].ToString(),
-                           phone_fax = dr["phone_fax"].ToString(),
-                           email_address = dr["email_address"].ToString(),
-                           present_address = dr["present_address"].ToString(),
-                           permanent_address = dr["permanent_address"].ToString(),
-                           image_path = dr["image_path"].ToString(),
-                           question1 = Convert.ToInt32(dr["question1"].ToString()),
-                           answer1 = dr["answer1"].ToString(),
-                           question2 = Convert.ToInt32(dr["question2"].ToString()),
-                           answer2 = dr["answer2"].ToString(),
-                           bp_status = dr["bp_status"].ToString(),
-                           approved = Convert.ToBoolean(dr["approved"].ToString()),
-                           active = Convert.ToBoolean(dr["active"].ToString()),
-                           approval_group_id = Convert.ToInt32(dr["approval_group_id"].ToString()),
-                           approval_group = dr["approval_group"].ToString(),
-                           access_level_id = Convert.ToInt32(dr["access_level_id"].ToString()),
-                           access_level = dr["access_level"].ToString(),
-                           immediate_supervisor_id = Convert.ToInt32(dr["immediate_supervisor_id"].ToString()),
-                           immediate_supervisor = dr["immediate_supervisor"].ToString(),
-                           created_by_id = Convert.ToInt32(dr["created_by_id"].ToString()),
-                           created_by = dr["created_by"].ToString(),
-                           date_created = dr["date_created"].ToString(),
-                           enc_key = dr["enc_key"].ToString(),
-                           company_id = Convert.ToInt32(dr["company_id"].ToString()),
-                           company_name = dr["company_name"].ToString(),
-                           fix = Convert.ToBoolean(dr["fix"].ToString()),
-
-                           payroll_type = Convert.ToInt32(dr["payroll_type_Id"].ToString()),
-                           payroll_type_desc = dr["payroll_type_desc"].ToString(),
-                           biometrics_id = dr["biometrics_id"].ToString(),
-                           bank = dr["bank"].ToString(),
-                           bankaccount = dr["bankaccount"].ToString(),
-                           basic_rate = Convert.ToDecimal(dr["basic_rate"].ToString()),
-                           daily_rate = Convert.ToDecimal(dr["daily_rate"].ToString()),
-                           hourly_rate = Convert.ToDecimal(dr["hourly_rate"].ToString()),
-                           semi_monthly_rate = Convert.ToDecimal(dr["semi_monthly_rate"].ToString()),
-                           employee_status_id = Convert.ToInt32(dr["employee_status_id"].ToString()),
-                           employee_status = dr["employee_status"].ToString(),
-                           occupation_id = Convert.ToInt32(dr["occupation_id"].ToString()),
-                           occupation = dr["occupation"].ToString(),
-                           department_id = Convert.ToInt32(dr["department_id"].ToString()),
-                           department = dr["department"].ToString(),
-                           sss = dr["sss"].ToString(),
-                           pagibig = dr["pagibig"].ToString(),
-                           philhealth = dr["philhealth"].ToString(),
-                           tin = dr["tin"].ToString(),
-                           nbi = dr["nbi"].ToString(),
-                           gsis = dr["gsis"].ToString(),
-                           date_hired = dr["date_hired"].ToString(),
-                           division_id = Convert.ToInt32(dr["division_id"].ToString()),
-                           division = dr["division"].ToString(),
-                           section_id = Convert.ToInt32(dr["section_id"].ToString()),
-                           section = dr["section"].ToString(),
-                           confidentiality_id = Convert.ToInt32(dr["confidentiality_id"].ToString()),
-                           confidentiality = dr["confidentiality"].ToString(),
-                           supervisor = Convert.ToInt32(dr["supervisor"].ToString()),
-                           warehouse = Convert.ToInt32(dr["warehouse"].ToString()),
-                           is_fixed_salary = Convert.ToBoolean(dr["is_fixed_salary"].ToString()),
-                           is_tardiness_deduction = Convert.ToBoolean(dr["is_tardiness_deduction"].ToString()),
-                           is_without_ot = Convert.ToBoolean(dr["is_without_ot"].ToString()),
-                       }).ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = employee_sel | " + e.Message, 0, 0);
-            }
-            finally
-            {
-                sqlConn.Close();
-
-            }
-            return ret;
-        }
-
-        public List<employee_information_in_lib> employee_information_view(int employee_id)
-        {
-            SqlConnection sqlConn = new SqlConnection(_master);
-            SqlCommand sqlcomm = new SqlCommand();
-            sqlcomm.Connection = sqlConn;
-            DataTable dt = new DataTable();
-            List<employee_information_in_lib> ret = new List<employee_information_in_lib>();
-            try
-            {
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = sqlcomm;
-                sqlcomm.CommandText = "employee_information_view";
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlcomm.Parameters.Clear();
-                sqlcomm.Parameters.AddWithValue("@employee_id", employee_id);
-                da.Fill(dt);
-                ret = (from DataRow dr in dt.Rows
-                       select new employee_information_in_lib()
-                       {
-                           employee_id = Convert.ToInt32(dr["employee_id"].ToString()),
-                           payroll_type = Convert.ToInt32(dr["payroll_type"].ToString()),
-                           payroll_type_desc = dr["payroll_type_desc"].ToString(),
-                           biometrics_id = dr["biometrics_id"].ToString(),
-                           bank = dr["bank"].ToString(),
-                           bankaccount = dr["bankaccount"].ToString(),
-                           basic_rate = Convert.ToDecimal(dr["basic_rate"]),
-                           daily_rate = Convert.ToDecimal(dr["daily_rate"].ToString()),
-                           hourly_rate = Convert.ToDecimal(dr["hourly_rate"].ToString()),
-                           semi_monthly_rate = Convert.ToDecimal(dr["semi_monthly_rate"].ToString()),
-                           employee_status_id = Convert.ToInt32(dr["employee_status_id"].ToString()),
-                           employee_status = dr["employee_status"].ToString(),
-                           occupation_id = Convert.ToInt32(dr["occupation_id"].ToString()),
-                           occupation = dr["occupation"].ToString(),
-                           department_id = Convert.ToInt32(dr["department_id"].ToString()),
-                           department = dr["department"].ToString(),
-                           sss = dr["sss"].ToString(),
-                           pagibig = dr["pagibig"].ToString(),
-                           philhealth = dr["philhealth"].ToString(),
-                           tin = dr["tin"].ToString(),
-                           nbi = dr["nbi"].ToString(),
-                           gsis = dr["gsis"].ToString(),
-                           date_hired = dr["date_hired"].ToString(),
-                           division_id = Convert.ToInt32(dr["division_id"].ToString()),
-                           division = dr["division"].ToString(),
-                           section_id = Convert.ToInt32(dr["section_id"].ToString()),
-                           section = dr["section"].ToString(),
-                           confidentiality = Convert.ToInt32(dr["confidentiality"].ToString()),
-                           confidentiality_desc = dr["confidentiality_desc"].ToString(),
-                           supervisor = Convert.ToInt32(dr["supervisor"].ToString()),
-                           supervisor_desc = dr["supervisor_desc"].ToString(),
-                           warehouse = Convert.ToInt32(dr["warehouse"].ToString()),
-                           warehouse_desc = dr["warehouse_desc"].ToString(),
-                           is_fixed_salary = Convert.ToBoolean(dr["is_fixed_salary"].ToString()),
-                           is_tardiness_deduction = Convert.ToBoolean(dr["is_tardiness_deduction"].ToString()),
-                           is_without_ot = Convert.ToBoolean(dr["is_without_ot"].ToString()),
-                       }).ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = employee_information_view | " + e.Message, 0, 0);
-            }
-            finally
-            {
-                sqlConn.Close();
-
-            }
-            return ret;
-        }
-
-        public List<employee_degree_in_lib> employee_degree_view(int employee_id)
-        {
-            SqlConnection sqlConn = new SqlConnection(_master);
-            SqlCommand sqlcomm = new SqlCommand();
-            sqlcomm.Connection = sqlConn;
-            DataTable dt = new DataTable();
-            List<employee_degree_in_lib> ret = new List<employee_degree_in_lib>();
-            try
-            {
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = sqlcomm;
-                sqlcomm.CommandText = "employee_degree_view";
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlcomm.Parameters.Clear();
-                sqlcomm.Parameters.AddWithValue("@employee_id", employee_id);
-                da.Fill(dt);
-                ret = (from DataRow dr in dt.Rows
-                       select new employee_degree_in_lib()
-                       {
-                           employee_id = Convert.ToInt32(dr["employee_id"].ToString()),
-                           name = dr["name"].ToString(),
-                           course = dr["course"].ToString(),
-                           major = dr["major"].ToString()
-                       }).ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = employee_degree_view | " + e.Message, 0, 0);
-            }
-            finally
-            {
-                sqlConn.Close();
-
-            }
-            return ret;
-        }
-
-        public List<employee_education_in_lib> employee_education_view(int employee_id)
-        {
-            SqlConnection sqlConn = new SqlConnection(_master);
-            SqlCommand sqlcomm = new SqlCommand();
-            sqlcomm.Connection = sqlConn;
-            DataTable dt = new DataTable();
-            List<employee_education_in_lib> ret = new List<employee_education_in_lib>();
-            try
-            {
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = sqlcomm;
-                sqlcomm.CommandText = "employee_education_view";
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlcomm.Parameters.Clear();
-                sqlcomm.Parameters.AddWithValue("@employee_id", employee_id);
-                da.Fill(dt);
-                ret = (from DataRow dr in dt.Rows
-                       select new employee_education_in_lib()
-                       {
-                           employee_id = Convert.ToInt32(dr["employee_id"].ToString()),
-                           name = dr["name"].ToString(),
-                           type_id = Convert.ToInt32(dr["type_id"].ToString()),
-                           type = dr["type"].ToString(),
-                           date_from = dr["date_from"].ToString(),
-                           date_to = dr["date_to"].ToString(),
-                           awards = dr["awards"].ToString(),
-                       }).ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = employee_education_view | " + e.Message, 0, 0);
-            }
-            finally
-            {
-                sqlConn.Close();
-
-            }
-            return ret;
-        }
-
-        public List<employee_emergency_in_lib> employee_emergency_view(int employee_id)
-        {
-            SqlConnection sqlConn = new SqlConnection(_master);
-            SqlCommand sqlcomm = new SqlCommand();
-            sqlcomm.Connection = sqlConn;
-            DataTable dt = new DataTable();
-            List<employee_emergency_in_lib> ret = new List<employee_emergency_in_lib>();
-            try
-            {
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = sqlcomm;
-                sqlcomm.CommandText = "employee_emergency_view";
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlcomm.Parameters.Clear();
-                sqlcomm.Parameters.AddWithValue("@employee_id", employee_id);
-                da.Fill(dt);
-                ret = (from DataRow dr in dt.Rows
-                       select new employee_emergency_in_lib()
-                       {
-                           employee_id = Convert.ToInt32(dr["employee_id"].ToString()),
-                           name = dr["name"].ToString(),
-                           relationship_id = Convert.ToInt32(dr["relationship_id"].ToString()),
-                           relationship = dr["relationship"].ToString(),
-                           address = dr["address"].ToString(),
-                           contact_number = dr["contact_number"].ToString()
-                       }).ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = employee_emergency_view | " + e.Message, 0, 0);
-            }
-            finally
-            {
-                sqlConn.Close();
-
-            }
-            return ret;
-        }
-
-        public List<employee_employment_in_lib> employee_employment_view(int employee_id)
-        {
-            SqlConnection sqlConn = new SqlConnection(_master);
-            SqlCommand sqlcomm = new SqlCommand();
-            sqlcomm.Connection = sqlConn;
-            DataTable dt = new DataTable();
-            List<employee_employment_in_lib> ret = new List<employee_employment_in_lib>();
-            try
-            {
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = sqlcomm;
-                sqlcomm.CommandText = "employee_employment_view";
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlcomm.Parameters.Clear();
-                sqlcomm.Parameters.AddWithValue("@employee_id", employee_id);
-                da.Fill(dt);
-                ret = (from DataRow dr in dt.Rows
-                       select new employee_employment_in_lib()
-                       {
-                           employee_id = Convert.ToInt32(dr["employee_id"].ToString()),
-                           company = dr["company"].ToString(),
-                           position = dr["position"].ToString(),
-                           salary = Convert.ToDecimal(dr["salary"].ToString()),
-                           date_from = dr["date_from"].ToString(),
-                           date_to = dr["date_to"].ToString(),
-                           reason = dr["reason"].ToString(),
-                       }).ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = employee_employment_view | " + e.Message, 0, 0);
-            }
-            finally
-            {
-                sqlConn.Close();
-
-            }
-            return ret;
-        }
-
-        public List<employee_relative_in_lib> employee_relative_view(int employee_id)
-        {
-            SqlConnection sqlConn = new SqlConnection(_master);
-            SqlCommand sqlcomm = new SqlCommand();
-            sqlcomm.Connection = sqlConn;
-            DataTable dt = new DataTable();
-            List<employee_relative_in_lib> ret = new List<employee_relative_in_lib>();
-            try
-            {
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = sqlcomm;
-                sqlcomm.CommandText = "employee_relative_view";
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlcomm.Parameters.Clear();
-                sqlcomm.Parameters.AddWithValue("@employee_id", employee_id);
-                da.Fill(dt);
-                ret = (from DataRow dr in dt.Rows
-                       select new employee_relative_in_lib()
-                       {
-                           employee_id = Convert.ToInt32(dr["employee_id"].ToString()),
-                           name = dr["name"].ToString(),
-                           relationship_id = Convert.ToInt32(dr["relationship_id"].ToString()),
-                           relationship = dr["relationship"].ToString(),
-                           birthday = dr["birthday"].ToString(),
-                           gender_id = Convert.ToInt32(dr["gender_id"].ToString()),
-                           gender = dr["gender"].ToString(),
-                           occupation = dr["occupation"].ToString(),
-                           company = dr["company"].ToString()
-                       }).ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = employee_relative_view | " + e.Message, 0, 0);
-            }
-            finally
-            {
-                sqlConn.Close();
-
-            }
-            return ret;
-        }
-
-        public List<employee_list_view_lib> employee_fetch_view(int employee_id, int company_id, int row, int index)
-        {
-            SqlConnection sqlConn = new SqlConnection(_master);
-            SqlCommand sqlcomm = new SqlCommand();
-            sqlcomm.Connection = sqlConn;
-            DataTable dt = new DataTable();
-            List<employee_list_view_lib> ret = new List<employee_list_view_lib>();
-            try
-            {
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = sqlcomm;
-                sqlcomm.CommandText = "employee_fetch_view";
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlcomm.Parameters.Clear();
-                sqlcomm.Parameters.AddWithValue("@employee_id", employee_id);
-                sqlcomm.Parameters.AddWithValue("@company_id", company_id);
-                sqlcomm.Parameters.AddWithValue("@row", row);
-                sqlcomm.Parameters.AddWithValue("@index", index);
-                da.Fill(dt);
-                ret = (from DataRow dr in dt.Rows
-                       select new employee_list_view_lib()
-                       {
-                           employee_id = Convert.ToInt32(dr["employee_id"].ToString()),
-                           employee_code = dr["employee_code"].ToString(),
-                           username = dr["username"].ToString(),
-                           userhash = dr["userhash"].ToString(),
-                           salutation_id = Convert.ToInt32(dr["salutation_id"].ToString()),
-                           salutation = dr["salutation"].ToString(),
-                           first_name = dr["first_name"].ToString(),
-                           middle_name = dr["middle_name"].ToString(),
-                           last_name = dr["last_name"].ToString(),
-                           full_name = dr["full_name"].ToString(),
-                           display_name = dr["display_name"].ToString(),
-                           nick_name = dr["nick_name"].ToString(),
-                           religion_id = Convert.ToInt32(dr["religion_id"].ToString()),
-                           religion = dr["religion"].ToString(),
-                           gender_id = Convert.ToInt32(dr["gender_id"].ToString()),
-                           gender = dr["gender"].ToString(),
                            nationality_id = Convert.ToInt32(dr["nationality_id"].ToString()),
-                           nationality = dr["nationality"].ToString(),
-                           birth_place = dr["birth_place"].ToString(),
-                           birthday = Convert.ToDateTime(dr["birthday"].ToString()).ToShortDateString(),
-                           civil_status_id = Convert.ToInt32(dr["civil_status_id"].ToString()),
-                           civil_status = dr["civil_status"].ToString(),
-                           height = dr["height"].ToString(),
-                           weight = dr["weight"].ToString(),
-                           blood_type = dr["blood_type"].ToString(),
-                           phone_mobile = dr["phone_mobile"].ToString(),
-                           phone_telephone = dr["phone_telephone"].ToString(),
-                           phone_office = dr["phone_office"].ToString(),
-                           phone_fax = dr["phone_fax"].ToString(),
-                           email_address = dr["email_address"].ToString(),
-                           present_address = dr["present_address"].ToString(),
-                           permanent_address = dr["permanent_address"].ToString(),
-                           image_path = dr["image_path"].ToString(),
-                           question1 = Convert.ToInt32(dr["question1"].ToString()),
-                           answer1 = dr["answer1"].ToString(),
-                           question2 = Convert.ToInt32(dr["question2"].ToString()),
-                           answer2 = dr["answer2"].ToString(),
-                           bp_status = dr["bp_status"].ToString(),
-                           approved = Convert.ToBoolean(dr["approved"].ToString()),
-                           active = Convert.ToBoolean(dr["active"].ToString()),
-                           approval_group_id = Convert.ToInt32(dr["approval_group_id"].ToString()),
-                           approval_group = dr["approval_group"].ToString(),
-                           access_level_id = Convert.ToInt32(dr["access_level_id"].ToString()),
-                           access_level = dr["access_level"].ToString(),
-                           immediate_supervisor_id = Convert.ToInt32(dr["immediate_supervisor_id"].ToString()),
-                           immediate_supervisor = dr["immediate_supervisor"].ToString(),
-                           created_by_id = Convert.ToInt32(dr["created_by_id"].ToString()),
-                           created_by = dr["created_by"].ToString(),
-                           date_created = dr["date_created"].ToString(),
-                           enc_key = dr["enc_key"].ToString(),
-                           company_id = Convert.ToInt32(dr["company_id"].ToString()),
-                           company_name = dr["company_name"].ToString(),
-                           fix = Convert.ToBoolean(dr["fix"].ToString()),
-
-                           payroll_type = Convert.ToInt32(dr["payroll_type_Id"].ToString()),
-                           payroll_type_desc = dr["payroll_type_desc"].ToString(),
-                           biometrics_id = dr["biometrics_id"].ToString(),
-                           bank = dr["bank"].ToString(),
-                           bankaccount = dr["bankaccount"].ToString(),
-                           basic_rate = Convert.ToDecimal(dr["basic_rate"].ToString()),
-                           daily_rate = Convert.ToDecimal(dr["daily_rate"].ToString()),
-                           hourly_rate = Convert.ToDecimal(dr["hourly_rate"].ToString()),
-                           semi_monthly_rate = Convert.ToDecimal(dr["semi_monthly_rate"].ToString()),
-                           employee_status_id = Convert.ToInt32(dr["employee_status_id"].ToString()),
-                           employee_status = dr["employee_status"].ToString(),
-                           occupation_id = Convert.ToInt32(dr["occupation_id"].ToString()),
-                           occupation = dr["occupation"].ToString(),
-                           department_id = Convert.ToInt32(dr["department_id"].ToString()),
-                           department = dr["department"].ToString(),
-                           sss = dr["sss"].ToString(),
-                           pagibig = dr["pagibig"].ToString(),
-                           philhealth = dr["philhealth"].ToString(),
-                           tin = dr["tin"].ToString(),
-                           nbi = dr["nbi"].ToString(),
-                           gsis = dr["gsis"].ToString(),
-                           date_hired = dr["date_hired"].ToString(),
-                           division_id = Convert.ToInt32(dr["division_id"].ToString()),
-                           division = dr["division"].ToString(),
-                           section_id = Convert.ToInt32(dr["section_id"].ToString()),
-                           section = dr["section"].ToString(),
-                           confidentiality_id = Convert.ToInt32(dr["confidentiality_id"].ToString()),
-                           confidentiality = dr["confidentiality"].ToString(),
-                           supervisor = Convert.ToInt32(dr["supervisor"].ToString()),
-                           warehouse = Convert.ToInt32(dr["warehouse"].ToString()),
-                           is_fixed_salary = Convert.ToBoolean(dr["is_fixed_salary"].ToString()),
-                           is_tardiness_deduction = Convert.ToBoolean(dr["is_tardiness_deduction"].ToString()),
-                           is_without_ot = Convert.ToBoolean(dr["is_without_ot"].ToString()),
-                       }).ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = employee_fetch_view | " + e.Message, 0, 0);
-            }
-            finally
-            {
-                sqlConn.Close();
-
-            }
-            return ret;
-        }
-
-        public List<employee_list_view_lib> employee_search(string search, int company_id)
-        {
-            SqlConnection sqlConn = new SqlConnection(_master);
-            SqlCommand sqlcomm = new SqlCommand();
-            sqlcomm.Connection = sqlConn;
-            DataTable dt = new DataTable();
-            List<employee_list_view_lib> ret = new List<employee_list_view_lib>();
-            try
-            {
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = sqlcomm;
-                sqlcomm.CommandText = "employee_search";
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlcomm.Parameters.Clear();
-                sqlcomm.Parameters.AddWithValue("@search", search);
-                sqlcomm.Parameters.AddWithValue("@company_id", company_id);
-                da.Fill(dt);
-                ret = (from DataRow dr in dt.Rows
-                       select new employee_list_view_lib()
-                       {
-                           employee_id = Convert.ToInt32(dr["employee_id"].ToString()),
-                           employee_code = dr["employee_code"].ToString(),
-                           username = dr["username"].ToString(),
-                           userhash = dr["userhash"].ToString(),
-                           salutation_id = Convert.ToInt32(dr["salutation_id"].ToString()),
-                           salutation = dr["salutation"].ToString(),
-                           first_name = dr["first_name"].ToString(),
-                           middle_name = dr["middle_name"].ToString(),
-                           last_name = dr["last_name"].ToString(),
-                           full_name = dr["full_name"].ToString(),
-                           display_name = dr["display_name"].ToString(),
-                           nick_name = dr["nick_name"].ToString(),
                            religion_id = Convert.ToInt32(dr["religion_id"].ToString()),
-                           religion = dr["religion"].ToString(),
-                           gender_id = Convert.ToInt32(dr["gender_id"].ToString()),
-                           gender = dr["gender"].ToString(),
-                           nationality_id = Convert.ToInt32(dr["nationality_id"].ToString()),
-                           nationality = dr["nationality"].ToString(),
-                           birth_place = dr["birth_place"].ToString(),
-                           birthday = dr["birthday"].ToString(),
-                           civil_status_id = Convert.ToInt32(dr["civil_status_id"].ToString()),
-                           civil_status = dr["civil_status"].ToString(),
-                           height = dr["height"].ToString(),
-                           weight = dr["weight"].ToString(),
-                           blood_type = dr["blood_type"].ToString(),
-                           phone_mobile = dr["phone_mobile"].ToString(),
-                           phone_telephone = dr["phone_telephone"].ToString(),
-                           phone_office = dr["phone_office"].ToString(),
-                           phone_fax = dr["phone_fax"].ToString(),
-                           email_address = dr["email_address"].ToString(),
-                           present_address = dr["present_address"].ToString(),
-                           permanent_address = dr["permanent_address"].ToString(),
-                           image_path = dr["image_path"].ToString(),
-                           question1 = Convert.ToInt32(dr["question1"].ToString()),
-                           answer1 = dr["answer1"].ToString(),
-                           question2 = Convert.ToInt32(dr["question2"].ToString()),
-                           answer2 = dr["answer2"].ToString(),
-                           bp_status = dr["bp_status"].ToString(),
-                           approved = Convert.ToBoolean(dr["approved"].ToString()),
-                           active = Convert.ToBoolean(dr["active"].ToString()),
-                           approval_group_id = Convert.ToInt32(dr["approval_group_id"].ToString()),
-                           approval_group = dr["approval_group"].ToString(),
-                           access_level_id = Convert.ToInt32(dr["access_level_id"].ToString()),
-                           access_level = dr["access_level"].ToString(),
-                           immediate_supervisor_id = Convert.ToInt32(dr["immediate_supervisor_id"].ToString()),
-                           immediate_supervisor = dr["immediate_supervisor"].ToString(),
-                           created_by_id = Convert.ToInt32(dr["created_by_id"].ToString()),
-                           created_by = dr["created_by"].ToString(),
-                           date_created = dr["date_created"].ToString(),
-                           enc_key = dr["enc_key"].ToString(),
+                           user_group_id = Convert.ToInt32(dr["user_group_id"].ToString()),
+                           warehouse_id = Convert.ToInt32(dr["warehouse_id"].ToString()),
                            company_id = Convert.ToInt32(dr["company_id"].ToString()),
-                           company_name = dr["company_name"].ToString(),
-                           fix = Convert.ToBoolean(dr["fix"].ToString()),
-                           button = dr["button"].ToString(),
-
-                           payroll_type = Convert.ToInt32(dr["payroll_type_Id"].ToString()),
-                           payroll_type_desc = dr["payroll_type_desc"].ToString(),
-                           biometrics_id = dr["biometrics_id"].ToString(),
-                           bank = dr["bank"].ToString(),
-                           bankaccount = dr["bankaccount"].ToString(),
-                           basic_rate = Convert.ToDecimal(dr["basic_rate"].ToString()),
-                           daily_rate = Convert.ToDecimal(dr["daily_rate"].ToString()),
-                           hourly_rate = Convert.ToDecimal(dr["hourly_rate"].ToString()),
-                           semi_monthly_rate = Convert.ToDecimal(dr["semi_monthly_rate"].ToString()),
-                           employee_status_id = Convert.ToInt32(dr["employee_status_id"].ToString()),
-                           employee_status = dr["employee_status"].ToString(),
-                           occupation_id = Convert.ToInt32(dr["occupation_id"].ToString()),
-                           occupation = dr["occupation"].ToString(),
-                           department_id = Convert.ToInt32(dr["department_id"].ToString()),
-                           department = dr["department"].ToString(),
-                           sss = dr["sss"].ToString(),
-                           pagibig = dr["pagibig"].ToString(),
-                           philhealth = dr["philhealth"].ToString(),
-                           tin = dr["tin"].ToString(),
-                           nbi = dr["nbi"].ToString(),
-                           gsis = dr["gsis"].ToString(),
-                           date_hired = dr["date_hired"].ToString(),
-                           division_id = Convert.ToInt32(dr["division_id"].ToString()),
-                           division = dr["division"].ToString(),
-                           section_id = Convert.ToInt32(dr["section_id"].ToString()),
-                           section = dr["section"].ToString(),
-                           confidentiality_id = Convert.ToInt32(dr["confidentiality_id"].ToString()),
-                           confidentiality = dr["confidentiality"].ToString(),
-                           supervisor = Convert.ToInt32(dr["supervisor"].ToString()),
-                           warehouse = Convert.ToInt32(dr["warehouse"].ToString()),
-                           is_fixed_salary = Convert.ToBoolean(dr["is_fixed_salary"].ToString()),
-                           is_tardiness_deduction = Convert.ToBoolean(dr["is_tardiness_deduction"].ToString()),
-                           is_without_ot = Convert.ToBoolean(dr["is_without_ot"].ToString()),
-                       }).ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: " + e.Message);
-                error_log_in("0", "SP = employee_search | " + e.Message, 0, 0);
-            }
-            finally
-            {
-                sqlConn.Close();
-
-            }
-            return ret;
-        }
-        #endregion
-
-        #region Payroll Information
-        public List<payroll_type_view_lib> payroll_type_view(int payroll_type_id)
-        {
-            SqlConnection sqlConn = new SqlConnection(_master);
-            SqlCommand sqlcomm = new SqlCommand();
-            sqlcomm.Connection = sqlConn;
-            DataTable dt = new DataTable();
-            List<payroll_type_view_lib> ret = new List<payroll_type_view_lib>();
-            try
-            {
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = sqlcomm;
-                sqlcomm.CommandText = "payroll_type_view";
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlcomm.Parameters.Clear();
-                sqlcomm.Parameters.AddWithValue("@payroll_type_id", payroll_type_id);
-                da.Fill(dt);
-                ret = (from DataRow dr in dt.Rows
-                       select new payroll_type_view_lib()
-                       {
-                           payroll_type_id = Convert.ToInt32(dr["payroll_type_id"].ToString()),
-                           description = dr["description"].ToString(),
-                           is_per_cut_off = Convert.ToBoolean(dr["is_per_cut_off"].ToString()),
-                           is_per_month = Convert.ToBoolean(dr["is_per_month"].ToString()),
-                           is_per_day = Convert.ToBoolean(dr["is_per_day"].ToString()),
-                           is_per_hr = Convert.ToBoolean(dr["is_per_hr"].ToString()),
-                           cutoff_from = Convert.ToInt32(dr["cutoff_from"].ToString()),
-                           cutoff_to = Convert.ToInt32(dr["cutoff_to"].ToString()),
+                           active = Convert.ToBoolean(dr["active"].ToString()),
+                           created_by = Convert.ToInt32(dr["created_by"].ToString()),
                            date_created = dr["date_created"].ToString(),
+                           approved = Convert.ToBoolean(dr["approved"].ToString()),
+                           bp_status = dr["bp_status"].ToString(),
+                           enc_key = dr["enc_key"].ToString(),
+                           fix = Convert.ToBoolean(dr["fix"].ToString()),
+                           access_level_id = Convert.ToInt32(dr["access_level_id"].ToString())
                        }).ToList();
             }
             catch (Exception e)

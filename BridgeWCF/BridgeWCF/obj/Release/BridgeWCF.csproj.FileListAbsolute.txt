@@ -1,7 +1,0 @@
-C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\bin\BridgeWCF.dll.config
-C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\bin\BridgeWCF.dll
-C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\bin\BridgeWCF.pdb
-C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\obj\Release\BridgeWCF.csprojAssemblyReference.cache
-C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\obj\Release\BridgeWCF.csproj.CoreCompileInputs.cache
-C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\obj\Release\BridgeWCF.dll
-C:\Users\Administrator\source\repos\BridgeHCM\BridgeWCF\BridgeWCF\obj\Release\BridgeWCF.pdb

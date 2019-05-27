@@ -38,9 +38,9 @@ namespace BridgeHCM.Controllers
             {
                 int result = 0;
                 file_manager_in_lib obj = new file_manager_in_lib();
-                int company_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["CompanyId"]));
-                int created_by = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["UserId"]));
-                int warehouse_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["WarehouseId"]));
+                int company_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["CompanyId"]));
+                int created_by = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["UserId"]));
+                int warehouse_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["WarehouseId"]));
 
                 if (Request.Form.Files.Count > 0)
                 {
@@ -83,17 +83,6 @@ namespace BridgeHCM.Controllers
                 return 0;
             }
         }
-
-        [Authorize]
-        [HttpGet()]
-        [ValidateAntiForgeryToken]
-        public JsonResult series_view(int module_id)
-        {
-            int company_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["CompanyId"]));
-            var result = JsonConvert.SerializeObject(_master.series_viewAsync(module_id, company_id).Result);
-            JsonResult json = Json(result);
-            return json;
-        }
         #endregion
 
         #region System Access
@@ -108,7 +97,7 @@ namespace BridgeHCM.Controllers
         [ValidateAntiForgeryToken]
         public JsonResult modules_access_view(int id)
         {
-            string company_id = Crypto.password_decrypt(Request.Cookies["CompanyId"]);
+            string company_id = Crypto.url_decrypt(Request.Cookies["CompanyId"]);
             var result = JsonConvert.SerializeObject(_master.modules_access_viewAsync(id, 0, Convert.ToInt32(company_id)).Result.ToList());
             JsonResult json = Json(result);
             return json;
@@ -119,8 +108,8 @@ namespace BridgeHCM.Controllers
         [ValidateAntiForgeryToken]
         public JsonResult module_access_in(menu_view_restriction_lib[] objHeader)
         {
-            int company_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["CompanyId"]));
-            int created_by = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["UserId"]));
+            int company_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["CompanyId"]));
+            int created_by = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["UserId"]));
             menu_view_restriction_lib result = _master.module_access_inAsync(objHeader, company_id, created_by).Result;
             JsonResult json = Json(result);
             return json;
@@ -139,7 +128,7 @@ namespace BridgeHCM.Controllers
         [ValidateAntiForgeryToken]
         public JsonResult util_dropdown_view(int id, bool active)
         {
-            string company_id = Crypto.password_decrypt(Request.Cookies["CompanyId"]);
+            string company_id = Crypto.url_decrypt(Request.Cookies["CompanyId"]);
             var result = JsonConvert.SerializeObject(_master.util_dropdown_viewAsync(id, active, 0, Convert.ToInt32(company_id)).Result.ToList());
             JsonResult json = Json(result);
             return json;
@@ -150,8 +139,8 @@ namespace BridgeHCM.Controllers
         [ValidateAntiForgeryToken]
         public JsonResult util_dropdown_list(int setting_id)
         {
-            string company_id = Crypto.password_decrypt(Request.Cookies["CompanyId"]);
-            string warehouse_id = Crypto.password_decrypt(Request.Cookies["WarehouseId"]);
+            string company_id = Crypto.url_decrypt(Request.Cookies["CompanyId"]);
+            string warehouse_id = Crypto.url_decrypt(Request.Cookies["WarehouseId"]);
             var result = JsonConvert.SerializeObject(_master.util_dropdown_listAsync(setting_id).Result.ToList());
             JsonResult json = Json(result);
             return json;
@@ -162,9 +151,9 @@ namespace BridgeHCM.Controllers
         [ValidateAntiForgeryToken]
         public JsonResult util_dropdown_setting_in(util_dropdown_view_lib obj)
         {
-            obj.company_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["CompanyId"]));
+            obj.company_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["CompanyId"]));
             obj.active_ds = true;
-            obj.created_by = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["UserId"]));
+            obj.created_by = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["UserId"]));
             var result = _master.util_dropdown_setting_inAsync(obj).Result;
             JsonResult json = Json(result);
             return json;
@@ -175,8 +164,8 @@ namespace BridgeHCM.Controllers
         [ValidateAntiForgeryToken]
         public JsonResult util_dropdown_setting_up(util_dropdown_view_lib obj)
         {
-            obj.company_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["CompanyId"]));
-            obj.created_by = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["UserId"]));
+            obj.company_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["CompanyId"]));
+            obj.created_by = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["UserId"]));
             var result = _master.util_dropdown_setting_upAsync(obj).Result;
             JsonResult json = Json(result);
             return json;
@@ -197,20 +186,9 @@ namespace BridgeHCM.Controllers
         [ValidateAntiForgeryToken]
         public JsonResult warehouse_in_up(warehouse_in_up_lib objHeader)
         {
-            objHeader.company_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["CompanyId"]));
-            objHeader.created_by = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["UserId"]));
+            objHeader.company_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["CompanyId"]));
+            objHeader.created_by = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["UserId"]));
             warehouse_in_up_lib result = _master.warehouse_in_upAsync(objHeader).Result;
-            JsonResult json = Json(result);
-            return json;
-        }
-
-        [Authorize]
-        [HttpGet()]
-        [ValidateAntiForgeryToken]
-        public JsonResult warehouse_view(int warehouse_id, bool is_active, bool is_ap)
-        {
-            int company_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["CompanyId"]));
-            var result = JsonConvert.SerializeObject(_master.warehouse_viewAsync(warehouse_id, company_id, is_active, is_ap).Result.ToList());
             JsonResult json = Json(result);
             return json;
         }
@@ -228,7 +206,7 @@ namespace BridgeHCM.Controllers
         [ValidateAntiForgeryToken]
         public JsonResult modules_view(int module_id, bool is_ap, bool is_active)
         {
-            string company_id = Crypto.password_decrypt(Request.Cookies["CompanyId"]);
+            string company_id = Crypto.url_decrypt(Request.Cookies["CompanyId"]);
             var result = JsonConvert.SerializeObject(_master.modules_viewAsync(module_id, is_ap, is_active).Result.ToList());
             JsonResult json = Json(result);
             return json;
@@ -239,9 +217,9 @@ namespace BridgeHCM.Controllers
         [ValidateAntiForgeryToken]
         public JsonResult approval_process_in(approval_process_in_lib[] obj, int module_id, bool all, int group)
         {
-            int company_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["CompanyId"]));
-            int warehouse_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["WarehouseId"]));
-            int created_by = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["UserId"]));
+            int company_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["CompanyId"]));
+            int warehouse_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["WarehouseId"]));
+            int created_by = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["UserId"]));
             approval_process_in_lib result =  _master.approval_process_inAsync(obj, group, module_id, all, company_id, warehouse_id, created_by).Result;
             JsonResult json = Json(result);
             return json;
@@ -252,9 +230,22 @@ namespace BridgeHCM.Controllers
         [ValidateAntiForgeryToken]
         public JsonResult approval_process_view(int module_id, int group)
         {
-            int company_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["CompanyId"]));
-            int warehouse_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["WarehouseId"]));
+            int company_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["CompanyId"]));
+            int warehouse_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["WarehouseId"]));
             var result = JsonConvert.SerializeObject(_master.approval_process_viewAsync(module_id, group, warehouse_id, company_id).Result.ToList());
+            JsonResult json = Json(result);
+            return json;
+        }
+        #endregion
+
+        #region Employee
+        [Authorize]
+        [HttpGet()]
+        [ValidateAntiForgeryToken]
+        public JsonResult employee_list_view(employee_list_view_lib obj)
+        {
+            obj.company_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["CompanyId"]));
+            var result = JsonConvert.SerializeObject(_master.employee_list_viewAsync(obj).Result.ToList());
             JsonResult json = Json(result);
             return json;
         }

@@ -43,16 +43,17 @@ namespace BridgeHCM.Controllers
                     options.Expires = DateTime.Now.AddDays(365);
                 }
 
-                Response.Cookies.Append("UserId", Crypto.password_encrypt(resp.employee_id.ToString()), options);
-                Response.Cookies.Append("WarehouseId", Crypto.password_encrypt(resp.warehouse_id.ToString()), options);
-                Response.Cookies.Append("CompanyId", Crypto.password_encrypt(resp.company_id.ToString()), options);
-                Response.Cookies.Append("AccessLevelId", Crypto.password_encrypt(resp.access_level_id.ToString()), options);
-                Response.Cookies.Append("ApprovalGroupId", Crypto.password_encrypt(resp.approval_group_id.ToString()), options);
+                Response.Cookies.Append("UserId", Crypto.url_encrypt(resp.user_id.ToString()), options);
+                Response.Cookies.Append("WarehouseId", Crypto.url_encrypt(resp.warehouse_id.ToString()), options);
+                Response.Cookies.Append("CompanyId", Crypto.url_encrypt(resp.company_id.ToString()), options);
+                Response.Cookies.Append("AccessLevelId", Crypto.url_encrypt(resp.access_level_id.ToString()), options);
                 Response.Cookies.Append("DisplayName", resp.display_name.ToString(), options);
+                //Response.Cookies.Append("Department", Crypto.password_encrypt(resp.department.ToString()), options);
+                //Response.Cookies.Append("ImgPath", Crypto.password_encrypt(resp.img.ToString()), options);
 
                 identity = new ClaimsIdentity(new[] {
                     new Claim(ClaimTypes.Name, model.username),
-                    new Claim(ClaimTypes.Role, resp.approval_group_id.ToString())
+                    new Claim(ClaimTypes.Role, resp.user_group_id.ToString())
                 }, CookieAuthenticationDefaults.AuthenticationScheme);
 
                 var principal = new ClaimsPrincipal(identity);

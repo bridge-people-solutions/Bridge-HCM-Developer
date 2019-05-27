@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="BridgeWCF.Master_Service" CodeBehind="Master_Service.svc.cs" %>

@@ -20,21 +20,27 @@ namespace wcf_Master
         
         private int access_level_idField;
         
-        private bool activeField;
+        private int activeField;
+        
+        private string address_cityField;
+        
+        private string address_countryField;
+        
+        private string address_stateField;
+        
+        private string address_streetField;
+        
+        private string address_zipcodeField;
         
         private string answer1Field;
         
         private string answer2Field;
         
-        private int approval_group_idField;
-        
-        private bool approvedField;
+        private int approvedField;
         
         private string birth_placeField;
         
         private string birthdayField;
-        
-        private string blood_typeField;
         
         private string bp_statusField;
         
@@ -50,15 +56,11 @@ namespace wcf_Master
         
         private string email_addressField;
         
-        private string employee_codeField;
-        
-        private int employee_idField;
-        
         private string enc_keyField;
         
-        private string first_nameField;
+        private string facebookField;
         
-        private bool fixField;
+        private string first_nameField;
         
         private string full_nameField;
         
@@ -68,9 +70,11 @@ namespace wcf_Master
         
         private string image_pathField;
         
-        private int immediate_supervisor_idField;
+        private string instagramField;
         
         private string last_nameField;
+        
+        private string linkedinField;
         
         private string middle_nameField;
         
@@ -78,17 +82,25 @@ namespace wcf_Master
         
         private string nick_nameField;
         
-        private string permanent_addressField;
+        private string perm_cityField;
+        
+        private string perm_countryField;
+        
+        private string perm_stateField;
+        
+        private string perm_streetField;
+        
+        private string perm_zipcodeField;
         
         private string phone_faxField;
         
+        private string phone_homeField;
+        
         private string phone_mobileField;
         
-        private string phone_officeField;
+        private string phone_otherField;
         
-        private string phone_telephoneField;
-        
-        private string present_addressField;
+        private string phone_workField;
         
         private int question1Field;
         
@@ -98,11 +110,25 @@ namespace wcf_Master
         
         private int salutation_idField;
         
+        private string skypeField;
+        
+        private string tumblrField;
+        
+        private string twitterField;
+        
+        private string user_codeField;
+        
+        private int user_group_idField;
+        
+        private int user_idField;
+        
         private string userhashField;
         
         private string usernameField;
         
         private int warehouse_idField;
+        
+        private string websiteField;
         
         private string weightField;
         
@@ -120,7 +146,7 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool active
+        public int active
         {
             get
             {
@@ -129,6 +155,71 @@ namespace wcf_Master
             set
             {
                 this.activeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_city
+        {
+            get
+            {
+                return this.address_cityField;
+            }
+            set
+            {
+                this.address_cityField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_country
+        {
+            get
+            {
+                return this.address_countryField;
+            }
+            set
+            {
+                this.address_countryField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_state
+        {
+            get
+            {
+                return this.address_stateField;
+            }
+            set
+            {
+                this.address_stateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_street
+        {
+            get
+            {
+                return this.address_streetField;
+            }
+            set
+            {
+                this.address_streetField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_zipcode
+        {
+            get
+            {
+                return this.address_zipcodeField;
+            }
+            set
+            {
+                this.address_zipcodeField = value;
             }
         }
         
@@ -159,20 +250,7 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int approval_group_id
-        {
-            get
-            {
-                return this.approval_group_idField;
-            }
-            set
-            {
-                this.approval_group_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool approved
+        public int approved
         {
             get
             {
@@ -207,19 +285,6 @@ namespace wcf_Master
             set
             {
                 this.birthdayField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string blood_type
-        {
-            get
-            {
-                return this.blood_typeField;
-            }
-            set
-            {
-                this.blood_typeField = value;
             }
         }
         
@@ -315,32 +380,6 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string employee_code
-        {
-            get
-            {
-                return this.employee_codeField;
-            }
-            set
-            {
-                this.employee_codeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employee_id
-        {
-            get
-            {
-                return this.employee_idField;
-            }
-            set
-            {
-                this.employee_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string enc_key
         {
             get
@@ -354,6 +393,19 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string facebook
+        {
+            get
+            {
+                return this.facebookField;
+            }
+            set
+            {
+                this.facebookField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string first_name
         {
             get
@@ -363,19 +415,6 @@ namespace wcf_Master
             set
             {
                 this.first_nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool fix
-        {
-            get
-            {
-                return this.fixField;
-            }
-            set
-            {
-                this.fixField = value;
             }
         }
         
@@ -432,15 +471,15 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int immediate_supervisor_id
+        public string instagram
         {
             get
             {
-                return this.immediate_supervisor_idField;
+                return this.instagramField;
             }
             set
             {
-                this.immediate_supervisor_idField = value;
+                this.instagramField = value;
             }
         }
         
@@ -454,6 +493,19 @@ namespace wcf_Master
             set
             {
                 this.last_nameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string linkedin
+        {
+            get
+            {
+                return this.linkedinField;
+            }
+            set
+            {
+                this.linkedinField = value;
             }
         }
         
@@ -497,15 +549,67 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string permanent_address
+        public string perm_city
         {
             get
             {
-                return this.permanent_addressField;
+                return this.perm_cityField;
             }
             set
             {
-                this.permanent_addressField = value;
+                this.perm_cityField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string perm_country
+        {
+            get
+            {
+                return this.perm_countryField;
+            }
+            set
+            {
+                this.perm_countryField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string perm_state
+        {
+            get
+            {
+                return this.perm_stateField;
+            }
+            set
+            {
+                this.perm_stateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string perm_street
+        {
+            get
+            {
+                return this.perm_streetField;
+            }
+            set
+            {
+                this.perm_streetField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string perm_zipcode
+        {
+            get
+            {
+                return this.perm_zipcodeField;
+            }
+            set
+            {
+                this.perm_zipcodeField = value;
             }
         }
         
@@ -523,6 +627,19 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string phone_home
+        {
+            get
+            {
+                return this.phone_homeField;
+            }
+            set
+            {
+                this.phone_homeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string phone_mobile
         {
             get
@@ -536,41 +653,28 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string phone_office
+        public string phone_other
         {
             get
             {
-                return this.phone_officeField;
+                return this.phone_otherField;
             }
             set
             {
-                this.phone_officeField = value;
+                this.phone_otherField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string phone_telephone
+        public string phone_work
         {
             get
             {
-                return this.phone_telephoneField;
+                return this.phone_workField;
             }
             set
             {
-                this.phone_telephoneField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string present_address
-        {
-            get
-            {
-                return this.present_addressField;
-            }
-            set
-            {
-                this.present_addressField = value;
+                this.phone_workField = value;
             }
         }
         
@@ -627,6 +731,84 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string skype
+        {
+            get
+            {
+                return this.skypeField;
+            }
+            set
+            {
+                this.skypeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tumblr
+        {
+            get
+            {
+                return this.tumblrField;
+            }
+            set
+            {
+                this.tumblrField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string twitter
+        {
+            get
+            {
+                return this.twitterField;
+            }
+            set
+            {
+                this.twitterField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string user_code
+        {
+            get
+            {
+                return this.user_codeField;
+            }
+            set
+            {
+                this.user_codeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int user_group_id
+        {
+            get
+            {
+                return this.user_group_idField;
+            }
+            set
+            {
+                this.user_group_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int user_id
+        {
+            get
+            {
+                return this.user_idField;
+            }
+            set
+            {
+                this.user_idField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string userhash
         {
             get
@@ -666,6 +848,19 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string website
+        {
+            get
+            {
+                return this.websiteField;
+            }
+            set
+            {
+                this.websiteField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string weight
         {
             get
@@ -688,10 +883,6 @@ namespace wcf_Master
         private int access_level_idField;
         
         private string actionField;
-        
-        private string action_newField;
-        
-        private string action_viewField;
         
         private bool activeField;
         
@@ -784,32 +975,6 @@ namespace wcf_Master
             set
             {
                 this.actionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string action_new
-        {
-            get
-            {
-                return this.action_newField;
-            }
-            set
-            {
-                this.action_newField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string action_view
-        {
-            get
-            {
-                return this.action_viewField;
-            }
-            set
-            {
-                this.action_viewField = value;
             }
         }
         
@@ -1905,71 +2070,41 @@ namespace wcf_Master
     public partial class employee_list_view_lib : object
     {
         
-        private string access_levelField;
-        
         private int access_level_idField;
         
         private bool activeField;
+        
+        private string address_cityField;
+        
+        private string address_countryField;
+        
+        private string address_stateField;
+        
+        private string address_streetField;
+        
+        private string address_zipcodeField;
         
         private string answer1Field;
         
         private string answer2Field;
         
-        private string approval_groupField;
-        
-        private int approval_group_idField;
-        
         private bool approvedField;
-        
-        private string bankField;
-        
-        private string bankaccountField;
-        
-        private decimal basic_rateField;
-        
-        private string biometrics_idField;
         
         private string birth_placeField;
         
         private string birthdayField;
         
-        private string blood_typeField;
-        
         private string bp_statusField;
-        
-        private string buttonField;
-        
-        private string civil_statusField;
         
         private int civil_status_idField;
         
         private int company_idField;
         
-        private string company_nameField;
-        
-        private string confidentialityField;
-        
-        private int confidentiality_idField;
-        
-        private string created_byField;
-        
-        private int created_by_idField;
-        
-        private decimal daily_rateField;
+        private int created_byField;
         
         private string date_createdField;
         
-        private string date_hiredField;
-        
-        private string departmentField;
-        
-        private int department_idField;
-        
         private string display_nameField;
-        
-        private string divisionField;
-        
-        private int division_idField;
         
         private string email_addressField;
         
@@ -1977,11 +2112,9 @@ namespace wcf_Master
         
         private int employee_idField;
         
-        private string employee_statusField;
-        
-        private int employee_status_idField;
-        
         private string enc_keyField;
+        
+        private string facebookField;
         
         private string first_nameField;
         
@@ -1989,112 +2122,69 @@ namespace wcf_Master
         
         private string full_nameField;
         
-        private string genderField;
-        
         private int gender_idField;
-        
-        private string gsisField;
         
         private string heightField;
         
-        private decimal hourly_rateField;
-        
         private string image_pathField;
         
-        private string immediate_supervisorField;
-        
-        private int immediate_supervisor_idField;
-        
-        private bool is_fixed_salaryField;
-        
-        private bool is_tardiness_deductionField;
-        
-        private bool is_without_otField;
+        private string instagramField;
         
         private string last_nameField;
         
-        private string middle_nameField;
+        private string linkedinField;
         
-        private string nationalityField;
+        private string middle_nameField;
         
         private int nationality_idField;
         
-        private string nbiField;
-        
         private string nick_nameField;
         
-        private string occupationField;
+        private string perm_cityField;
         
-        private int occupation_idField;
+        private string perm_countryField;
         
-        private string pagibigField;
+        private string perm_stateField;
         
-        private int payroll_typeField;
+        private string perm_streetField;
         
-        private string payroll_type_descField;
-        
-        private string permanent_addressField;
-        
-        private string philhealthField;
+        private string perm_zipcodeField;
         
         private string phone_faxField;
         
+        private string phone_homeField;
+        
         private string phone_mobileField;
         
-        private string phone_officeField;
+        private string phone_otherField;
         
-        private string phone_telephoneField;
-        
-        private string present_addressField;
+        private string phone_workField;
         
         private int question1Field;
         
         private int question2Field;
         
-        private string religionField;
-        
         private int religion_idField;
-        
-        private string salutationField;
         
         private int salutation_idField;
         
-        private string sectionField;
+        private string skypeField;
         
-        private int section_idField;
+        private string tumblrField;
         
-        private decimal semi_monthly_rateField;
+        private string twitterField;
         
-        private string sssField;
-        
-        private int supervisorField;
-        
-        private string supervisor_descField;
-        
-        private string tinField;
+        private int user_group_idField;
         
         private string userhashField;
         
         private string usernameField;
         
-        private int warehouseField;
+        private int warehouse_idField;
         
-        private string warehouse_descField;
+        private string websiteField;
         
         private string weightField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string access_level
-        {
-            get
-            {
-                return this.access_levelField;
-            }
-            set
-            {
-                this.access_levelField = value;
-            }
-        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int access_level_id
@@ -2119,6 +2209,71 @@ namespace wcf_Master
             set
             {
                 this.activeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_city
+        {
+            get
+            {
+                return this.address_cityField;
+            }
+            set
+            {
+                this.address_cityField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_country
+        {
+            get
+            {
+                return this.address_countryField;
+            }
+            set
+            {
+                this.address_countryField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_state
+        {
+            get
+            {
+                return this.address_stateField;
+            }
+            set
+            {
+                this.address_stateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_street
+        {
+            get
+            {
+                return this.address_streetField;
+            }
+            set
+            {
+                this.address_streetField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address_zipcode
+        {
+            get
+            {
+                return this.address_zipcodeField;
+            }
+            set
+            {
+                this.address_zipcodeField = value;
             }
         }
         
@@ -2149,32 +2304,6 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string approval_group
-        {
-            get
-            {
-                return this.approval_groupField;
-            }
-            set
-            {
-                this.approval_groupField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int approval_group_id
-        {
-            get
-            {
-                return this.approval_group_idField;
-            }
-            set
-            {
-                this.approval_group_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public bool approved
         {
             get
@@ -2184,58 +2313,6 @@ namespace wcf_Master
             set
             {
                 this.approvedField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string bank
-        {
-            get
-            {
-                return this.bankField;
-            }
-            set
-            {
-                this.bankField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string bankaccount
-        {
-            get
-            {
-                return this.bankaccountField;
-            }
-            set
-            {
-                this.bankaccountField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal basic_rate
-        {
-            get
-            {
-                return this.basic_rateField;
-            }
-            set
-            {
-                this.basic_rateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string biometrics_id
-        {
-            get
-            {
-                return this.biometrics_idField;
-            }
-            set
-            {
-                this.biometrics_idField = value;
             }
         }
         
@@ -2266,19 +2343,6 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string blood_type
-        {
-            get
-            {
-                return this.blood_typeField;
-            }
-            set
-            {
-                this.blood_typeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string bp_status
         {
             get
@@ -2288,32 +2352,6 @@ namespace wcf_Master
             set
             {
                 this.bp_statusField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string button
-        {
-            get
-            {
-                return this.buttonField;
-            }
-            set
-            {
-                this.buttonField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string civil_status
-        {
-            get
-            {
-                return this.civil_statusField;
-            }
-            set
-            {
-                this.civil_statusField = value;
             }
         }
         
@@ -2344,46 +2382,7 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string company_name
-        {
-            get
-            {
-                return this.company_nameField;
-            }
-            set
-            {
-                this.company_nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string confidentiality
-        {
-            get
-            {
-                return this.confidentialityField;
-            }
-            set
-            {
-                this.confidentialityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int confidentiality_id
-        {
-            get
-            {
-                return this.confidentiality_idField;
-            }
-            set
-            {
-                this.confidentiality_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string created_by
+        public int created_by
         {
             get
             {
@@ -2392,32 +2391,6 @@ namespace wcf_Master
             set
             {
                 this.created_byField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int created_by_id
-        {
-            get
-            {
-                return this.created_by_idField;
-            }
-            set
-            {
-                this.created_by_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal daily_rate
-        {
-            get
-            {
-                return this.daily_rateField;
-            }
-            set
-            {
-                this.daily_rateField = value;
             }
         }
         
@@ -2435,45 +2408,6 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string date_hired
-        {
-            get
-            {
-                return this.date_hiredField;
-            }
-            set
-            {
-                this.date_hiredField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string department
-        {
-            get
-            {
-                return this.departmentField;
-            }
-            set
-            {
-                this.departmentField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int department_id
-        {
-            get
-            {
-                return this.department_idField;
-            }
-            set
-            {
-                this.department_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string display_name
         {
             get
@@ -2483,32 +2417,6 @@ namespace wcf_Master
             set
             {
                 this.display_nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string division
-        {
-            get
-            {
-                return this.divisionField;
-            }
-            set
-            {
-                this.divisionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int division_id
-        {
-            get
-            {
-                return this.division_idField;
-            }
-            set
-            {
-                this.division_idField = value;
             }
         }
         
@@ -2552,32 +2460,6 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string employee_status
-        {
-            get
-            {
-                return this.employee_statusField;
-            }
-            set
-            {
-                this.employee_statusField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employee_status_id
-        {
-            get
-            {
-                return this.employee_status_idField;
-            }
-            set
-            {
-                this.employee_status_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string enc_key
         {
             get
@@ -2587,6 +2469,19 @@ namespace wcf_Master
             set
             {
                 this.enc_keyField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string facebook
+        {
+            get
+            {
+                return this.facebookField;
+            }
+            set
+            {
+                this.facebookField = value;
             }
         }
         
@@ -2630,19 +2525,6 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string gender
-        {
-            get
-            {
-                return this.genderField;
-            }
-            set
-            {
-                this.genderField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int gender_id
         {
             get
@@ -2652,19 +2534,6 @@ namespace wcf_Master
             set
             {
                 this.gender_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string gsis
-        {
-            get
-            {
-                return this.gsisField;
-            }
-            set
-            {
-                this.gsisField = value;
             }
         }
         
@@ -2682,19 +2551,6 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal hourly_rate
-        {
-            get
-            {
-                return this.hourly_rateField;
-            }
-            set
-            {
-                this.hourly_rateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string image_path
         {
             get
@@ -2708,67 +2564,15 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string immediate_supervisor
+        public string instagram
         {
             get
             {
-                return this.immediate_supervisorField;
+                return this.instagramField;
             }
             set
             {
-                this.immediate_supervisorField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int immediate_supervisor_id
-        {
-            get
-            {
-                return this.immediate_supervisor_idField;
-            }
-            set
-            {
-                this.immediate_supervisor_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool is_fixed_salary
-        {
-            get
-            {
-                return this.is_fixed_salaryField;
-            }
-            set
-            {
-                this.is_fixed_salaryField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool is_tardiness_deduction
-        {
-            get
-            {
-                return this.is_tardiness_deductionField;
-            }
-            set
-            {
-                this.is_tardiness_deductionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool is_without_ot
-        {
-            get
-            {
-                return this.is_without_otField;
-            }
-            set
-            {
-                this.is_without_otField = value;
+                this.instagramField = value;
             }
         }
         
@@ -2786,6 +2590,19 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string linkedin
+        {
+            get
+            {
+                return this.linkedinField;
+            }
+            set
+            {
+                this.linkedinField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string middle_name
         {
             get
@@ -2795,19 +2612,6 @@ namespace wcf_Master
             set
             {
                 this.middle_nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string nationality
-        {
-            get
-            {
-                return this.nationalityField;
-            }
-            set
-            {
-                this.nationalityField = value;
             }
         }
         
@@ -2825,19 +2629,6 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string nbi
-        {
-            get
-            {
-                return this.nbiField;
-            }
-            set
-            {
-                this.nbiField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string nick_name
         {
             get
@@ -2851,93 +2642,67 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string occupation
+        public string perm_city
         {
             get
             {
-                return this.occupationField;
+                return this.perm_cityField;
             }
             set
             {
-                this.occupationField = value;
+                this.perm_cityField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int occupation_id
+        public string perm_country
         {
             get
             {
-                return this.occupation_idField;
+                return this.perm_countryField;
             }
             set
             {
-                this.occupation_idField = value;
+                this.perm_countryField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string pagibig
+        public string perm_state
         {
             get
             {
-                return this.pagibigField;
+                return this.perm_stateField;
             }
             set
             {
-                this.pagibigField = value;
+                this.perm_stateField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int payroll_type
+        public string perm_street
         {
             get
             {
-                return this.payroll_typeField;
+                return this.perm_streetField;
             }
             set
             {
-                this.payroll_typeField = value;
+                this.perm_streetField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string payroll_type_desc
+        public string perm_zipcode
         {
             get
             {
-                return this.payroll_type_descField;
+                return this.perm_zipcodeField;
             }
             set
             {
-                this.payroll_type_descField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string permanent_address
-        {
-            get
-            {
-                return this.permanent_addressField;
-            }
-            set
-            {
-                this.permanent_addressField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string philhealth
-        {
-            get
-            {
-                return this.philhealthField;
-            }
-            set
-            {
-                this.philhealthField = value;
+                this.perm_zipcodeField = value;
             }
         }
         
@@ -2955,6 +2720,19 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string phone_home
+        {
+            get
+            {
+                return this.phone_homeField;
+            }
+            set
+            {
+                this.phone_homeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string phone_mobile
         {
             get
@@ -2968,41 +2746,28 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string phone_office
+        public string phone_other
         {
             get
             {
-                return this.phone_officeField;
+                return this.phone_otherField;
             }
             set
             {
-                this.phone_officeField = value;
+                this.phone_otherField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string phone_telephone
+        public string phone_work
         {
             get
             {
-                return this.phone_telephoneField;
+                return this.phone_workField;
             }
             set
             {
-                this.phone_telephoneField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string present_address
-        {
-            get
-            {
-                return this.present_addressField;
-            }
-            set
-            {
-                this.present_addressField = value;
+                this.phone_workField = value;
             }
         }
         
@@ -3033,19 +2798,6 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string religion
-        {
-            get
-            {
-                return this.religionField;
-            }
-            set
-            {
-                this.religionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int religion_id
         {
             get
@@ -3055,19 +2807,6 @@ namespace wcf_Master
             set
             {
                 this.religion_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string salutation
-        {
-            get
-            {
-                return this.salutationField;
-            }
-            set
-            {
-                this.salutationField = value;
             }
         }
         
@@ -3085,93 +2824,54 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string section
+        public string skype
         {
             get
             {
-                return this.sectionField;
+                return this.skypeField;
             }
             set
             {
-                this.sectionField = value;
+                this.skypeField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int section_id
+        public string tumblr
         {
             get
             {
-                return this.section_idField;
+                return this.tumblrField;
             }
             set
             {
-                this.section_idField = value;
+                this.tumblrField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal semi_monthly_rate
+        public string twitter
         {
             get
             {
-                return this.semi_monthly_rateField;
+                return this.twitterField;
             }
             set
             {
-                this.semi_monthly_rateField = value;
+                this.twitterField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string sss
+        public int user_group_id
         {
             get
             {
-                return this.sssField;
+                return this.user_group_idField;
             }
             set
             {
-                this.sssField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int supervisor
-        {
-            get
-            {
-                return this.supervisorField;
-            }
-            set
-            {
-                this.supervisorField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string supervisor_desc
-        {
-            get
-            {
-                return this.supervisor_descField;
-            }
-            set
-            {
-                this.supervisor_descField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string tin
-        {
-            get
-            {
-                return this.tinField;
-            }
-            set
-            {
-                this.tinField = value;
+                this.user_group_idField = value;
             }
         }
         
@@ -3202,28 +2902,28 @@ namespace wcf_Master
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int warehouse
+        public int warehouse_id
         {
             get
             {
-                return this.warehouseField;
+                return this.warehouse_idField;
             }
             set
             {
-                this.warehouseField = value;
+                this.warehouse_idField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string warehouse_desc
+        public string website
         {
             get
             {
-                return this.warehouse_descField;
+                return this.websiteField;
             }
             set
             {
-                this.warehouse_descField = value;
+                this.websiteField = value;
             }
         }
         
@@ -3660,1944 +3360,6 @@ namespace wcf_Master
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="payroll_type_view_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
-    public partial class payroll_type_view_lib : object
-    {
-        
-        private int cutoff_fromField;
-        
-        private int cutoff_toField;
-        
-        private string date_createdField;
-        
-        private string descriptionField;
-        
-        private bool is_per_cut_offField;
-        
-        private bool is_per_dayField;
-        
-        private bool is_per_hrField;
-        
-        private bool is_per_monthField;
-        
-        private int payroll_type_idField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int cutoff_from
-        {
-            get
-            {
-                return this.cutoff_fromField;
-            }
-            set
-            {
-                this.cutoff_fromField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int cutoff_to
-        {
-            get
-            {
-                return this.cutoff_toField;
-            }
-            set
-            {
-                this.cutoff_toField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string date_created
-        {
-            get
-            {
-                return this.date_createdField;
-            }
-            set
-            {
-                this.date_createdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string description
-        {
-            get
-            {
-                return this.descriptionField;
-            }
-            set
-            {
-                this.descriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool is_per_cut_off
-        {
-            get
-            {
-                return this.is_per_cut_offField;
-            }
-            set
-            {
-                this.is_per_cut_offField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool is_per_day
-        {
-            get
-            {
-                return this.is_per_dayField;
-            }
-            set
-            {
-                this.is_per_dayField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool is_per_hr
-        {
-            get
-            {
-                return this.is_per_hrField;
-            }
-            set
-            {
-                this.is_per_hrField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool is_per_month
-        {
-            get
-            {
-                return this.is_per_monthField;
-            }
-            set
-            {
-                this.is_per_monthField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int payroll_type_id
-        {
-            get
-            {
-                return this.payroll_type_idField;
-            }
-            set
-            {
-                this.payroll_type_idField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="employee_in_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
-    public partial class employee_in_lib : object
-    {
-        
-        private int access_level_idField;
-        
-        private bool activeField;
-        
-        private string answer1Field;
-        
-        private string answer2Field;
-        
-        private int approval_group_idField;
-        
-        private string birth_placeField;
-        
-        private string birthdayField;
-        
-        private string blood_typeField;
-        
-        private int civil_status_idField;
-        
-        private int company_idField;
-        
-        private int created_byField;
-        
-        private string date_createdField;
-        
-        private string display_nameField;
-        
-        private string email_addressField;
-        
-        private int employee_idField;
-        
-        private string first_nameField;
-        
-        private bool fixField;
-        
-        private int gender_idField;
-        
-        private string heightField;
-        
-        private string image_pathField;
-        
-        private int immediate_supervisor_idField;
-        
-        private string last_nameField;
-        
-        private string middle_nameField;
-        
-        private int nationality_idField;
-        
-        private string nick_nameField;
-        
-        private string permanent_addressField;
-        
-        private string phone_faxField;
-        
-        private string phone_mobileField;
-        
-        private string phone_officeField;
-        
-        private string phone_telephoneField;
-        
-        private string present_addressField;
-        
-        private int question1Field;
-        
-        private int question2Field;
-        
-        private int religion_idField;
-        
-        private int salutation_idField;
-        
-        private string userhashField;
-        
-        private string usernameField;
-        
-        private string weightField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int access_level_id
-        {
-            get
-            {
-                return this.access_level_idField;
-            }
-            set
-            {
-                this.access_level_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool active
-        {
-            get
-            {
-                return this.activeField;
-            }
-            set
-            {
-                this.activeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string answer1
-        {
-            get
-            {
-                return this.answer1Field;
-            }
-            set
-            {
-                this.answer1Field = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string answer2
-        {
-            get
-            {
-                return this.answer2Field;
-            }
-            set
-            {
-                this.answer2Field = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int approval_group_id
-        {
-            get
-            {
-                return this.approval_group_idField;
-            }
-            set
-            {
-                this.approval_group_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string birth_place
-        {
-            get
-            {
-                return this.birth_placeField;
-            }
-            set
-            {
-                this.birth_placeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string birthday
-        {
-            get
-            {
-                return this.birthdayField;
-            }
-            set
-            {
-                this.birthdayField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string blood_type
-        {
-            get
-            {
-                return this.blood_typeField;
-            }
-            set
-            {
-                this.blood_typeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int civil_status_id
-        {
-            get
-            {
-                return this.civil_status_idField;
-            }
-            set
-            {
-                this.civil_status_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int company_id
-        {
-            get
-            {
-                return this.company_idField;
-            }
-            set
-            {
-                this.company_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int created_by
-        {
-            get
-            {
-                return this.created_byField;
-            }
-            set
-            {
-                this.created_byField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string date_created
-        {
-            get
-            {
-                return this.date_createdField;
-            }
-            set
-            {
-                this.date_createdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string display_name
-        {
-            get
-            {
-                return this.display_nameField;
-            }
-            set
-            {
-                this.display_nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string email_address
-        {
-            get
-            {
-                return this.email_addressField;
-            }
-            set
-            {
-                this.email_addressField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employee_id
-        {
-            get
-            {
-                return this.employee_idField;
-            }
-            set
-            {
-                this.employee_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string first_name
-        {
-            get
-            {
-                return this.first_nameField;
-            }
-            set
-            {
-                this.first_nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool fix
-        {
-            get
-            {
-                return this.fixField;
-            }
-            set
-            {
-                this.fixField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int gender_id
-        {
-            get
-            {
-                return this.gender_idField;
-            }
-            set
-            {
-                this.gender_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string height
-        {
-            get
-            {
-                return this.heightField;
-            }
-            set
-            {
-                this.heightField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string image_path
-        {
-            get
-            {
-                return this.image_pathField;
-            }
-            set
-            {
-                this.image_pathField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int immediate_supervisor_id
-        {
-            get
-            {
-                return this.immediate_supervisor_idField;
-            }
-            set
-            {
-                this.immediate_supervisor_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string last_name
-        {
-            get
-            {
-                return this.last_nameField;
-            }
-            set
-            {
-                this.last_nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string middle_name
-        {
-            get
-            {
-                return this.middle_nameField;
-            }
-            set
-            {
-                this.middle_nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int nationality_id
-        {
-            get
-            {
-                return this.nationality_idField;
-            }
-            set
-            {
-                this.nationality_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string nick_name
-        {
-            get
-            {
-                return this.nick_nameField;
-            }
-            set
-            {
-                this.nick_nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string permanent_address
-        {
-            get
-            {
-                return this.permanent_addressField;
-            }
-            set
-            {
-                this.permanent_addressField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string phone_fax
-        {
-            get
-            {
-                return this.phone_faxField;
-            }
-            set
-            {
-                this.phone_faxField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string phone_mobile
-        {
-            get
-            {
-                return this.phone_mobileField;
-            }
-            set
-            {
-                this.phone_mobileField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string phone_office
-        {
-            get
-            {
-                return this.phone_officeField;
-            }
-            set
-            {
-                this.phone_officeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string phone_telephone
-        {
-            get
-            {
-                return this.phone_telephoneField;
-            }
-            set
-            {
-                this.phone_telephoneField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string present_address
-        {
-            get
-            {
-                return this.present_addressField;
-            }
-            set
-            {
-                this.present_addressField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int question1
-        {
-            get
-            {
-                return this.question1Field;
-            }
-            set
-            {
-                this.question1Field = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int question2
-        {
-            get
-            {
-                return this.question2Field;
-            }
-            set
-            {
-                this.question2Field = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int religion_id
-        {
-            get
-            {
-                return this.religion_idField;
-            }
-            set
-            {
-                this.religion_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int salutation_id
-        {
-            get
-            {
-                return this.salutation_idField;
-            }
-            set
-            {
-                this.salutation_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string userhash
-        {
-            get
-            {
-                return this.userhashField;
-            }
-            set
-            {
-                this.userhashField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string username
-        {
-            get
-            {
-                return this.usernameField;
-            }
-            set
-            {
-                this.usernameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string weight
-        {
-            get
-            {
-                return this.weightField;
-            }
-            set
-            {
-                this.weightField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="employee_information_in_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
-    public partial class employee_information_in_lib : object
-    {
-        
-        private string bankField;
-        
-        private string bankaccountField;
-        
-        private decimal basic_rateField;
-        
-        private string biometrics_idField;
-        
-        private int confidentialityField;
-        
-        private string confidentiality_descField;
-        
-        private decimal daily_rateField;
-        
-        private string date_hiredField;
-        
-        private string departmentField;
-        
-        private int department_idField;
-        
-        private string divisionField;
-        
-        private int division_idField;
-        
-        private int employee_idField;
-        
-        private string employee_statusField;
-        
-        private int employee_status_idField;
-        
-        private string gsisField;
-        
-        private decimal hourly_rateField;
-        
-        private bool is_fixed_salaryField;
-        
-        private bool is_tardiness_deductionField;
-        
-        private bool is_without_otField;
-        
-        private string nbiField;
-        
-        private string occupationField;
-        
-        private int occupation_idField;
-        
-        private string pagibigField;
-        
-        private int payroll_typeField;
-        
-        private string payroll_type_descField;
-        
-        private string philhealthField;
-        
-        private string sectionField;
-        
-        private int section_idField;
-        
-        private decimal semi_monthly_rateField;
-        
-        private string sssField;
-        
-        private int supervisorField;
-        
-        private string supervisor_descField;
-        
-        private string tinField;
-        
-        private int warehouseField;
-        
-        private string warehouse_descField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string bank
-        {
-            get
-            {
-                return this.bankField;
-            }
-            set
-            {
-                this.bankField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string bankaccount
-        {
-            get
-            {
-                return this.bankaccountField;
-            }
-            set
-            {
-                this.bankaccountField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal basic_rate
-        {
-            get
-            {
-                return this.basic_rateField;
-            }
-            set
-            {
-                this.basic_rateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string biometrics_id
-        {
-            get
-            {
-                return this.biometrics_idField;
-            }
-            set
-            {
-                this.biometrics_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int confidentiality
-        {
-            get
-            {
-                return this.confidentialityField;
-            }
-            set
-            {
-                this.confidentialityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string confidentiality_desc
-        {
-            get
-            {
-                return this.confidentiality_descField;
-            }
-            set
-            {
-                this.confidentiality_descField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal daily_rate
-        {
-            get
-            {
-                return this.daily_rateField;
-            }
-            set
-            {
-                this.daily_rateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string date_hired
-        {
-            get
-            {
-                return this.date_hiredField;
-            }
-            set
-            {
-                this.date_hiredField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string department
-        {
-            get
-            {
-                return this.departmentField;
-            }
-            set
-            {
-                this.departmentField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int department_id
-        {
-            get
-            {
-                return this.department_idField;
-            }
-            set
-            {
-                this.department_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string division
-        {
-            get
-            {
-                return this.divisionField;
-            }
-            set
-            {
-                this.divisionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int division_id
-        {
-            get
-            {
-                return this.division_idField;
-            }
-            set
-            {
-                this.division_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employee_id
-        {
-            get
-            {
-                return this.employee_idField;
-            }
-            set
-            {
-                this.employee_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string employee_status
-        {
-            get
-            {
-                return this.employee_statusField;
-            }
-            set
-            {
-                this.employee_statusField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employee_status_id
-        {
-            get
-            {
-                return this.employee_status_idField;
-            }
-            set
-            {
-                this.employee_status_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string gsis
-        {
-            get
-            {
-                return this.gsisField;
-            }
-            set
-            {
-                this.gsisField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal hourly_rate
-        {
-            get
-            {
-                return this.hourly_rateField;
-            }
-            set
-            {
-                this.hourly_rateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool is_fixed_salary
-        {
-            get
-            {
-                return this.is_fixed_salaryField;
-            }
-            set
-            {
-                this.is_fixed_salaryField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool is_tardiness_deduction
-        {
-            get
-            {
-                return this.is_tardiness_deductionField;
-            }
-            set
-            {
-                this.is_tardiness_deductionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool is_without_ot
-        {
-            get
-            {
-                return this.is_without_otField;
-            }
-            set
-            {
-                this.is_without_otField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string nbi
-        {
-            get
-            {
-                return this.nbiField;
-            }
-            set
-            {
-                this.nbiField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string occupation
-        {
-            get
-            {
-                return this.occupationField;
-            }
-            set
-            {
-                this.occupationField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int occupation_id
-        {
-            get
-            {
-                return this.occupation_idField;
-            }
-            set
-            {
-                this.occupation_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string pagibig
-        {
-            get
-            {
-                return this.pagibigField;
-            }
-            set
-            {
-                this.pagibigField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int payroll_type
-        {
-            get
-            {
-                return this.payroll_typeField;
-            }
-            set
-            {
-                this.payroll_typeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string payroll_type_desc
-        {
-            get
-            {
-                return this.payroll_type_descField;
-            }
-            set
-            {
-                this.payroll_type_descField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string philhealth
-        {
-            get
-            {
-                return this.philhealthField;
-            }
-            set
-            {
-                this.philhealthField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string section
-        {
-            get
-            {
-                return this.sectionField;
-            }
-            set
-            {
-                this.sectionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int section_id
-        {
-            get
-            {
-                return this.section_idField;
-            }
-            set
-            {
-                this.section_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal semi_monthly_rate
-        {
-            get
-            {
-                return this.semi_monthly_rateField;
-            }
-            set
-            {
-                this.semi_monthly_rateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string sss
-        {
-            get
-            {
-                return this.sssField;
-            }
-            set
-            {
-                this.sssField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int supervisor
-        {
-            get
-            {
-                return this.supervisorField;
-            }
-            set
-            {
-                this.supervisorField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string supervisor_desc
-        {
-            get
-            {
-                return this.supervisor_descField;
-            }
-            set
-            {
-                this.supervisor_descField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string tin
-        {
-            get
-            {
-                return this.tinField;
-            }
-            set
-            {
-                this.tinField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int warehouse
-        {
-            get
-            {
-                return this.warehouseField;
-            }
-            set
-            {
-                this.warehouseField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string warehouse_desc
-        {
-            get
-            {
-                return this.warehouse_descField;
-            }
-            set
-            {
-                this.warehouse_descField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="employee_relative_in_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
-    public partial class employee_relative_in_lib : object
-    {
-        
-        private string birthdayField;
-        
-        private string companyField;
-        
-        private int employee_idField;
-        
-        private string genderField;
-        
-        private int gender_idField;
-        
-        private string nameField;
-        
-        private string occupationField;
-        
-        private string relationshipField;
-        
-        private int relationship_idField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string birthday
-        {
-            get
-            {
-                return this.birthdayField;
-            }
-            set
-            {
-                this.birthdayField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string company
-        {
-            get
-            {
-                return this.companyField;
-            }
-            set
-            {
-                this.companyField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employee_id
-        {
-            get
-            {
-                return this.employee_idField;
-            }
-            set
-            {
-                this.employee_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string gender
-        {
-            get
-            {
-                return this.genderField;
-            }
-            set
-            {
-                this.genderField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int gender_id
-        {
-            get
-            {
-                return this.gender_idField;
-            }
-            set
-            {
-                this.gender_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name
-        {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string occupation
-        {
-            get
-            {
-                return this.occupationField;
-            }
-            set
-            {
-                this.occupationField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string relationship
-        {
-            get
-            {
-                return this.relationshipField;
-            }
-            set
-            {
-                this.relationshipField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int relationship_id
-        {
-            get
-            {
-                return this.relationship_idField;
-            }
-            set
-            {
-                this.relationship_idField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="employee_emergency_in_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
-    public partial class employee_emergency_in_lib : object
-    {
-        
-        private string addressField;
-        
-        private string contact_numberField;
-        
-        private int employee_idField;
-        
-        private string nameField;
-        
-        private string relationshipField;
-        
-        private int relationship_idField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string address
-        {
-            get
-            {
-                return this.addressField;
-            }
-            set
-            {
-                this.addressField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string contact_number
-        {
-            get
-            {
-                return this.contact_numberField;
-            }
-            set
-            {
-                this.contact_numberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employee_id
-        {
-            get
-            {
-                return this.employee_idField;
-            }
-            set
-            {
-                this.employee_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name
-        {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string relationship
-        {
-            get
-            {
-                return this.relationshipField;
-            }
-            set
-            {
-                this.relationshipField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int relationship_id
-        {
-            get
-            {
-                return this.relationship_idField;
-            }
-            set
-            {
-                this.relationship_idField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="employee_employment_in_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
-    public partial class employee_employment_in_lib : object
-    {
-        
-        private string companyField;
-        
-        private string date_fromField;
-        
-        private string date_toField;
-        
-        private int employee_idField;
-        
-        private string positionField;
-        
-        private string reasonField;
-        
-        private decimal salaryField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string company
-        {
-            get
-            {
-                return this.companyField;
-            }
-            set
-            {
-                this.companyField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string date_from
-        {
-            get
-            {
-                return this.date_fromField;
-            }
-            set
-            {
-                this.date_fromField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string date_to
-        {
-            get
-            {
-                return this.date_toField;
-            }
-            set
-            {
-                this.date_toField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employee_id
-        {
-            get
-            {
-                return this.employee_idField;
-            }
-            set
-            {
-                this.employee_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string position
-        {
-            get
-            {
-                return this.positionField;
-            }
-            set
-            {
-                this.positionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string reason
-        {
-            get
-            {
-                return this.reasonField;
-            }
-            set
-            {
-                this.reasonField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal salary
-        {
-            get
-            {
-                return this.salaryField;
-            }
-            set
-            {
-                this.salaryField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="employee_education_in_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
-    public partial class employee_education_in_lib : object
-    {
-        
-        private string awardsField;
-        
-        private string date_fromField;
-        
-        private string date_toField;
-        
-        private int employee_idField;
-        
-        private string nameField;
-        
-        private string typeField;
-        
-        private int type_idField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string awards
-        {
-            get
-            {
-                return this.awardsField;
-            }
-            set
-            {
-                this.awardsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string date_from
-        {
-            get
-            {
-                return this.date_fromField;
-            }
-            set
-            {
-                this.date_fromField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string date_to
-        {
-            get
-            {
-                return this.date_toField;
-            }
-            set
-            {
-                this.date_toField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employee_id
-        {
-            get
-            {
-                return this.employee_idField;
-            }
-            set
-            {
-                this.employee_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name
-        {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string type
-        {
-            get
-            {
-                return this.typeField;
-            }
-            set
-            {
-                this.typeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int type_id
-        {
-            get
-            {
-                return this.type_idField;
-            }
-            set
-            {
-                this.type_idField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="employee_degree_in_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
-    public partial class employee_degree_in_lib : object
-    {
-        
-        private string courseField;
-        
-        private int employee_idField;
-        
-        private string majorField;
-        
-        private string nameField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string course
-        {
-            get
-            {
-                return this.courseField;
-            }
-            set
-            {
-                this.courseField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employee_id
-        {
-            get
-            {
-                return this.employee_idField;
-            }
-            set
-            {
-                this.employee_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string major
-        {
-            get
-            {
-                return this.majorField;
-            }
-            set
-            {
-                this.majorField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name
-        {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="series_view_lib", Namespace="http://schemas.datacontract.org/2004/07/BridgeWCF.Library")]
-    public partial class series_view_lib : object
-    {
-        
-        private bool activeField;
-        
-        private int company_idField;
-        
-        private int module_idField;
-        
-        private string module_nameField;
-        
-        private string prefixField;
-        
-        private string series_codeField;
-        
-        private int series_idField;
-        
-        private int series_numField;
-        
-        private int yearField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool active
-        {
-            get
-            {
-                return this.activeField;
-            }
-            set
-            {
-                this.activeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int company_id
-        {
-            get
-            {
-                return this.company_idField;
-            }
-            set
-            {
-                this.company_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int module_id
-        {
-            get
-            {
-                return this.module_idField;
-            }
-            set
-            {
-                this.module_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string module_name
-        {
-            get
-            {
-                return this.module_nameField;
-            }
-            set
-            {
-                this.module_nameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string prefix
-        {
-            get
-            {
-                return this.prefixField;
-            }
-            set
-            {
-                this.prefixField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string series_code
-        {
-            get
-            {
-                return this.series_codeField;
-            }
-            set
-            {
-                this.series_codeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int series_id
-        {
-            get
-            {
-                return this.series_idField;
-            }
-            set
-            {
-                this.series_idField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int series_num
-        {
-            get
-            {
-                return this.series_numField;
-            }
-            set
-            {
-                this.series_numField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int year
-        {
-            get
-            {
-                return this.yearField;
-            }
-            set
-            {
-                this.yearField = value;
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="wcf_Master.IMaster_Service")]
     public interface IMaster_Service
@@ -5622,7 +3384,7 @@ namespace wcf_Master
         System.Threading.Tasks.Task<wcf_Master.menu_view_restriction_lib[]> modules_viewAsync(int module_id, bool is_ap, bool is_active);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/util_dropdown_setting_in", ReplyAction="http://tempuri.org/IMaster_Service/util_dropdown_setting_inResponse")]
-        System.Threading.Tasks.Task<wcf_Master.util_dropdown_view_lib[]> util_dropdown_setting_inAsync(wcf_Master.util_dropdown_view_lib obj);
+        System.Threading.Tasks.Task<int> util_dropdown_setting_inAsync(wcf_Master.util_dropdown_view_lib obj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/module_access_in", ReplyAction="http://tempuri.org/IMaster_Service/module_access_inResponse")]
         System.Threading.Tasks.Task<wcf_Master.menu_view_restriction_lib> module_access_inAsync(wcf_Master.menu_view_restriction_lib[] obj, int company_id, int created_by);
@@ -5647,45 +3409,6 @@ namespace wcf_Master
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/approval_process_view", ReplyAction="http://tempuri.org/IMaster_Service/approval_process_viewResponse")]
         System.Threading.Tasks.Task<wcf_Master.approval_process_in_lib[]> approval_process_viewAsync(int module_id, int approval_group_id, int warehouse_id, int company_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/payroll_type_view", ReplyAction="http://tempuri.org/IMaster_Service/payroll_type_viewResponse")]
-        System.Threading.Tasks.Task<wcf_Master.payroll_type_view_lib[]> payroll_type_viewAsync(int payroll_type_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/employee_in_up", ReplyAction="http://tempuri.org/IMaster_Service/employee_in_upResponse")]
-        System.Threading.Tasks.Task<wcf_Master.employee_in_lib> employee_in_upAsync(wcf_Master.employee_in_lib objPersonal, wcf_Master.employee_information_in_lib objPayroll, wcf_Master.employee_relative_in_lib[] objRelative, wcf_Master.employee_emergency_in_lib[] objEmergency, wcf_Master.employee_employment_in_lib[] objEmployment, wcf_Master.employee_education_in_lib[] objEducation, wcf_Master.employee_degree_in_lib[] objDegree, int approval_group_id, bool oldPath);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/employee_information_view", ReplyAction="http://tempuri.org/IMaster_Service/employee_information_viewResponse")]
-        System.Threading.Tasks.Task<wcf_Master.employee_information_in_lib[]> employee_information_viewAsync(int employee_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/employee_degree_view", ReplyAction="http://tempuri.org/IMaster_Service/employee_degree_viewResponse")]
-        System.Threading.Tasks.Task<wcf_Master.employee_degree_in_lib[]> employee_degree_viewAsync(int employee_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/employee_education_view", ReplyAction="http://tempuri.org/IMaster_Service/employee_education_viewResponse")]
-        System.Threading.Tasks.Task<wcf_Master.employee_education_in_lib[]> employee_education_viewAsync(int employee_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/employee_emergency_view", ReplyAction="http://tempuri.org/IMaster_Service/employee_emergency_viewResponse")]
-        System.Threading.Tasks.Task<wcf_Master.employee_emergency_in_lib[]> employee_emergency_viewAsync(int employee_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/employee_employment_view", ReplyAction="http://tempuri.org/IMaster_Service/employee_employment_viewResponse")]
-        System.Threading.Tasks.Task<wcf_Master.employee_employment_in_lib[]> employee_employment_viewAsync(int employee_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/employee_relative_view", ReplyAction="http://tempuri.org/IMaster_Service/employee_relative_viewResponse")]
-        System.Threading.Tasks.Task<wcf_Master.employee_relative_in_lib[]> employee_relative_viewAsync(int employee_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/employee_credentials_up", ReplyAction="http://tempuri.org/IMaster_Service/employee_credentials_upResponse")]
-        System.Threading.Tasks.Task<wcf_Master.employee_list_view_lib> employee_credentials_upAsync(wcf_Master.employee_list_view_lib obj);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/employee_fetch_view", ReplyAction="http://tempuri.org/IMaster_Service/employee_fetch_viewResponse")]
-        System.Threading.Tasks.Task<wcf_Master.employee_list_view_lib[]> employee_fetch_viewAsync(int employee_id, int company_id, int row, int index);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/employee_sel", ReplyAction="http://tempuri.org/IMaster_Service/employee_selResponse")]
-        System.Threading.Tasks.Task<wcf_Master.employee_list_view_lib[]> employee_selAsync(wcf_Master.employee_list_view_lib obj);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/series_view", ReplyAction="http://tempuri.org/IMaster_Service/series_viewResponse")]
-        System.Threading.Tasks.Task<wcf_Master.series_view_lib> series_viewAsync(int module_id, int company_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaster_Service/employee_search", ReplyAction="http://tempuri.org/IMaster_Service/employee_searchResponse")]
-        System.Threading.Tasks.Task<wcf_Master.employee_list_view_lib[]> employee_searchAsync(string search, int company_id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1-preview-30310-0943")]
@@ -5768,7 +3491,7 @@ namespace wcf_Master
             return base.Channel.modules_viewAsync(module_id, is_ap, is_active);
         }
         
-        public System.Threading.Tasks.Task<wcf_Master.util_dropdown_view_lib[]> util_dropdown_setting_inAsync(wcf_Master.util_dropdown_view_lib obj)
+        public System.Threading.Tasks.Task<int> util_dropdown_setting_inAsync(wcf_Master.util_dropdown_view_lib obj)
         {
             return base.Channel.util_dropdown_setting_inAsync(obj);
         }
@@ -5811,71 +3534,6 @@ namespace wcf_Master
         public System.Threading.Tasks.Task<wcf_Master.approval_process_in_lib[]> approval_process_viewAsync(int module_id, int approval_group_id, int warehouse_id, int company_id)
         {
             return base.Channel.approval_process_viewAsync(module_id, approval_group_id, warehouse_id, company_id);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.payroll_type_view_lib[]> payroll_type_viewAsync(int payroll_type_id)
-        {
-            return base.Channel.payroll_type_viewAsync(payroll_type_id);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.employee_in_lib> employee_in_upAsync(wcf_Master.employee_in_lib objPersonal, wcf_Master.employee_information_in_lib objPayroll, wcf_Master.employee_relative_in_lib[] objRelative, wcf_Master.employee_emergency_in_lib[] objEmergency, wcf_Master.employee_employment_in_lib[] objEmployment, wcf_Master.employee_education_in_lib[] objEducation, wcf_Master.employee_degree_in_lib[] objDegree, int approval_group_id, bool oldPath)
-        {
-            return base.Channel.employee_in_upAsync(objPersonal, objPayroll, objRelative, objEmergency, objEmployment, objEducation, objDegree, approval_group_id, oldPath);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.employee_information_in_lib[]> employee_information_viewAsync(int employee_id)
-        {
-            return base.Channel.employee_information_viewAsync(employee_id);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.employee_degree_in_lib[]> employee_degree_viewAsync(int employee_id)
-        {
-            return base.Channel.employee_degree_viewAsync(employee_id);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.employee_education_in_lib[]> employee_education_viewAsync(int employee_id)
-        {
-            return base.Channel.employee_education_viewAsync(employee_id);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.employee_emergency_in_lib[]> employee_emergency_viewAsync(int employee_id)
-        {
-            return base.Channel.employee_emergency_viewAsync(employee_id);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.employee_employment_in_lib[]> employee_employment_viewAsync(int employee_id)
-        {
-            return base.Channel.employee_employment_viewAsync(employee_id);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.employee_relative_in_lib[]> employee_relative_viewAsync(int employee_id)
-        {
-            return base.Channel.employee_relative_viewAsync(employee_id);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.employee_list_view_lib> employee_credentials_upAsync(wcf_Master.employee_list_view_lib obj)
-        {
-            return base.Channel.employee_credentials_upAsync(obj);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.employee_list_view_lib[]> employee_fetch_viewAsync(int employee_id, int company_id, int row, int index)
-        {
-            return base.Channel.employee_fetch_viewAsync(employee_id, company_id, row, index);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.employee_list_view_lib[]> employee_selAsync(wcf_Master.employee_list_view_lib obj)
-        {
-            return base.Channel.employee_selAsync(obj);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.series_view_lib> series_viewAsync(int module_id, int company_id)
-        {
-            return base.Channel.series_viewAsync(module_id, company_id);
-        }
-        
-        public System.Threading.Tasks.Task<wcf_Master.employee_list_view_lib[]> employee_searchAsync(string search, int company_id)
-        {
-            return base.Channel.employee_searchAsync(search, company_id);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

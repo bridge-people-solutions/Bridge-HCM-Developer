@@ -5594,9 +5594,9 @@ select.form-control:not([size]):not([multiple]) {
   overflow-y: auto;
 }
 .wizard > .content > .body input.form-control {
-  /*border-top: none;
+  border-top: none;
   border-right: none;
-  border-left: none;*/
+  border-left: none;
 }
 
 .tabledit-input:disabled {

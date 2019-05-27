@@ -14,8 +14,8 @@ namespace BridgeHCM.Components
         {
             try
             {
-                int company_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["CompanyId"]));
-                int access_level_id = Convert.ToInt32(Crypto.password_decrypt(Request.Cookies["AccessLevelId"]));
+                int company_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["CompanyId"]));
+                int access_level_id = Convert.ToInt32(Crypto.url_decrypt(Request.Cookies["AccessLevelId"]));
 
                 var m = _master.menu_view_restrictionAsync(access_level_id, 0, company_id).Result.ToList();
                 ViewBag.department = Crypto.password_decrypt(Request.Cookies["Department"]);

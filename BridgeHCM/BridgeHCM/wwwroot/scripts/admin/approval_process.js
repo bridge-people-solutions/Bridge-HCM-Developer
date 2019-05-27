@@ -1,23 +1,20 @@
 ﻿var app = angular.module('myApp', ['ngRoute', 'ngSanitize']);
 
-app.controller('myCtrl', function ($scope, $q, approvalProcessService, employeeService) {
-    var dv = approvalProcessService.dropdownView();
-    var ml = approvalProcessService.moduleList();
-    var el = employeeService.employeeList();
+app.controller('myCtrl', function ($scope, approvalProcessService, employeeService) {
+    var dt = approvalProcessService.dropdownView();
+    dt.then(function (data) {
+        $scope.dropdownlist = JSON.parse(data.data);
+    })
 
-    $q.all([dv, ml, el])
-        .then(function (results) {
-            $scope.dropdownlist = JSON.parse(results[0].data);
-            $scope.modulelist = JSON.parse(results[1].data);
-            $scope.employeelist = JSON.parse(results[2].data);
-        }).then(function () {
-            $(".theme-loader").animate({
-                opacity: "0"
-            }, 1000);
-            setTimeout(function () {
-                $(".theme-loader").remove();
-            }, 1000);
-        });
+    var dt = approvalProcessService.moduleList();
+    dt.then(function (data) {
+        $scope.modulelist = JSON.parse(data.data);
+    })
+
+    var dt = employeeService.employeeList();
+    dt.then(function (data) {
+        $scope.employeelist = JSON.parse(data.data);
+    })
 
     $scope.status = [];
 
